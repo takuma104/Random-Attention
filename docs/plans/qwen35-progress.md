@@ -45,4 +45,13 @@
 - 回答は`<|im_end|>`の後に改行・`<|endoftext|>`まで生成していた。chatターン境界後の継続を避けるためpilot_v1を停止し、両EOSのunionで止めるよう修正。旧smoke/pilot_v1は実装診断のみで、確認評価には混ぜない。
 - tokenizer EOSを含める回帰テストを追加（11 tests passed）。修正commit `337db8d`をpush。
 - 00:32に実モデルEOS回帰テスト完了。既知のrecency C4096回答は8045 tokensで`<|im_end|>`終了し、thinking閉鎖・正しいfinal boxedを確認。旧8047-token列の先頭8045 tokensと完全一致。生成分布は変えず正しい位置で停止したことを確認。
-- 新規`results/qwen35/pilot_v2`で50問×7条件、最大8192 tokensのpilotを開始する。v1は混ぜず全例を新設定で再生成する。
+- 新規`results/qwen35/pilot_v2`で50問×7条件、最大8192 tokensのpilotを開始。v1は混ぜず全例を新設定で再生成。
+
+## 2026-09-10 07:09: pilot_v2完了
+
+- 350回答完了、wall約6時間36分。全セルの欠損/重複/budget不適合/grading errorsなし。終了token、cache長、eviction回数、paired条件の監査通過。
+- 詳細: [qwen35-pilot-v2-report.md](qwen35-pilot-v2-report.md)、機械可読統計 `qwen35-pilot-v2-analysis.json`。
+- final正答率: native76%、Random/Recency C1024=64%/66%、C2048=70%/70%、C4096=74%/74%。
+- ただし全条件でEOS終了例の誤答0。native24%、圧縮26–36%が8k capで未完了。差の解釈には32k確認が不可欠。
+- Random vs Recencyの95% CIは広く、同等性は未確認。C4096でもnativeからの低下2ポイント以内という事前目標をCIは保証しない。
+- 次の32k確認は事前固定pilot先頭10問、当初の5条件（native、Random1024/2048、Recency1024、SnapKV1024）、各1回。SnapKV実モデル検証通過後に実行する。結果に基づく問題選別はしない。
