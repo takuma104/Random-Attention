@@ -55,3 +55,12 @@
 - ただし全条件でEOS終了例の誤答0。native24%、圧縮26–36%が8k capで未完了。差の解釈には32k確認が不可欠。
 - Random vs Recencyの95% CIは広く、同等性は未確認。C4096でもnativeからの低下2ポイント以内という事前目標をCIは保証しない。
 - 次の32k確認は事前固定pilot先頭10問、当初の5条件（native、Random1024/2048、Recency1024、SnapKV1024）、各1回。SnapKV実モデル検証通過後に実行する。結果に基づく問題選別はしない。
+- MATH500全500問のprompt長を事前検査: 最大857 tokens、C1024のprompt保持枠960未満で全例適合。
+
+## 2026-09-10 07:14: SnapKV検証・32k確認へ
+
+- SnapKV＋promptの実モデル179 decode-stepテスト通過。no-op/nativeと発動前logits最大差0、eviction後432箇所の参照attention比較通過、32 layer-events。
+- 記録: `qwen35-snapkv-validation.json`。モデルのゲート・partial RoPE・DeltaNetは公式実装を維持。
+- このSnapKVはリポジトリのdecode adaptation（直近query平均、幅5平均pool、GQA group平均）を移植。スコア算出はFP32で、元実装のBF16演算と数値的に完全同一とは主張しない。
+- `results/qwen35/confirm32k_v2`に先頭10問×5条件×1回、max_new_tokens32768を実行する。既存8kと同一seed・prompt・samplingで、出力上限のみを延長。SnapKVは追加比較。
+- 50回答全て32kに到達した場合の約6時間は上限長に基づく概算。EOS終了すれば短縮される。完了後に本評価500問×2回×5条件の見積もりを更新する。

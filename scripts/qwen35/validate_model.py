@@ -3,6 +3,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from kvcompress.qwen35.runtime import load_model, kernel_provenance, ROOT
+import argparse
 import json
 import time
 import torch
@@ -13,6 +14,9 @@ from kvcompress.qwen35.cache import EvictionConfig, HybridEvictionCache, install
 
 @torch.inference_mode()
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--policy', choices=['random_pp', 'snapkv_pp'], default='random_pp')
+    args = parser.parse_args()
     model, tokenizer, artifacts = load_model()
     # Check outputs before eviction hook compacts storage: all retained KV are
     # legal past tokens for q_len=1. An explicit no-mask eager attention is the
@@ -48,7 +52,7 @@ def main():
     assert ids.shape[1] < 112
     native = DynamicCache(config=model.config)
     noop = HybridEvictionCache(model.config, EvictionConfig(policy="none", capacity=128, recent=16))
-    compressed = HybridEvictionCache(model.config, EvictionConfig(capacity=128, recent=16))
+    compressed = HybridEvictionCache(model.config, EvictionConfig(policy=args.policy, capacity=128, recent=16))
     current = ids
     max_noop = 0.
     max_before = 0.
@@ -67,7 +71,7 @@ def main():
         assert compressed.get_seq_length() == native.get_seq_length()
         current = a[:, -1].argmax(-1,keepdim=True)
     assert reference_calls and compressed.eviction_events > 0
-    report = dict(model_revision=artifacts["model_revision"], kernels=kernel_provenance(),
+    report = dict(policy=args.policy, model_revision=artifacts["model_revision"], kernels=kernel_provenance(),
                   prompt_tokens=ids.shape[1], tested_decode_steps=179, max_noop_logit_error=max_noop,
                   max_pre_eviction_logit_error=max_before, max_reference_attention_error=max(errors),
                   reference_checks=len(reference_calls), eviction_layer_events=compressed.eviction_events,
@@ -75,7 +79,7 @@ def main():
                   peak_allocated_bytes=torch.cuda.max_memory_allocated(), status="passed")
     for h in handles+reference_handles:
         h.remove()
-    output = ROOT / "work/qwen35/full_model_validation.json"
+    output = ROOT / f"work/qwen35/full_model_validation_{args.policy}.json"
     output.write_text(json.dumps(report, indent=2)+"\n")
     print(json.dumps(report,indent=2),flush=True)
 
