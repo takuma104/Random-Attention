@@ -1,0 +1,19 @@
+{
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "kernels": {
+    "torch_chunk_gated_delta_rule": "fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule",
+    "torch_recurrent_gated_delta_rule": "fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule",
+    "causal_conv1d_fn": "transformers.models.qwen3_5.modeling_qwen3_5.causal_conv1d_fn",
+    "causal_conv1d_update": "transformers.models.qwen3_5.modeling_qwen3_5.causal_conv1d_update"
+  },
+  "prompt_tokens": 19,
+  "tested_decode_steps": 179,
+  "max_noop_logit_error": 0.0,
+  "max_pre_eviction_logit_error": 0.0,
+  "max_reference_attention_error": 0.0625,
+  "reference_checks": 432,
+  "eviction_layer_events": 32,
+  "elapsed_seconds": 22.002818151027896,
+  "peak_allocated_bytes": 9360887808,
+  "status": "passed"
+}
