@@ -30,6 +30,15 @@ def kernel_provenance():
     return report
 
 
+def resolve_eos_ids(config_eos, tokenizer_eos):
+    ids = [config_eos] if isinstance(config_eos, int) else list(config_eos or [])
+    if tokenizer_eos is not None:
+        ids.append(tokenizer_eos)
+    if not ids or any(not isinstance(i, int) for i in ids):
+        raise ValueError(f"Invalid EOS configuration: {ids}")
+    return list(dict.fromkeys(ids))
+
+
 def load_model():
     artifacts = json.loads((ROOT / "work/qwen35/artifacts.json").read_text())
     provenance = kernel_provenance()
@@ -44,7 +53,13 @@ def load_model():
     )
     if loading.get("missing_keys") or loading.get("mismatched_keys") or loading.get("unexpected_keys"):
         raise RuntimeError(f"Checkpoint loading discrepancies: {loading}")
+    # This checkpoint has no generation_config.json. Its text config EOS is
+    # <|endoftext|>, whereas the chat tokenizer EOS is <|im_end|>. Honor BOTH;
+    # otherwise chat completions can continue after the assistant-turn boundary.
+    model.generation_config.eos_token_id = resolve_eos_ids(
+        model.generation_config.eos_token_id, tokenizer.eos_token_id)
     model.eval()
+    print("EOS ids:", model.generation_config.eos_token_id, flush=True)
     print("Model loaded; parameter bytes:", sum(p.numel()*p.element_size() for p in model.parameters()), flush=True)
     return model, tokenizer, artifacts
 

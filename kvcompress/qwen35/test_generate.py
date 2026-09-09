@@ -19,6 +19,12 @@ def test_sampling_matches_transformers():
         torch.testing.assert_close(actual,expected,atol=1e-7,rtol=1e-6)
 
 
+def test_eos_union_includes_chat_boundary():
+    assert runtime.resolve_eos_ids(248044,248046)==[248044,248046]
+    assert runtime.resolve_eos_ids([248044,248046],248046)==[248044,248046]
+    assert runtime.resolve_eos_ids(None,248046)==[248046]
+
+
 def test_seeds_and_rng_independence():
     a=stable_seed('id',0,'generation')
     assert a==stable_seed('id',0,'generation')

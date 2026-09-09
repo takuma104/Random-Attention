@@ -35,7 +35,7 @@ The artifact script pins model/data revisions before downloading and saves the
 .venv/bin/python scripts/qwen35/run_math.py --out results/qwen35/smoke_v1 \
   --limit 2 --max-new-tokens 2048 --cells native,random_pp:1024,recency_pp:1024
 # Fixed pilot: 50 questions x 7 conditions x 1 rollout, 8k output cap.
-.venv/bin/python scripts/qwen35/run_math.py --out results/qwen35/pilot_v1
+.venv/bin/python scripts/qwen35/run_math.py --out results/qwen35/pilot_v2
 ```
 
 Repeat the **exact same command** to resume. The runner refuses changes in
@@ -50,6 +50,12 @@ Initial implementation supports unpadded batch=1, prefill followed by single-tok
 decode. The full vision-language checkpoint is loaded, but only text is used.
 Presence penalty applies to generated tokens only. Sampling and eviction use
 separate explicit generators. All generation settings are in each manifest.
+
+Stop at the union of model-config EOS and tokenizer/chat EOS: for the pinned
+checkpoint these are `<|endoftext|>` (248044) and `<|im_end|>` (248046).
+The initial `smoke_v1` and interrupted `pilot_v1` used only the former and are
+INVALIDATED as accuracy evidence; keep them only for implementation diagnostics.
+Use a fresh smoke output directory when running updated source.
 
 The main metric is a boxed answer after `</think>`; the paper-compatible diagnostic
 also scores unfinished thinking using the original repository extractor/grader.
