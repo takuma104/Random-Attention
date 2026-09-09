@@ -24,4 +24,16 @@
 - CPU/GPU cache不変条件、RNG分離、Transformersとtop-k/top-p分布一致、boxedとthinking境界の採点など10テスト通過。
 - 採点は元リポジトリの数式graderを利用。CUDA processからforkしないよう、別CPU processへ分離。final-boxed metricとpaper互換の全completion採点を両方記録する。
 - 各回答を原子的に保存し、IDベースで再開。生成済み未採点も再生成しない。設定・source hash不一致のresumeは禁止。
-- 次: 2問×3条件、最大生成2048 tokensのsmoke、その後50問×7条件、最大8192 tokensのpilot。短いsmokeの精度から結論は出さない。
+- 実装と検証記録はcommit `9e4bccc`としてorigin/experimentsへpush済み。
+
+## 2026-09-10 00:13: smoke完了
+
+- `results/qwen35/smoke_v1`: 事前固定pilotの先頭2問×native/random_pp C1024/recency_pp C1024、最大生成2048 tokens。
+- 6回答すべて正常に保存・採点。budget不適合0、grading error0。
+- 全回答が2048-token cap到達、thinking未終了。final/paper正答率0だが、短すぎる出力上限であり精度の結論は出さない。出力をspot checkし、数学的な推論が進んでいることを確認。
+- 各圧縮回答で136–144 layer-eviction events（8層合計）。nativeでは0。
+- nativeと圧縮の生成token列は初回eviction以前に一致し、相違はeviction後にのみ発生。
+- native約75.6 tok/s、random約74.8、recency約74.9（batch1、この短いworkloadの診断値。速度優位は主張しない）。
+- Full Attention KV実allocation: 圧縮35,651,584 bytes（C+r=1088）、native約71–72 MB。DeltaNet再帰状態50,331,648 bytes、conv1,572,864 bytesは同じ。
+- 50問×7条件×8192-token capのpilotに進む。上限まで全回答が生成した場合、75 tok/s基準で約10.6 GPU時間。実際のEOSにより短縮する可能性あり。
+- 次: pilotのEOS、cap率、eviction発動率と精度・長さを確認し、32k確認と主評価の条件・時間見積もりを決定する。
