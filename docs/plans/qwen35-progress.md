@@ -43,4 +43,6 @@
 - 最初のEOS回答（recency C4096、8047 tokens）をspot checkし、正しい最終boxedとthinking閉鎖を確認。
 - 同時にcheckpoint text config EOS=248044 (`<|endoftext|>`)とtokenizer EOS=248046 (`<|im_end|>`)の不一致を発見。checkpointにgeneration_config.jsonはなく、前者だけで終了判定していた。
 - 回答は`<|im_end|>`の後に改行・`<|endoftext|>`まで生成していた。chatターン境界後の継続を避けるためpilot_v1を停止し、両EOSのunionで止めるよう修正。旧smoke/pilot_v1は実装診断のみで、確認評価には混ぜない。
-- tokenizer EOSを含める回帰テストを追加。修正後、最初にEOS到達した既知の1回答を再実行して停止tokenと採点を確認してから、新規`pilot_v2`を開始する。
+- tokenizer EOSを含める回帰テストを追加（11 tests passed）。修正commit `337db8d`をpush。
+- 00:32に実モデルEOS回帰テスト完了。既知のrecency C4096回答は8045 tokensで`<|im_end|>`終了し、thinking閉鎖・正しいfinal boxedを確認。旧8047-token列の先頭8045 tokensと完全一致。生成分布は変えず正しい位置で停止したことを確認。
+- 新規`results/qwen35/pilot_v2`で50問×7条件、最大8192 tokensのpilotを開始する。v1は混ぜず全例を新設定で再生成する。
