@@ -19,7 +19,7 @@ class EvictionConfig:
     policy: str = "random_pp"
     capacity: int = 1024
     recent: int = 64
-    seed: int = 0
+    seed: int | tuple[int, ...] = 0
 
     def __post_init__(self):
         if self.policy not in {"none", "random_pp", "random", "recency_pp", "random_shared_pp", "snapkv_pp"}:
@@ -61,7 +61,13 @@ class EvictionLayer(DynamicLayer):
             self.value_storage = torch.empty_like(self.key_storage)
             self.position_storage = torch.empty(b, h, self.settings.capacity + self.settings.recent,
                                                 device=self.device, dtype=torch.long)
-            self.generator = torch.Generator(device=self.device).manual_seed(self.settings.seed + 100003 * self.layer_idx)
+            seeds = self.settings.seed
+            if isinstance(seeds, tuple):
+                if len(seeds) != b:
+                    raise ValueError('One eviction seed per batch row is required')
+                self.generators = [torch.Generator(device=self.device).manual_seed(s + 100003*self.layer_idx) for s in seeds]
+            else:
+                self.generator = torch.Generator(device=self.device).manual_seed(seeds + 100003*self.layer_idx)
             self.is_initialized = True
         end = self.length + n
         if end > self.key_storage.shape[-2]:
@@ -117,7 +123,11 @@ class EvictionLayer(DynamicLayer):
             scores = scores.reshape(b, h, groups, candidates).mean(2)
         else:
             shape = (b, 1 if cfg.policy == "random_shared_pp" else h, candidates)
-            scores = torch.rand(shape, device=self.device, generator=self.generator).expand(b, h, candidates).clone()
+            if hasattr(self, 'generators'):
+                scores = torch.stack([torch.rand(shape[1:], device=self.device, generator=g) for g in self.generators])
+            else:
+                scores = torch.rand(shape, device=self.device, generator=self.generator)
+            scores = scores.expand(b, h, candidates).clone()
         if cfg.policy.endswith("_pp"):
             scores.masked_fill_(positions < self.prompt_length, float("inf"))
         chosen = scores.topk(keep_n, dim=-1).indices.sort(-1).values
@@ -144,6 +154,8 @@ class EvictionLayer(DynamicLayer):
         self.key_storage = self.key_storage.index_select(0, indices)
         self.value_storage = self.value_storage.index_select(0, indices)
         self.position_storage = self.position_storage.index_select(0, indices)
+        if hasattr(self, 'generators'):
+            self.generators = [self.generators[i] for i in indices.tolist()]
         if self.queries is not None:
             self.queries = self.queries.index_select(0, indices)
         self._refresh_views()

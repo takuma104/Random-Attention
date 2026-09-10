@@ -1,0 +1,410 @@
+{
+  "recency_pp_C1024": [
+    {
+      "id": "test/precalculus/323.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 32768,
+      "short_cap": true,
+      "long_cap": true,
+      "short_correct": false,
+      "long_correct": false
+    },
+    {
+      "id": "test/number_theory/911.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 27311,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/intermediate_algebra/1837.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 10480,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/algebra/892.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 32768,
+      "short_cap": true,
+      "long_cap": true,
+      "short_correct": false,
+      "long_correct": false
+    },
+    {
+      "id": "test/counting_and_probability/339.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 32768,
+      "short_cap": true,
+      "long_cap": true,
+      "short_correct": false,
+      "long_correct": false
+    },
+    {
+      "id": "test/counting_and_probability/71.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 22683,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/algebra/1078.json",
+      "prefix_equal": true,
+      "short_tokens": 4595,
+      "long_tokens": 4595,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/counting_and_probability/51.json",
+      "prefix_equal": true,
+      "short_tokens": 7276,
+      "long_tokens": 7276,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/prealgebra/1747.json",
+      "prefix_equal": true,
+      "short_tokens": 4839,
+      "long_tokens": 4839,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/precalculus/1105.json",
+      "prefix_equal": true,
+      "short_tokens": 2892,
+      "long_tokens": 2892,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    }
+  ],
+  "random_pp_C2048": [
+    {
+      "id": "test/precalculus/323.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 13540,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/number_theory/911.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 13409,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/intermediate_algebra/1837.json",
+      "prefix_equal": true,
+      "short_tokens": 6880,
+      "long_tokens": 6880,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/algebra/892.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 32768,
+      "short_cap": true,
+      "long_cap": true,
+      "short_correct": false,
+      "long_correct": false
+    },
+    {
+      "id": "test/counting_and_probability/339.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 20258,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/counting_and_probability/71.json",
+      "prefix_equal": true,
+      "short_tokens": 5023,
+      "long_tokens": 5023,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/algebra/1078.json",
+      "prefix_equal": true,
+      "short_tokens": 5168,
+      "long_tokens": 5168,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/counting_and_probability/51.json",
+      "prefix_equal": true,
+      "short_tokens": 6212,
+      "long_tokens": 6212,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/prealgebra/1747.json",
+      "prefix_equal": true,
+      "short_tokens": 2570,
+      "long_tokens": 2570,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/precalculus/1105.json",
+      "prefix_equal": true,
+      "short_tokens": 2404,
+      "long_tokens": 2404,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    }
+  ],
+  "native": [
+    {
+      "id": "test/precalculus/323.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 9317,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/number_theory/911.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 9237,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/intermediate_algebra/1837.json",
+      "prefix_equal": true,
+      "short_tokens": 5777,
+      "long_tokens": 5777,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/algebra/892.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 17499,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/counting_and_probability/339.json",
+      "prefix_equal": true,
+      "short_tokens": 6710,
+      "long_tokens": 6710,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/counting_and_probability/71.json",
+      "prefix_equal": true,
+      "short_tokens": 7105,
+      "long_tokens": 7105,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/algebra/1078.json",
+      "prefix_equal": true,
+      "short_tokens": 6009,
+      "long_tokens": 6009,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/counting_and_probability/51.json",
+      "prefix_equal": true,
+      "short_tokens": 4653,
+      "long_tokens": 4653,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/prealgebra/1747.json",
+      "prefix_equal": true,
+      "short_tokens": 2756,
+      "long_tokens": 2756,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/precalculus/1105.json",
+      "prefix_equal": true,
+      "short_tokens": 2511,
+      "long_tokens": 2511,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    }
+  ],
+  "random_pp_C1024": [
+    {
+      "id": "test/precalculus/323.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 32768,
+      "short_cap": true,
+      "long_cap": true,
+      "short_correct": false,
+      "long_correct": false
+    },
+    {
+      "id": "test/number_theory/911.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 15443,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/intermediate_algebra/1837.json",
+      "prefix_equal": true,
+      "short_tokens": 8160,
+      "long_tokens": 8160,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/algebra/892.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 32768,
+      "short_cap": true,
+      "long_cap": true,
+      "short_correct": false,
+      "long_correct": false
+    },
+    {
+      "id": "test/counting_and_probability/339.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 10678,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/counting_and_probability/71.json",
+      "prefix_equal": true,
+      "short_tokens": 8192,
+      "long_tokens": 11154,
+      "short_cap": true,
+      "long_cap": false,
+      "short_correct": false,
+      "long_correct": true
+    },
+    {
+      "id": "test/algebra/1078.json",
+      "prefix_equal": true,
+      "short_tokens": 6357,
+      "long_tokens": 6357,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/counting_and_probability/51.json",
+      "prefix_equal": true,
+      "short_tokens": 2719,
+      "long_tokens": 2719,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/prealgebra/1747.json",
+      "prefix_equal": true,
+      "short_tokens": 2706,
+      "long_tokens": 2706,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    },
+    {
+      "id": "test/precalculus/1105.json",
+      "prefix_equal": true,
+      "short_tokens": 2885,
+      "long_tokens": 2885,
+      "short_cap": false,
+      "long_cap": false,
+      "short_correct": true,
+      "long_correct": true
+    }
+  ]
+}

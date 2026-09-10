@@ -46,8 +46,8 @@ with tokens, exact EOS/cap reason, seeds, prompt IDs, cache metrics and grades.
 generations if the CPU grading subprocess is interrupted.
 
 `C` includes the recent `r=64` slots. Prompt must fit strictly within `C-r`.
-Initial implementation supports unpadded batch=1, prefill followed by single-token
-decode. The full vision-language checkpoint is loaded, but only text is used.
+The B1 runner supports unpadded batch=1, prefill followed by single-token
+decode. The separate B2 runner below supports two rollouts of the same prompt. The full vision-language checkpoint is loaded, but only text is used.
 Presence penalty applies to generated tokens only. Sampling and eviction use
 separate explicit generators. All generation settings are in each manifest.
 
@@ -63,6 +63,29 @@ Both inherit that grader's mathematical normalizations and tolerances. An answer
 at the output cap stays in the denominator. Token count includes sampled EOS;
 the final sampled token has not entered KV yet. Report eviction exposure and
 truncation rates with accuracy. Do not call the 8k pilot the paper's 32k protocol.
+
+## Same-prompt B2 runner (main protocol)
+
+```bash
+# B2 smoke: 2 questions x 3 methods x 2 rollouts.
+.venv/bin/python scripts/qwen35/run_math_batch.py --out results/qwen35/smoke_b2_v3 \
+  --limit 2 --max-new-tokens 8192 --cells native,random_pp:1024,snapkv_pp:1024
+# Main: 500 questions x 5 methods x 2 rollouts, all at B=2.
+.venv/bin/python scripts/qwen35/run_math_batch.py --out results/qwen35/main32k_b2_v3 \
+  --subset all --limit 500 --runs 2 --max-new-tokens 32768
+# Audit every expected problem/run, EOS/cap, cache counters, paired settings;
+# then compute problem-clustered paired confidence intervals.
+.venv/bin/python scripts/qwen35/analyze_math.py results/qwen35/main32k_b2_v3 \
+  --out docs/plans/qwen35-main32k-analysis.json
+```
+
+B2 uses separate generation and eviction generators per row, never mixes different
+prompts, and keeps finished rows resident. Per-row `elapsed_seconds` is batch wall
+time divided by two (GPU time accounting), while `request_latency_seconds` is that
+row's actual EOS/cap latency. Both rollouts are atomically journaled before either
+is graded; partial grading can resume without repeating inference. Do not edit
+frozen source mid-run. BF16 batch shape affects rounding and therefore sampled
+trajectories: do not pool B1 pilot scores with B2 main scores.
 
 Per-answer tok/s is a workload diagnostic, not a fixed-workload speed benchmark.
 Native uses DynamicCache, compressed uses preallocated bounded storage; allocator

@@ -1,0 +1,28 @@
+{
+  "bf16_b1_vs_b2": {
+    "max_abs": 0.5625,
+    "mean_abs": 0.04242822527885437,
+    "max_kl": 0.001593949506059289,
+    "argmax_agreement": 1.0
+  },
+  "fp32_b1_vs_b2": {
+    "max_abs": 2.86102294921875e-05,
+    "mean_abs": 3.302051254649996e-06,
+    "max_kl": 4.8837172528237716e-08,
+    "argmax_agreement": 1.0
+  },
+  "bf16_b1_vs_fp32": {
+    "max_abs": 0.3359041213989258,
+    "mean_abs": 0.031341105699539185,
+    "max_kl": 0.0010608079610392451,
+    "argmax_agreement": 1.0
+  },
+  "bf16_b2_vs_fp32": {
+    "max_abs": 0.28547823429107666,
+    "mean_abs": 0.030368881300091743,
+    "max_kl": 0.0005144650349393487,
+    "argmax_agreement": 1.0
+  },
+  "steps": 8,
+  "fp32_reference": "upstream torch-only DeltaNet; float32 matmul precision highest"
+}

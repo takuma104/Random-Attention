@@ -60,6 +60,17 @@ def audit_and_load(root):
         for key,row in cell.items():
             for field in ('prompt_token_ids','generation_seed','eviction_seed','sampling','gold','eos_ids'):
                 assert row[field]==reference[key][field], f'Paired {field} mismatch: {key}'
+    if settings.get('batch_size',1)>1:
+        for cell in records.values():
+            groups=defaultdict(list)
+            for row in cell.values():
+                groups[row['batch_id']].append(row)
+            for group in groups.values():
+                assert len(group)==2 and {r['batch_row'] for r in group}=={0,1}
+                assert len({r['problem_id'] for r in group})==1
+                wall=group[0]['batch_wall_seconds']
+                assert all(r['batch_wall_seconds']==wall and r['request_latency_seconds']<=wall for r in group)
+                assert abs(sum(r['elapsed_seconds'] for r in group)-wall)<1e-6
     return manifest,records
 
 
@@ -99,6 +110,13 @@ def analyze(root):
                          mean_kv_mib=float(np.mean([r['cache_bytes']['kv'] for r in rows]))/2**20,
                          recurrent_mib=rows[0]['cache_bytes']['recurrent']/2**20,
                          conv_mib=rows[0]['cache_bytes']['conv']/2**20)
+        if rows[0].get('batch_size',1)>1:
+            groups=defaultdict(list)
+            for r in rows:
+                groups[r['batch_id']].append(r)
+            scheduled=sum(len(g)*max(r['generated_tokens'] for r in g) for g in groups.values())
+            cells[name]['useful_row_step_fraction']=float(lengths.sum()/scheduled)
+            cells[name]['mean_request_latency_seconds']=mean('request_latency_seconds')
     contrasts={}
     if 'native' in records:
         for name in records:
@@ -119,6 +137,7 @@ def analyze(root):
     return dict(audit='passed',input_path=str(root),manifest_commit=manifest['git_commit'],
                 completed_data_sha256=aggregate_hash.hexdigest(),n_problems=len(manifest['settings']['problem_ids']),
                 runs_per_problem=manifest['settings']['args']['runs'],
+                batch_size=manifest['settings'].get('batch_size',1),
                 max_new_tokens=manifest['settings']['args']['max_new_tokens'],
                 total_generation_hours=sum(c['generation_seconds'] for c in cells.values())/3600,
                 cells=cells,paired_contrasts=contrasts,

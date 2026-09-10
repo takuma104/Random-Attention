@@ -1,0 +1,255 @@
+{
+  "audit": "passed",
+  "input_path": "results/qwen35/confirm32k_v2",
+  "manifest_commit": "1a3757016d82afc4a604fb3d7ed66f2f921134fb",
+  "completed_data_sha256": "d36d546506f33783b09071476db80be9dddfbfa81f559d9c47d53ecc87372829",
+  "n_problems": 10,
+  "runs_per_problem": 1,
+  "max_new_tokens": 32768,
+  "total_generation_hours": 2.501792686560786,
+  "cells": {
+    "native": {
+      "n": 10,
+      "final_accuracy": 1.0,
+      "paper_accuracy": 1.0,
+      "cap_rate": 0.0,
+      "thinking_unclosed_rate": 0.0,
+      "n_eos": 10,
+      "n_eos_incorrect": 0,
+      "mean_tokens": 7157.4,
+      "median_tokens": 6359.5,
+      "p90_tokens": 10135.199999999997,
+      "eviction_exposure": 0.0,
+      "generation_seconds": 968.366788716754,
+      "aggregate_tok_s": 73.91207632683002,
+      "peak_allocated_gib": 9.083666324615479,
+      "mean_kv_mib": 226.05625,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5
+    },
+    "random_pp_C1024": {
+      "n": 10,
+      "final_accuracy": 0.8,
+      "paper_accuracy": 0.8,
+      "cap_rate": 0.2,
+      "thinking_unclosed_rate": 0.2,
+      "n_eos": 8,
+      "n_eos_incorrect": 0,
+      "mean_tokens": 12563.8,
+      "median_tokens": 9419.0,
+      "p90_tokens": 32768.0,
+      "eviction_exposure": 1.0,
+      "generation_seconds": 1723.295319427154,
+      "aggregate_tok_s": 72.90567007503027,
+      "peak_allocated_gib": 8.567474842071533,
+      "mean_kv_mib": 34.0,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5
+    },
+    "random_pp_C2048": {
+      "n": 10,
+      "final_accuracy": 0.9,
+      "paper_accuracy": 0.9,
+      "cap_rate": 0.1,
+      "thinking_unclosed_rate": 0.1,
+      "n_eos": 9,
+      "n_eos_incorrect": 0,
+      "mean_tokens": 10823.2,
+      "median_tokens": 6546.0,
+      "p90_tokens": 21508.999999999996,
+      "eviction_exposure": 1.0,
+      "generation_seconds": 1483.7009749470744,
+      "aggregate_tok_s": 72.94731339235035,
+      "peak_allocated_gib": 8.599047183990479,
+      "mean_kv_mib": 66.0,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5
+    },
+    "recency_pp_C1024": {
+      "n": 10,
+      "final_accuracy": 0.7,
+      "paper_accuracy": 0.7,
+      "cap_rate": 0.3,
+      "thinking_unclosed_rate": 0.3,
+      "n_eos": 7,
+      "n_eos_incorrect": 0,
+      "mean_tokens": 17838.0,
+      "median_tokens": 16581.5,
+      "p90_tokens": 32768.0,
+      "eviction_exposure": 1.0,
+      "generation_seconds": 2445.2308807619265,
+      "aggregate_tok_s": 72.95016654804283,
+      "peak_allocated_gib": 8.567474842071533,
+      "mean_kv_mib": 34.0,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5
+    },
+    "snapkv_pp_C1024": {
+      "n": 10,
+      "final_accuracy": 0.7,
+      "paper_accuracy": 0.7,
+      "cap_rate": 0.3,
+      "thinking_unclosed_rate": 0.3,
+      "n_eos": 7,
+      "n_eos_incorrect": 0,
+      "mean_tokens": 16707.4,
+      "median_tokens": 12879.0,
+      "p90_tokens": 32768.0,
+      "eviction_exposure": 1.0,
+      "generation_seconds": 2385.8597077659215,
+      "aggregate_tok_s": 70.02674945898025,
+      "peak_allocated_gib": 8.577733993530273,
+      "mean_kv_mib": 34.0,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5
+    }
+  },
+  "paired_contrasts": {
+    "random_pp_C1024 - native": {
+      "final_correct": {
+        "n_problems": 10,
+        "difference": -0.2,
+        "ci95": [
+          -0.5,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 2,
+        "problem_ties": 8,
+        "exact_sign_p": 0.5,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 10,
+        "difference": -0.2,
+        "ci95": [
+          -0.5,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 2,
+        "problem_ties": 8,
+        "exact_sign_p": 0.5,
+        "bootstrap_replicates": 10000
+      }
+    },
+    "random_pp_C2048 - native": {
+      "final_correct": {
+        "n_problems": 10,
+        "difference": -0.1,
+        "ci95": [
+          -0.3,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 1,
+        "problem_ties": 9,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 10,
+        "difference": -0.1,
+        "ci95": [
+          -0.3,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 1,
+        "problem_ties": 9,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000
+      }
+    },
+    "recency_pp_C1024 - native": {
+      "final_correct": {
+        "n_problems": 10,
+        "difference": -0.3,
+        "ci95": [
+          -0.6,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 3,
+        "problem_ties": 7,
+        "exact_sign_p": 0.25,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 10,
+        "difference": -0.3,
+        "ci95": [
+          -0.6,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 3,
+        "problem_ties": 7,
+        "exact_sign_p": 0.25,
+        "bootstrap_replicates": 10000
+      }
+    },
+    "snapkv_pp_C1024 - native": {
+      "final_correct": {
+        "n_problems": 10,
+        "difference": -0.3,
+        "ci95": [
+          -0.6,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 3,
+        "problem_ties": 7,
+        "exact_sign_p": 0.25,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 10,
+        "difference": -0.3,
+        "ci95": [
+          -0.6,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 3,
+        "problem_ties": 7,
+        "exact_sign_p": 0.25,
+        "bootstrap_replicates": 10000
+      }
+    },
+    "random_pp_C1024 - recency_pp_C1024": {
+      "final_correct": {
+        "n_problems": 10,
+        "difference": 0.1,
+        "ci95": [
+          0.0,
+          0.3
+        ],
+        "problem_wins": 1,
+        "problem_losses": 0,
+        "problem_ties": 9,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 10,
+        "difference": 0.1,
+        "ci95": [
+          0.0,
+          0.3
+        ],
+        "problem_wins": 1,
+        "problem_losses": 0,
+        "problem_ties": 9,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000
+      }
+    }
+  },
+  "notes": [
+    "Exploratory problem-clustered percentile bootstrap, seed20260910; no multiplicity correction.",
+    "Non-significance is not equivalence. Pilot selection does not isolate architectural causality.",
+    "Cap examples remain in denominator; EOS-conditioned accuracy is a diagnostic, not primary.",
+    "Per-answer speed is not iso-workload or iso-allocator efficiency."
+  ]
+}

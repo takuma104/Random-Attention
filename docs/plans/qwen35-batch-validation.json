@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "max_b2_vs_b1_logit_error": 0.5625,
+  "max_token_kl": 0.0017270966200158,
+  "checked_decode_steps": 31,
+  "criteria": {
+    "max_abs_lt": 1.0,
+    "mean_abs_lt": 0.1,
+    "max_kl_lt": 0.005
+  },
+  "benchmarks": [
+    {
+      "policy": "native",
+      "batch": 1,
+      "seconds": 13.5101363559952,
+      "tok_s": 75.79494188788065,
+      "peak_allocated_bytes": 9192380928
+    },
+    {
+      "policy": "native",
+      "batch": 2,
+      "seconds": 13.924537257989869,
+      "tok_s": 147.07849618664076,
+      "peak_allocated_bytes": 9285160960
+    },
+    {
+      "policy": "random_pp",
+      "batch": 1,
+      "seconds": 13.514407641021535,
+      "tok_s": 75.7709865796676,
+      "peak_allocated_bytes": 9204015616
+    },
+    {
+      "policy": "random_pp",
+      "batch": 2,
+      "seconds": 14.084582331008278,
+      "tok_s": 145.40722272546006,
+      "peak_allocated_bytes": 9313647616
+    },
+    {
+      "policy": "snapkv_pp",
+      "batch": 1,
+      "seconds": 14.063022546004504,
+      "tok_s": 72.81507205511323,
+      "peak_allocated_bytes": 9217406976
+    },
+    {
+      "policy": "snapkv_pp",
+      "batch": 2,
+      "seconds": 14.644507152028382,
+      "tok_s": 139.84765610335583,
+      "peak_allocated_bytes": 9338222080
+    }
+  ],
+  "note": "Short same-prompt fixed1024-output benchmark; not long-context serving speed."
+}
