@@ -86,3 +86,15 @@
 - 同一コマンドで再開したところ全12回答をskip。再監査のcompleted data SHA256は`b921baccc722eb35fa5386625094b3a2f5c808eb64dedbc8feb3cc90f49569fc`で変更なし。
 - [本評価プロトコル](qwen35-main32k-protocol.md)を開始前に固定。500問×2反復×5条件、B2、32k。主比較・CI・2比較のHolm補正、途中精度で条件変更しない規則を記載。
 - 所要時間は暫定5〜8日。最初の20問完了で運用・時間の確認を行う。生成ソースは以降変更しない。
+
+## 2026-09-10 15:58: 主評価20/500問（200/5000回答）完了
+
+- 主評価は10:20:30開始、job `qwen35-main32k-b2-34f9`。開始commit `fa2864a`、実装`cc919ad`。
+- 最初の20問をCPU-onlyの派生snapshotで監査。元manifest/回答は変更せず、EOS・counter・batch・ペア対応・source hash全て通過。
+- 200回答の生成は5.610時間。単純外挿は全体5.84日（約140時間）、完了目安は9月16日午前。最初の20問はデータセット順の複数分野で、無作為な追加標本ではないため暫定推定。
+- EOS終了した161回答は全て正解、残り39回答が32k cap。途中の手法別精度から条件やsample数は変えず継続する。
+- 実効aggregate速度123–132 tokens/s、useful row-step比86–93%。早期終了rowを残す損失を含む。共有peak allocatedはnative10.70 GiB、圧縮8.72–8.78 GiB。
+- 運用確認時: GPU55℃、約257W、使用約10GiB、disk空き2.8TiB。異常なし。
+- 記録: `qwen35-main32k-progress-020.json`。次の監視は100問完了時。
+- 生成ソースには触れず、CPU-onlyの`audit_progress.py`と事前固定統計用`analyze_main.py`を追加。後者のHolm/strict margin/cluster単位は3 CPU tests passed。
+- 次段階の[遅延参照probe案](qwen35-delayed-retrieval-protocol.md)を保存。factを保護promptではなく生成領域に置く点と、post-attention evictionによる測定時点のずれを明記。

@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "interim": true,
+  "scope": "Operational monitoring only; no hypothesis tests.",
+  "captured_at": "2026-09-10T06:59:15.543604+00:00",
+  "input_path": "results/qwen35/main32k_b2_v3",
+  "original_manifest_sha256": "ae7f93f814f573d734ff1036987534fa8ad747db9eae6d467b9ee546926b841c",
+  "prefix_data_sha256": "c1393b51925fbf1b4c05285e5c253fe0c640ae3e0c48547aaaeca0264f5b77d3",
+  "selected_problem_ids": [
+    "test/precalculus/807.json",
+    "test/intermediate_algebra/1994.json",
+    "test/algebra/2584.json",
+    "test/number_theory/572.json",
+    "test/algebra/1349.json",
+    "test/prealgebra/1622.json",
+    "test/number_theory/515.json",
+    "test/precalculus/927.json",
+    "test/algebra/2036.json",
+    "test/prealgebra/1139.json",
+    "test/number_theory/1032.json",
+    "test/intermediate_algebra/1197.json",
+    "test/number_theory/737.json",
+    "test/geometry/248.json",
+    "test/precalculus/1303.json",
+    "test/precalculus/990.json",
+    "test/intermediate_algebra/134.json",
+    "test/precalculus/1199.json",
+    "test/geometry/434.json",
+    "test/intermediate_algebra/1000.json"
+  ],
+  "n_problems": 20,
+  "n_planned_problems": 500,
+  "total_generation_hours": 5.610210117764057,
+  "linear_full_run_days": 5.843968872670892,
+  "raw_answer_bytes": 32362430,
+  "frozen_source_hashes_match": true,
+  "cells": {
+    "native": {
+      "n": 40,
+      "n_final_correct": 39,
+      "n_cap": 1,
+      "n_eos_wrong": 0,
+      "mean_tokens": 10243.475,
+      "generation_hours": 0.9233422687902283,
+      "aggregate_useful_tok_s": 123.2656542822546,
+      "useful_row_step_fraction": 0.86295723745177,
+      "peak_shared_allocated_gib": 10.699450969696045,
+      "subjects": {
+        "Precalculus": 10,
+        "Geometry": 4,
+        "Number Theory": 8,
+        "Intermediate Algebra": 8,
+        "Algebra": 6,
+        "Prealgebra": 4
+      }
+    },
+    "random_pp_C1024": {
+      "n": 40,
+      "n_final_correct": 30,
+      "n_cap": 10,
+      "n_eos_wrong": 0,
+      "mean_tokens": 14205.475,
+      "generation_hours": 1.229254232868908,
+      "aggregate_useful_tok_s": 128.40192605457847,
+      "useful_row_step_fraction": 0.9040903869224723,
+      "peak_shared_allocated_gib": 8.720479488372803,
+      "subjects": {
+        "Precalculus": 10,
+        "Geometry": 4,
+        "Number Theory": 8,
+        "Intermediate Algebra": 8,
+        "Algebra": 6,
+        "Prealgebra": 4
+      }
+    },
+    "random_pp_C2048": {
+      "n": 40,
+      "n_final_correct": 33,
+      "n_cap": 7,
+      "n_eos_wrong": 0,
+      "mean_tokens": 11800.075,
+      "generation_hours": 0.9923898929830466,
+      "aggregate_useful_tok_s": 132.11737178250794,
+      "useful_row_step_fraction": 0.9305502434792895,
+      "peak_shared_allocated_gib": 8.775485515594482,
+      "subjects": {
+        "Precalculus": 10,
+        "Geometry": 4,
+        "Number Theory": 8,
+        "Intermediate Algebra": 8,
+        "Algebra": 6,
+        "Prealgebra": 4
+      }
+    },
+    "recency_pp_C1024": {
+      "n": 40,
+      "n_final_correct": 29,
+      "n_cap": 11,
+      "n_eos_wrong": 0,
+      "mean_tokens": 14635.375,
+      "generation_hours": 1.2508774568436072,
+      "aggregate_useful_tok_s": 130.0009660323657,
+      "useful_row_step_fraction": 0.9155492372703757,
+      "peak_shared_allocated_gib": 8.720479488372803,
+      "subjects": {
+        "Precalculus": 10,
+        "Geometry": 4,
+        "Number Theory": 8,
+        "Intermediate Algebra": 8,
+        "Algebra": 6,
+        "Prealgebra": 4
+      }
+    },
+    "snapkv_pp_C1024": {
+      "n": 40,
+      "n_final_correct": 30,
+      "n_cap": 10,
+      "n_eos_wrong": 0,
+      "mean_tokens": 13729.3,
+      "generation_hours": 1.2143462662782663,
+      "aggregate_useful_tok_s": 125.62131742316537,
+      "useful_row_step_fraction": 0.9190609436084186,
+      "peak_shared_allocated_gib": 8.76210355758667,
+      "subjects": {
+        "Precalculus": 10,
+        "Geometry": 4,
+        "Number Theory": 8,
+        "Intermediate Algebra": 8,
+        "Algebra": 6,
+        "Prealgebra": 4
+      }
+    }
+  },
+  "caveats": [
+    "Deterministic dataset prefix, not a new random sample; runtime extrapolation is provisional.",
+    "No change to sample size, methods, budgets, or sampling from interim accuracy.",
+    "Shared peak memory is batch-wide; elapsed_seconds is allocated batch time/2."
+  ]
+}

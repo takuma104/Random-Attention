@@ -75,9 +75,16 @@ truncation rates with accuracy. Do not call the 8k pilot the paper's 32k protoco
   --subset all --limit 500 --runs 2 --max-new-tokens 32768
 # Audit every expected problem/run, EOS/cap, cache counters, paired settings;
 # then compute problem-clustered paired confidence intervals.
-.venv/bin/python scripts/qwen35/analyze_math.py results/qwen35/main32k_b2_v3 \
+.venv/bin/python scripts/qwen35/analyze_main.py results/qwen35/main32k_b2_v3 \
   --out docs/plans/qwen35-main32k-analysis.json
 ```
+
+`analyze_main.py` adds the preregistered Random–SnapKV contrast, two-comparison
+Holm adjustment, and strict -2pp accuracy-preservation criterion. It refuses
+incomplete main runs. During execution, `audit_progress.py ROOT --problems N
+--out REPORT.json` audits an immutable completed prefix using a temporary derived
+snapshot, without changing the live manifest or running interim hypothesis tests.
+CPU-only tests: `.venv/bin/python -m pytest scripts/qwen35/test_statistics.py -q`.
 
 B2 uses separate generation and eviction generators per row, never mixes different
 prompts, and keeps finished rows resident. Per-row `elapsed_seconds` is batch wall
