@@ -1,0 +1,140 @@
+{
+  "audit": "passed",
+  "input_path": "results/qwen35/smoke_b2_v3",
+  "manifest_commit": "cc919ad813cef6c3162da0ab7b9c2cf1f7f7912a",
+  "completed_data_sha256": "b921baccc722eb35fa5386625094b3a2f5c808eb64dedbc8feb3cc90f49569fc",
+  "n_problems": 2,
+  "runs_per_problem": 2,
+  "batch_size": 2,
+  "max_new_tokens": 8192,
+  "total_generation_hours": 0.18610606102830693,
+  "cells": {
+    "native": {
+      "n": 4,
+      "final_accuracy": 0.5,
+      "paper_accuracy": 0.5,
+      "cap_rate": 0.5,
+      "thinking_unclosed_rate": 0.5,
+      "n_eos": 2,
+      "n_eos_incorrect": 0,
+      "mean_tokens": 7130.25,
+      "median_tokens": 7510.0,
+      "p90_tokens": 8192.0,
+      "eviction_exposure": 0.0,
+      "generation_seconds": 206.5915882679401,
+      "aggregate_tok_s": 138.05499168247613,
+      "peak_allocated_gib": 9.101927757263184,
+      "mean_kv_mib": 226.9453125,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5,
+      "useful_row_step_fraction": 0.9494340878828229,
+      "mean_request_latency_seconds": 98.07945647274028
+    },
+    "random_pp_C1024": {
+      "n": 4,
+      "final_accuracy": 0.0,
+      "paper_accuracy": 0.0,
+      "cap_rate": 1.0,
+      "thinking_unclosed_rate": 1.0,
+      "n_eos": 0,
+      "n_eos_incorrect": 0,
+      "mean_tokens": 8192.0,
+      "median_tokens": 8192.0,
+      "p90_tokens": 8192.0,
+      "eviction_exposure": 1.0,
+      "generation_seconds": 227.0917249060003,
+      "aggregate_tok_s": 144.29411733766875,
+      "peak_allocated_gib": 8.670546531677246,
+      "mean_kv_mib": 34.0,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5,
+      "useful_row_step_fraction": 1.0,
+      "mean_request_latency_seconds": 113.54577918347786
+    },
+    "snapkv_pp_C1024": {
+      "n": 4,
+      "final_accuracy": 0.0,
+      "paper_accuracy": 0.0,
+      "cap_rate": 1.0,
+      "thinking_unclosed_rate": 1.0,
+      "n_eos": 0,
+      "n_eos_incorrect": 0,
+      "mean_tokens": 8192.0,
+      "median_tokens": 8192.0,
+      "p90_tokens": 8192.0,
+      "eviction_exposure": 1.0,
+      "generation_seconds": 236.2985065279645,
+      "aggregate_tok_s": 138.67205714278228,
+      "peak_allocated_gib": 8.695558071136475,
+      "mean_kv_mib": 34.0,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5,
+      "useful_row_step_fraction": 1.0,
+      "mean_request_latency_seconds": 118.14917435098323
+    }
+  },
+  "paired_contrasts": {
+    "random_pp_C1024 - native": {
+      "final_correct": {
+        "n_problems": 2,
+        "difference": -0.5,
+        "ci95": [
+          -1.0,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 1,
+        "problem_ties": 1,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 2,
+        "difference": -0.5,
+        "ci95": [
+          -1.0,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 1,
+        "problem_ties": 1,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000
+      }
+    },
+    "snapkv_pp_C1024 - native": {
+      "final_correct": {
+        "n_problems": 2,
+        "difference": -0.5,
+        "ci95": [
+          -1.0,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 1,
+        "problem_ties": 1,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 2,
+        "difference": -0.5,
+        "ci95": [
+          -1.0,
+          0.0
+        ],
+        "problem_wins": 0,
+        "problem_losses": 1,
+        "problem_ties": 1,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000
+      }
+    }
+  },
+  "notes": [
+    "Exploratory problem-clustered percentile bootstrap, seed20260910; no multiplicity correction.",
+    "Non-significance is not equivalence. Pilot selection does not isolate architectural causality.",
+    "Cap examples remain in denominator; EOS-conditioned accuracy is a diagnostic, not primary.",
+    "Per-answer speed is not iso-workload or iso-allocator efficiency."
+  ]
+}
