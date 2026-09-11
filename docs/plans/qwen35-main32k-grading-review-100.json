@@ -1,0 +1,145 @@
+{
+  "scope": "Manual diagnostic of all EOS-incorrect and cap-correct cases in the first 100 problems; not a replacement score.",
+  "counts": {
+    "grader_false_negative": 12,
+    "cap_with_correct_final_box": 3,
+    "model_error": 1
+  },
+  "independent_checks": [
+    "Both 1 +/- sqrt(19) satisfy the original rational equation exactly (SymPy).",
+    "Binary 10101001110 equals octal 2516 (integer conversion).",
+    "2250 mod 360 is 90: clockwise from north is east.",
+    "Dividing 1+z+z^2+z^3+z^4=0 by z^2 gives requested sum -1."
+  ],
+  "action": "Keep inference and frozen primary grader unchanged. Disclose limitations and conduct a separately versioned post-hoc sensitivity review across all cells after completion.",
+  "cases": [
+    {
+      "problem_id": "test/intermediate_algebra/662.json",
+      "cell": "native",
+      "run": 1,
+      "record_sha256": "d0b72b0761f6740c5f16ebc480a1870804b4f644e8b9839041f3416dcf80606a",
+      "category": "grader_false_negative",
+      "review": "correct comma-separated roots as requested; gold uses plus/minus notation"
+    },
+    {
+      "problem_id": "test/number_theory/516.json",
+      "cell": "native",
+      "run": 0,
+      "record_sha256": "6590aac9628c4b4540f4417275c32791c46466a7d1d33df795d271998c787e29",
+      "category": "grader_false_negative",
+      "review": "correct contextual base-eight digits; redundant base suffix omitted inside box"
+    },
+    {
+      "problem_id": "test/prealgebra/105.json",
+      "cell": "native",
+      "run": 0,
+      "record_sha256": "8fa31521a6098d6402a3b9392a57a622185b80ca2f3fcb5b026128a32ff5d9df",
+      "category": "grader_false_negative",
+      "review": "correct east; gold includes LaTeX text wrapper"
+    },
+    {
+      "problem_id": "test/prealgebra/105.json",
+      "cell": "native",
+      "run": 1,
+      "record_sha256": "62a9b386710adeb39493ab87841473fd58764d58209f6d927e096a05906ae233",
+      "category": "grader_false_negative",
+      "review": "correct east; gold includes LaTeX text wrapper"
+    },
+    {
+      "problem_id": "test/precalculus/285.json",
+      "cell": "random_pp_C1024",
+      "run": 0,
+      "record_sha256": "c7bcfe89ad6f6af5d7c0ad37aa2524b4e43e31275f4a2f8d08bfc40ec48bdfc2",
+      "category": "cap_with_correct_final_box",
+      "review": "Allowed by preregistered primary metric, but fails EOS-required secondary metric."
+    },
+    {
+      "problem_id": "test/intermediate_algebra/2046.json",
+      "cell": "random_pp_C1024",
+      "run": 0,
+      "record_sha256": "cf4ea051dc16d690830da39398ca17a7f92d975717ee3e5c517deb4b9a85b340",
+      "category": "cap_with_correct_final_box",
+      "review": "Allowed by preregistered primary metric, but fails EOS-required secondary metric."
+    },
+    {
+      "problem_id": "test/prealgebra/105.json",
+      "cell": "random_pp_C1024",
+      "run": 0,
+      "record_sha256": "4dd3d10b8423df5a741f322047a588c5827735dbb3614a98328bc5817769d355",
+      "category": "grader_false_negative",
+      "review": "correct east; gold includes LaTeX text wrapper"
+    },
+    {
+      "problem_id": "test/prealgebra/105.json",
+      "cell": "random_pp_C1024",
+      "run": 1,
+      "record_sha256": "1a12157f8b90ee856b99fe6235ad64a99af9e305c814252db7a56ab04c5d9c64",
+      "category": "grader_false_negative",
+      "review": "correct east; gold includes LaTeX text wrapper"
+    },
+    {
+      "problem_id": "test/intermediate_algebra/662.json",
+      "cell": "random_pp_C2048",
+      "run": 0,
+      "record_sha256": "a9daf929cab301693fe50d4888f73a2560a5567a9979dbb8ba2dcb3f63f8e57b",
+      "category": "grader_false_negative",
+      "review": "correct comma-separated roots as requested; gold uses plus/minus notation"
+    },
+    {
+      "problem_id": "test/algebra/892.json",
+      "cell": "random_pp_C2048",
+      "run": 1,
+      "record_sha256": "fdd499b92eef0e0527f489616d28245e3314196d6c6196976c226dee48e54aee",
+      "category": "cap_with_correct_final_box",
+      "review": "Allowed by preregistered primary metric, but fails EOS-required secondary metric."
+    },
+    {
+      "problem_id": "test/prealgebra/105.json",
+      "cell": "random_pp_C2048",
+      "run": 0,
+      "record_sha256": "76dbe250cb88aa1c10519d5ea028bc56d095b92ecfd3e9e8ef49591891e8757c",
+      "category": "grader_false_negative",
+      "review": "correct east; gold includes LaTeX text wrapper"
+    },
+    {
+      "problem_id": "test/prealgebra/105.json",
+      "cell": "random_pp_C2048",
+      "run": 1,
+      "record_sha256": "ee56f37eb918392c31959f824102255c32d9b030b590bfbffe4ab696a732dc84",
+      "category": "grader_false_negative",
+      "review": "correct east; gold includes LaTeX text wrapper"
+    },
+    {
+      "problem_id": "test/intermediate_algebra/207.json",
+      "cell": "recency_pp_C1024",
+      "run": 1,
+      "record_sha256": "a52ea1e69bd1c50cdba3b636c7e6131ebb54fadb835ea91a20bb84ccfc82bc77",
+      "category": "model_error",
+      "review": "genuine model error: dropped constant 1; cyclotomic identity gives -1 not 0"
+    },
+    {
+      "problem_id": "test/prealgebra/105.json",
+      "cell": "recency_pp_C1024",
+      "run": 1,
+      "record_sha256": "66f68e2f6878d1aed6ea43c6f8f8bb5d4c254773ecbd049d16efe5b1cf117e3a",
+      "category": "grader_false_negative",
+      "review": "correct east; gold includes LaTeX text wrapper"
+    },
+    {
+      "problem_id": "test/prealgebra/105.json",
+      "cell": "snapkv_pp_C1024",
+      "run": 0,
+      "record_sha256": "61a5475141a942ba06fe67bd41bab975fb17ee9d6eb1b1babe7b214ec8900359",
+      "category": "grader_false_negative",
+      "review": "correct east; gold includes LaTeX text wrapper"
+    },
+    {
+      "problem_id": "test/prealgebra/105.json",
+      "cell": "snapkv_pp_C1024",
+      "run": 1,
+      "record_sha256": "71fe01d6fc76cd6563da813d318aa3c944abd4e403491fd66f57311005b2c300",
+      "category": "grader_false_negative",
+      "review": "correct east; gold includes LaTeX text wrapper"
+    }
+  ]
+}

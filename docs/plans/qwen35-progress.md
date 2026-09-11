@@ -98,3 +98,19 @@
 - 記録: `qwen35-main32k-progress-020.json`。次の監視は100問完了時。
 - 生成ソースには触れず、CPU-onlyの`audit_progress.py`と事前固定統計用`analyze_main.py`を追加。後者のHolm/strict margin/cluster単位は3 CPU tests passed。
 - 次段階の[遅延参照probe案](qwen35-delayed-retrieval-protocol.md)を保存。factを保護promptではなく生成領域に置く点と、post-attention evictionによる測定時点のずれを明記。
+
+## 2026-09-11 10:27: 主評価100/500問（1000/5000回答）完了
+
+- 保存・EOS・cache counter・batch・ペア対応・frozen source hashの監査通過。生成ソースは開始時のまま。
+- 生成24.017時間、全体の単純外挿は約120時間（5.00日）。現在の完了目安は9月15日午前へ更新。分野/難易度による時間変動は残る。
+- GPU55℃、約254W、使用約10GiB、disk空き2.8TiB。異常なし。次の確認は250問完了時。
+- 記録: `qwen35-main32k-progress-100.json`。
+
+### 採点器の表記差によるfalse negativeを発見
+
+- 1000回答のうち、163回答が32k cap、837回答がEOS。自動採点ではEOS不正解13例。
+- 全13例を確認すると、**12例は数学的には正しい表記の違い**、1例は実際のモデル誤答（5乗根の恒等式で定数1を落としたRecency回答）。
+- 内訳: `east`と`\text{east}`の差9例、問題の要求通りのcomma-separated rootsとgoldの`\pm`表記の差2例、八進数を明示する文脈でboxed内のbase suffixを省略した例1例。根の代入はSymPy、進数と回転は整数演算で独立確認。
+- さらにcapでも最後の`</think>`後に正しいboxがある3例を確認。これは事前固定した主指標では正答だが、EOSを要求する副指標では不正解となる。
+- 記録: `qwen35-main32k-grading-review-100.json`。採点例外・出力破損ではなく、継承したgraderの意味的な限界。生成に影響しないため実行は継続し、途中でgraderやraw scoreを書き換えない。
+- 最終報告では「固定したlegacy graderのスコア」と、全条件に同じ規則で行う別versionの表記差に関する感度分析を区別する。途中で発見した補正を事前登録済みと称したり、都合のよい条件だけ修正したりしない。
