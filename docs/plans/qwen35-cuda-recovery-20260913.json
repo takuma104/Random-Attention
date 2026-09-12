@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "prior_records_checked": 2238,
+  "all_prior_records_unchanged": true,
+  "recovered_problem": "test/number_theory/183.json",
+  "recovered_cell": "snapkv_pp_C1024",
+  "recovered": [
+    {
+      "run": 0,
+      "generated_tokens": 32768,
+      "termination": "length",
+      "record_sha256": "6c0a7a29ebe344d782f7eb833dad3b9a8bc3e85a6fe3049c123dd99a3a1d0c1e"
+    },
+    {
+      "run": 1,
+      "generated_tokens": 32768,
+      "termination": "length",
+      "record_sha256": "e522b8ca82eb5af8da9841d939c13f6abc781274cd7894bef2ba42a4246b6ee0"
+    }
+  ],
+  "resumed_job": "qwen35-main32k-b2-resume1-d641",
+  "note": "Same frozen settings and seeds; successful replay does not establish root cause of the prior CUDA failure."
+}
