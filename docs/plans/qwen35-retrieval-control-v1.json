@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "n_traces": 1,
+  "n_policies": 6,
+  "batch_size": 2,
+  "prompt_length": 65,
+  "fact_span": [
+    65,
+    85
+  ],
+  "value_span": [
+    82,
+    83
+  ],
+  "query_length": 52,
+  "all_non_native_pre_eviction_label_logit_errors": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "conditional_target_probability": 0.9929317235946655,
+  "source_commit": "65662bb55770d326a6055e80bfec2954555e5030",
+  "note": "Short no-eviction control only. Native long-distance calibration pending; duplicate batch rows are not independent cases."
+}

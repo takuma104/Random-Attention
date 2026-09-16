@@ -158,3 +158,11 @@
 - 曖昧なinverse-cotangent branchとregion/volumeの5回答は無理に補正せずlegacy判定を維持。残るEOS不正解10回答は、この5例＋final boxなし3例＋実際の計算誤り2例。
 - 詳細: [感度分析報告](qwen35-grading-sensitivity-report.md)、決定JSON、統計/sidecar JSON。CPU testsは統計と合わせ6件通過。
 - 次は遅延参照probeを別実装・別データで校正し、KV-head選択多様性と古い生成情報の保持を調べる。
+
+## 2026-09-16: 遅延参照probe v1の校正へ
+
+- 別script `run_retrieval_probe.py`と独立データ生成を実装。protected prompt65 tokensの後、生成領域[65,85)へ任意のkey→value factをteacher-forceする。
+- 1問gap0の全6条件で、eviction前の4択label logitsがnativeと完全一致（最大差0.0）。正解条件付き確率0.99293。記録`qwen35-retrieval-control-v1.json`。
+- fact/value span、retentionの測定位置、head共有選択とrow別RNGをCPU testで確認。元MATH生成ソースは変更していない。
+- 校正gateを実行前に固定: calibration用8問、native、gap0/8192/16384でそれぞれ7/8以上の正答。B2の同一trace2rowを独立問題として数えない。
+- 次に長距離native校正を実行し、通過した場合のみ別nonceの確認gridを最終固定する。
