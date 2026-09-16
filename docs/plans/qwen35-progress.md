@@ -183,3 +183,12 @@
 - 2caseだけの精度から優劣は判断せず、事前固定した確認gridを変更しない。
 - 記録: `qwen35-retrieval-posteviction-smoke-v1-analysis.json`。
 - 次: `retrieval_confirm_v1`、別nonce32case×2seeds×6条件×5gap、960 batches。約20時間を見込み、生成ソースを固定して実行する。
+
+## 2026-09-17 05:50: 遅延参照確認完了
+
+- 960 batches、19.125 GPU時間、監査通過。新しいXidなし。
+- native/SnapKVは全5距離で100%。Random1024はgap2048で79.69%、gap8192/16384で25%。Random2048はそれぞれ100/29.69/25%。
+- 主比較Random1024−Random-shared1024（3遠距離gapをcase内平均）は+1.5625pp、95% CI [−1.0417,+4.1667]pp、sign p=.453125。head別選択の優位を確認する事前基準は満たさなかった。
+- head間選択多様性や元value保持率の差は観測したが、accuracy優位を保証しない。SnapKVのlookup上の強さとMATH上の弱さを区別して報告する。
+- 詳細: [遅延参照報告](qwen35-retrieval-confirm-v1-report.md)、`qwen35-retrieval-confirm-v1-analysis.json`。
+- 次は同じ入力token列・batch・論理contextのdecode効率測定。native DynamicCacheに加え、evictionなしpreallocated cacheを対照にしてallocatorの交絡を分ける。
