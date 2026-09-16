@@ -94,6 +94,22 @@ is graded; partial grading can resume without repeating inference. Do not edit
 frozen source mid-run. BF16 batch shape affects rounding and therefore sampled
 trajectories: do not pool B1 pilot scores with B2 main scores.
 
+## Post-hoc grading sensitivity (preserves raw answers)
+
+```bash
+.venv/bin/python scripts/qwen35/prepare_grading_review.py results/qwen35/main32k_b2_v3 \
+  --out work/qwen35/grading_review_v1
+# Record condition-masked decisions BEFORE consulting private_mapping.json.
+.venv/bin/python scripts/qwen35/analyze_grading_review.py results/qwen35/main32k_b2_v3 \
+  --review work/qwen35/grading_review_v1 --decisions docs/plans/qwen35-grading-decisions-v1.json \
+  --out docs/plans/qwen35-main32k-grading-sensitivity.json
+.venv/bin/python -m pytest scripts/qwen35/test_grading_review.py scripts/qwen35/test_statistics.py -q
+```
+
+This is a curated, explicitly post-hoc sensitivity analysis, not a replacement
+universal grader or independent human adjudication. Packets/raw final texts stay
+outside Git; decisions, aggregate reports, and SHA-linked sidecars are tracked.
+
 Per-answer tok/s is a workload diagnostic, not a fixed-workload speed benchmark.
 Native uses DynamicCache, compressed uses preallocated bounded storage; allocator
 and cache-growth costs therefore differ. An iso-kernel/allocator efficiency study

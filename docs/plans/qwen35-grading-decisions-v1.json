@@ -1,0 +1,1011 @@
+{
+  "version": "posthoc-manual-equivalence-v1",
+  "reviewer": "Coding assistant; not an independent human adjudicator.",
+  "packets_sha256": "d4bb8791af26b34b015646615b73e7e0bea48c41610c0ade8dc5f56b69850cb4",
+  "masking": "Condition/run mapping not consulted while recording these decisions. Prior first-100 examples were already exposed and are disclosed.",
+  "scope": "177 selected records grouped into122 problem/boxed packets; includes100 hash-selected accepted records. Exact gold matches assessed mechanically; nonexact pairs reviewed against question/gold, and contextual cases against all masked final-text variants.",
+  "unresolved_policy": "Keep original score unchanged; separately enumerate interpretation ambiguities.",
+  "decisions": [
+    {
+      "case_id": "case_0404434236e8281e",
+      "problem_id": "test/precalculus/1281.json",
+      "new_final_correct": false,
+      "category": "missing_or_empty_final_box",
+      "rationale": "No nonempty final box under the frozen extraction contract. Do not rescue an answer from the thinking trace or other prose.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_04e04953f01569be",
+      "problem_id": "test/prealgebra/846.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_07e6988e843bf51b",
+      "problem_id": "test/algebra/892.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_0920f48348de22c5",
+      "problem_id": "test/geometry/254.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_0927b663b46f724a",
+      "problem_id": "test/number_theory/931.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_0b4345244f01ae96",
+      "problem_id": "test/prealgebra/1558.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_0b788ab71796e7aa",
+      "problem_id": "test/number_theory/132.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_0ed914e0f54caf22",
+      "problem_id": "test/intermediate_algebra/558.json",
+      "new_final_correct": true,
+      "category": "interval_notation",
+      "rationale": "(3,4] is exactly 3 < lambda <= 4; same endpoint inclusion.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_10e67db026dc272c",
+      "problem_id": "test/algebra/2517.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_119bee18c7c70cdb",
+      "problem_id": "test/intermediate_algebra/101.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_16ce5ba23957eccf",
+      "problem_id": "test/prealgebra/1555.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_1bb16d5254c5aab9",
+      "problem_id": "test/number_theory/572.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_1db7931ccf5ceaf7",
+      "problem_id": "test/counting_and_probability/1114.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_1dc4a89e8cecb6b7",
+      "problem_id": "test/prealgebra/1922.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_1f026830c2061bf0",
+      "problem_id": "test/prealgebra/1252.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_20ff80a908ffffc9",
+      "problem_id": "test/intermediate_algebra/1992.json",
+      "new_final_correct": true,
+      "category": "interval_notation",
+      "rationale": "The two strict inequalities describe exactly the stated union of open intervals.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_21304d1342350549",
+      "problem_id": "test/algebra/858.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_21ca3510e244fa9f",
+      "problem_id": "test/algebra/2176.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_2388aba00d430068",
+      "problem_id": "test/counting_and_probability/389.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_26542f4c1b1d6b87",
+      "problem_id": "test/prealgebra/1423.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_280bdf6d418800b8",
+      "problem_id": "test/precalculus/681.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_286b0546ee37a4e5",
+      "problem_id": "test/prealgebra/1865.json",
+      "new_final_correct": true,
+      "category": "ordinal_grade",
+      "rationale": "Twelfth grade denotes grade 12; 11.6/8.6 is the closest listed ratio to 1.35.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_28bee8ce6ab91b7b",
+      "problem_id": "test/algebra/509.json",
+      "new_final_correct": true,
+      "category": "fraction_typesetting",
+      "rationale": "dfrac and frac are the same rational number 13/6.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_29d6a3754b7bf785",
+      "problem_id": "test/counting_and_probability/761.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_2b2bbfce183d35af",
+      "problem_id": "test/intermediate_algebra/1422.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_2c3a86853bcc65f7",
+      "problem_id": "test/precalculus/1202.json",
+      "new_final_correct": false,
+      "category": "missing_or_empty_final_box",
+      "rationale": "No nonempty final box under the frozen extraction contract. Do not rescue an answer from the thinking trace or other prose.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_2df0a607f9a89a0a",
+      "problem_id": "test/number_theory/410.json",
+      "new_final_correct": true,
+      "category": "decimal_notation",
+      "rationale": "Leading zero does not change .35625.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_3197fe55cb07cfec",
+      "problem_id": "test/intermediate_algebra/1467.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_32bd9e6597a9a90d",
+      "problem_id": "test/counting_and_probability/870.json",
+      "new_final_correct": false,
+      "category": "missing_or_empty_final_box",
+      "rationale": "No nonempty final box under the frozen extraction contract. Do not rescue an answer from the thinking trace or other prose.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_341866c7430e5774",
+      "problem_id": "test/number_theory/1172.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_347e9e3acb7c4459",
+      "problem_id": "test/counting_and_probability/737.json",
+      "new_final_correct": true,
+      "category": "thousands_separator",
+      "rationale": "58,500 and 58500 denote the same integer count.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_350f934f7efa0216",
+      "problem_id": "test/precalculus/768.json",
+      "new_final_correct": null,
+      "category": "inverse_cotangent_branch",
+      "rationale": "Four roots are not the given two-root gold. Negative roots depend on the unspecified arccot branch (0,pi) versus (-pi/2,pi/2); leave legacy score unchanged, flag ambiguity.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_361f3f70096ce186",
+      "problem_id": "test/precalculus/768.json",
+      "new_final_correct": null,
+      "category": "inverse_cotangent_branch",
+      "rationale": "Same four-root set and branch ambiguity; do not silently accept extra roots or label them unconditionally mathematically wrong.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_3ae33dfefd2b2ce4",
+      "problem_id": "test/algebra/2058.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_3ba1ed2462be243c",
+      "problem_id": "test/number_theory/864.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_3c36c2ddac0ce530",
+      "problem_id": "test/number_theory/516.json",
+      "new_final_correct": true,
+      "category": "contextual_base_suffix",
+      "rationale": "Question requests base eight; final text explicitly says 2516_8. int(binary10101001110,2)==int(2516,8).",
+      "reviewed_final_text_variants": [
+        "b59b35e0c2be6da360b7"
+      ]
+    },
+    {
+      "case_id": "case_40bfde71e92b274f",
+      "problem_id": "test/algebra/873.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_42c77125e59f7486",
+      "problem_id": "test/intermediate_algebra/1354.json",
+      "new_final_correct": true,
+      "category": "exact_decimal",
+      "rationale": "998.5 equals 1997/2 exactly.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_43f8cfafeabff9d8",
+      "problem_id": "test/intermediate_algebra/1566.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_452ae0a9be506af2",
+      "problem_id": "test/algebra/297.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_45a5f2e579fd3c7f",
+      "problem_id": "test/geometry/347.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_464417699d874ce3",
+      "problem_id": "test/number_theory/89.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_47a5a530eeeebd3e",
+      "problem_id": "test/geometry/1140.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_48a9013f0cc01cab",
+      "problem_id": "test/prealgebra/1995.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_498697cdcf9481d2",
+      "problem_id": "test/intermediate_algebra/1217.json",
+      "new_final_correct": false,
+      "category": "placeholder_box",
+      "rationale": "The literal word expression is not the requested polynomial quotient.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_4d6d2c3045ffdddd",
+      "problem_id": "test/algebra/101.json",
+      "new_final_correct": true,
+      "category": "interval_notation",
+      "rationale": "Question requests interval notation. [-2,7] is the set represented by x in [-2,7].",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_4da65a65ab26c2e2",
+      "problem_id": "test/precalculus/499.json",
+      "new_final_correct": true,
+      "category": "whitespace",
+      "rationale": "Same ordered interval and endpoints, only whitespace differs.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_51977bf028b56000",
+      "problem_id": "test/prealgebra/1761.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5519246e55a82cee",
+      "problem_id": "test/number_theory/483.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5725b4fc63303e71",
+      "problem_id": "test/intermediate_algebra/431.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5a88e46ac4af47c7",
+      "problem_id": "test/intermediate_algebra/1217.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5b102f2e04958f55",
+      "problem_id": "test/intermediate_algebra/662.json",
+      "new_final_correct": true,
+      "category": "two_root_expansion",
+      "rationale": "Question explicitly requests comma-separated real roots. Both 1-sqrt(19) and 1+sqrt(19) satisfy the original rational equation exactly (SymPy checked).",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5bc1e84de9a9be21",
+      "problem_id": "test/geometry/947.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5e141ab4aaa9cdfd",
+      "problem_id": "test/prealgebra/993.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5f0ad79ccd33f7e3",
+      "problem_id": "test/prealgebra/1233.json",
+      "new_final_correct": true,
+      "category": "requested_percent",
+      "rationale": "Question asks by what percent; 10 percent is the intended answer, not an unconditional rule removing percent signs.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_627bb6a85639521e",
+      "problem_id": "test/geometry/473.json",
+      "new_final_correct": true,
+      "category": "contextual_units",
+      "rationale": "Question specifies square inches; all eight masked text variants state 864 square inches. 6*12^2=864.",
+      "reviewed_final_text_variants": [
+        "05b81a654cabb5b9ae1e",
+        "258a325fcecd75bb64e8",
+        "34f801a2ee8b7606472e",
+        "4afc76ac3c675b93994e",
+        "5efb4937365db88f2f1a",
+        "b204ec90d7be741f8e2f",
+        "c8cad5a88910a5c581b3",
+        "f8f22c595b820084911a"
+      ]
+    },
+    {
+      "case_id": "case_6499cb2460e3bb10",
+      "problem_id": "test/intermediate_algebra/134.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_686df543de3de68b",
+      "problem_id": "test/intermediate_algebra/1126.json",
+      "new_final_correct": false,
+      "category": "arithmetic_error",
+      "rationale": "Center(-3,2), a=12,c=13,b=5, hence h+k+a+b=16, not18.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_68c5262396ef6a85",
+      "problem_id": "test/prealgebra/1747.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_69b335b5f146ef68",
+      "problem_id": "test/algebra/1934.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_6b0fd05278c3c6a1",
+      "problem_id": "test/precalculus/807.json",
+      "new_final_correct": true,
+      "category": "delimiter_typesetting",
+      "rationale": "Same ordered polar pair; left/right LaTeX delimiters are only typography.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_6ebf07df5cb9caa6",
+      "problem_id": "test/intermediate_algebra/1992.json",
+      "new_final_correct": true,
+      "category": "whitespace",
+      "rationale": "Same union of open intervals, only spaces differ.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_700ef9c23e625a96",
+      "problem_id": "test/algebra/668.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_7310ff4d1d9f36dd",
+      "problem_id": "test/algebra/2476.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_78c99c5b22421b9b",
+      "problem_id": "test/precalculus/1056.json",
+      "new_final_correct": null,
+      "category": "region_vs_volume_wording",
+      "rationale": "Box describes the correct radius6 ball, not scalar gold288pi. Question says region of the volume enclosed; final text follows the region reading. Not a formatting-only equivalence; retain legacy score and flag wording ambiguity.",
+      "reviewed_final_text_variants": [
+        "ac82062ce9137f365591"
+      ]
+    },
+    {
+      "case_id": "case_80cbb1b4500c33f0",
+      "problem_id": "test/intermediate_algebra/662.json",
+      "new_final_correct": false,
+      "category": "missing_or_empty_final_box",
+      "rationale": "No nonempty final box under the frozen extraction contract. Do not rescue an answer from the thinking trace or other prose.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_82ce8a84e55064ef",
+      "problem_id": "test/prealgebra/1227.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_865fd4c140565462",
+      "problem_id": "test/precalculus/768.json",
+      "new_final_correct": null,
+      "category": "inverse_cotangent_branch",
+      "rationale": "Same four-root set and unspecified arccot branch; unchanged legacy score.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_887a17e1e7d4f92f",
+      "problem_id": "test/prealgebra/1840.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_8ddf7e8fa43c44c7",
+      "problem_id": "test/algebra/2214.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_90a0ae4fdf0a844e",
+      "problem_id": "test/intermediate_algebra/337.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_90af89c262bb9961",
+      "problem_id": "test/precalculus/920.json",
+      "new_final_correct": false,
+      "category": "missing_or_empty_final_box",
+      "rationale": "No nonempty final box under the frozen extraction contract. Do not rescue an answer from the thinking trace or other prose.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_915e1851fcd9e555",
+      "problem_id": "test/algebra/2257.json",
+      "new_final_correct": true,
+      "category": "fraction_typesetting",
+      "rationale": "frac9{19} and frac{9}{19} are the same fraction.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_94f085be33880dc4",
+      "problem_id": "test/counting_and_probability/116.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_9743c02686084a85",
+      "problem_id": "test/prealgebra/1961.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_993ae3ca04e31258",
+      "problem_id": "test/prealgebra/1114.json",
+      "new_final_correct": true,
+      "category": "contextual_units",
+      "rationale": "Diagram dimensions are cm; all nine masked text variants state square centimeters. Triangle area .5*10*3=15.",
+      "reviewed_final_text_variants": [
+        "21418a6e8b08c772b54b",
+        "44b07b0ba6f3d4b3ed8c",
+        "48cce0077e5e6caacba6",
+        "4f5d3fb1773e3f9f92cd",
+        "50bc8639995631a24513",
+        "76d5c406c9b9817c3210",
+        "a6aedf0cb3e79221787a",
+        "b7955f782f6757b5ddb1",
+        "ee089c10d1b2e8870d56"
+      ]
+    },
+    {
+      "case_id": "case_9a7f1a79691c3cc8",
+      "problem_id": "test/geometry/456.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_9b2bfbd8be4805bb",
+      "problem_id": "test/prealgebra/930.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_a50be0bf70863609",
+      "problem_id": "test/algebra/975.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_a5bbd181ac3d91f2",
+      "problem_id": "test/geometry/477.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_a5ea63e1864d7145",
+      "problem_id": "test/number_theory/234.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_aab3395d38539a74",
+      "problem_id": "test/geometry/73.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ab986cf6a8439a24",
+      "problem_id": "test/number_theory/753.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_abd0072a05660900",
+      "problem_id": "test/prealgebra/1991.json",
+      "new_final_correct": true,
+      "category": "text_wrapper",
+      "rationale": "Same proper name Navin with/without text wrapper.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_b29158eb7ed7bb2f",
+      "problem_id": "test/counting_and_probability/25149.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_b4f773da0e7da135",
+      "problem_id": "test/algebra/1199.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_b6096529425d0ef1",
+      "problem_id": "test/intermediate_algebra/754.json",
+      "new_final_correct": true,
+      "category": "option_label",
+      "rationale": "B names exactly option(B); option-letter parentheses and text wrapper are typography.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_bade9c24005902b5",
+      "problem_id": "test/number_theory/838.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_c2bdd770c238667c",
+      "problem_id": "test/intermediate_algebra/2046.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_c374ce8ad015e10c",
+      "problem_id": "test/precalculus/1056.json",
+      "new_final_correct": null,
+      "category": "region_vs_volume_wording",
+      "rationale": "Same correct ball but not scalar volume gold; wording ambiguity, not a formatting-only correction.",
+      "reviewed_final_text_variants": [
+        "8b9280a9164cbe897442"
+      ]
+    },
+    {
+      "case_id": "case_c3a40746cea76376",
+      "problem_id": "test/intermediate_algebra/158.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_c46f9f7b8c5f43b6",
+      "problem_id": "test/number_theory/634.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_c57ef67ab294cf5c",
+      "problem_id": "test/prealgebra/1742.json",
+      "new_final_correct": false,
+      "category": "missing_or_empty_final_box",
+      "rationale": "No nonempty final box under the frozen extraction contract. Do not rescue an answer from the thinking trace or other prose.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ca5fe8fde6f7f950",
+      "problem_id": "test/number_theory/13.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_cb880268d5b48469",
+      "problem_id": "test/precalculus/285.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_cdae5d8d23f68d9d",
+      "problem_id": "test/algebra/2593.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ce1eed11c4da50d4",
+      "problem_id": "test/number_theory/1201.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_cea4e8004fe0faf4",
+      "problem_id": "test/prealgebra/1297.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_d0d6644ef8a050a7",
+      "problem_id": "test/prealgebra/105.json",
+      "new_final_correct": true,
+      "category": "text_wrapper",
+      "rationale": "Same east with/without text wrapper; 2250 mod360=90 clockwise from north.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_d1c098056855bffa",
+      "problem_id": "test/number_theory/459.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_d5f1b509b776ecba",
+      "problem_id": "test/intermediate_algebra/207.json",
+      "new_final_correct": false,
+      "category": "algebra_error",
+      "rationale": "Dividing 1+z+z^2+z^3+z^4=0 by z^2 gives requested sum=-1; zero drops the constant1.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_d6769d2cbccc8634",
+      "problem_id": "test/intermediate_algebra/754.json",
+      "new_final_correct": true,
+      "category": "option_label",
+      "rationale": "Bold(B) and text(B) name the identical option.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_de34f2b1478e8837",
+      "problem_id": "test/counting_and_probability/913.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_e039e4462184b688",
+      "problem_id": "test/prealgebra/1865.json",
+      "new_final_correct": true,
+      "category": "ordinal_grade",
+      "rationale": "12th grade and12 denote the same requested grade.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_e3fedfb91ca85715",
+      "problem_id": "test/precalculus/1291.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ebc02d5cec9d8c1a",
+      "problem_id": "test/algebra/841.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ee3d39d342b74691",
+      "problem_id": "test/precalculus/681.json",
+      "new_final_correct": false,
+      "category": "missing_or_empty_final_box",
+      "rationale": "No nonempty final box under the frozen extraction contract. Do not rescue an answer from the thinking trace or other prose.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ef516699712abe28",
+      "problem_id": "test/intermediate_algebra/207.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ef59cd33da79a6c7",
+      "problem_id": "test/intermediate_algebra/1981.json",
+      "new_final_correct": true,
+      "category": "whitespace",
+      "rationale": "Same union of open intervals; spaces do not change endpoints.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f091353b1032d832",
+      "problem_id": "test/number_theory/109.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f0fcd84cd0d23b72",
+      "problem_id": "test/precalculus/452.json",
+      "new_final_correct": true,
+      "category": "option_label",
+      "rationale": "E names option(E); x^2-y^2=4 is a hyperbola.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f1fe170ce2b7282a",
+      "problem_id": "test/algebra/2080.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f5e36911b132da42",
+      "problem_id": "test/algebra/1031.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f602345d7695bd7b",
+      "problem_id": "test/prealgebra/1272.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f68b7305518cd881",
+      "problem_id": "test/number_theory/22.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f7ec8a7f59b7b96b",
+      "problem_id": "test/intermediate_algebra/1014.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_fa0cb84a2d08e708",
+      "problem_id": "test/counting_and_probability/803.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_fa4503e81c033c03",
+      "problem_id": "test/precalculus/920.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_fce898801b0b77f2",
+      "problem_id": "test/precalculus/742.json",
+      "new_final_correct": true,
+      "category": "exact_decimal",
+      "rationale": "0.09 equals9/100 exactly.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_fd75d9c41c5e79db",
+      "problem_id": "test/prealgebra/1865.json",
+      "new_final_correct": true,
+      "category": "ordinal_grade",
+      "rationale": "12th grade denotes the requested grade12; ordinal typography does not change it.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_fd7e0e8bfa669139",
+      "problem_id": "test/intermediate_algebra/776.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_fe65c79cb0654793",
+      "problem_id": "test/algebra/1143.json",
+      "new_final_correct": true,
+      "category": "exact_gold_match",
+      "rationale": "Extracted final box matches supplied gold exactly (outer whitespace ignored); no independent claim validating the dataset gold itself.",
+      "reviewed_final_text_variants": []
+    }
+  ]
+}

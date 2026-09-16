@@ -149,3 +149,12 @@
 - Random1024はRecency比+3.2pp / SnapKV比+3.0pp。対応付きCIはそれぞれ[1.6,4.8]/[1.5,4.6]pp、事前固定した2比較Holm補正sign testも通過。
 - 詳細: [主評価報告](qwen35-main32k-report.md)、`qwen35-main32k-analysis.json`、`qwen35-main32k-progress-500.json`。
 - この数値には既知のgrader表記差問題がある。元スコアを保ち、全条件に同じ規則を適用する別versionの感度分析を次に実施する。
+
+## 2026-09-16: 採点感度分析v1完了
+
+- 全EOS不正解等と固定hashの自動正答100例、合計177回答を122個のcondition-masked packetsへまとめ、判断を保存してからmappingを戻した。過去の100問で見た例の非blind性と、AI-assisted reviewである点を開示。
+- 表記差のfalse negative56回答をsidecarで補正。自動正答sample100例にfalse positiveは見つからなかった。元の5000回答・主スコアは不変、aggregate SHAも一致。
+- 補正後: native94.7%、Random1024 72.4%、Random2048 82.4%、Recency69.3%、SnapKV69.4%。Random2048−nativeは−12.3pp、95% CI [−14.8,−9.8]pp。C1024 selector差は+3.1pp/+3.0ppで、主結論は変わらない。
+- 曖昧なinverse-cotangent branchとregion/volumeの5回答は無理に補正せずlegacy判定を維持。残るEOS不正解10回答は、この5例＋final boxなし3例＋実際の計算誤り2例。
+- 詳細: [感度分析報告](qwen35-grading-sensitivity-report.md)、決定JSON、統計/sidecar JSON。CPU testsは統計と合わせ6件通過。
+- 次は遅延参照probeを別実装・別データで校正し、KV-head選択多様性と古い生成情報の保持を調べる。
