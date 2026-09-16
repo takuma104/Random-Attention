@@ -110,6 +110,21 @@ This is a curated, explicitly post-hoc sensitivity analysis, not a replacement
 universal grader or independent human adjudication. Packets/raw final texts stay
 outside Git; decisions, aggregate reports, and SHA-linked sidecars are tracked.
 
+## Fixed decode efficiency with cache-implementation controls
+
+```bash
+.venv/bin/python scripts/qwen35/benchmark_decode.py --out results/qwen35/efficiency_v1
+.venv/bin/python scripts/qwen35/analyze_efficiency.py results/qwen35/efficiency_v1 \
+  --out docs/plans/qwen35-efficiency-v1-analysis.json
+```
+
+Defaults: B1/2/8, logical contexts8192/16384/32768, six methods including
+DynamicCache and a no-eviction preallocated adapter. Window-end full-vocabulary
+logits of both no-eviction implementations must match exactly. Model+LM-head
+throughput and per-step-barrier timing are separate; neither includes sampling
+or a serving scheduler. Preallocation includes adapter position bookkeeping,
+not just a different allocator. See `docs/plans/qwen35-efficiency-protocol.md`.
+
 Per-answer tok/s is a workload diagnostic, not a fixed-workload speed benchmark.
 Native uses DynamicCache, compressed uses preallocated bounded storage; allocator
 and cache-growth costs therefore differ. An iso-kernel/allocator efficiency study

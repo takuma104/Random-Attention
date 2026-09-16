@@ -1,0 +1,3817 @@
+{
+  "audit": "passed",
+  "input_path": "results/qwen35/efficiency_smoke_v1",
+  "manifest_commit": "eb997bbc451efabf9009de00dad3317d1289c6b4",
+  "completed_data_sha256": "f4f821fa89cff604dfc04b3836ad89490e111935c541974f157345bf3be26384",
+  "input_token_sha256": "ecc106b7fc9e94abda8fa1b4332ce7cf99b058e17a5a6d44ec0a21bc592201d8",
+  "n_cells": 18,
+  "n_windows": 72,
+  "total_run_wall_hours": 0.06997260833424257,
+  "summaries": [
+    {
+      "batch": 1,
+      "method": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 82.31008363157599,
+        "minimum": 82.31008363157599,
+        "maximum": 82.31008363157599,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.149179734478821,
+        "minimum": 12.149179734478821,
+        "maximum": 12.149179734478821,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.524592399597168,
+      "peak_reserved_gib": 8.541015625,
+      "kv_backing_mib_per_sequence": 10.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 77.24490844997952,
+        "minimum": 77.24490844997952,
+        "maximum": 77.24490844997952,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.945837079314515,
+        "minimum": 12.945837079314515,
+        "maximum": 12.945837079314515,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.526545524597168,
+      "peak_reserved_gib": 8.546875,
+      "kv_backing_mib_per_sequence": 12.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 83.82559894012701,
+        "minimum": 83.82559894012701,
+        "maximum": 83.82559894012701,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 11.929530031920876,
+        "minimum": 11.929530031920876,
+        "maximum": 11.929530031920876,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.549824237823486,
+      "peak_reserved_gib": 8.587890625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 77.96268961627091,
+        "minimum": 77.96268961627091,
+        "maximum": 77.96268961627091,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.82664829705027,
+        "minimum": 12.82664829705027,
+        "maximum": 12.82664829705027,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.551138401031494,
+      "peak_reserved_gib": 8.587890625,
+      "kv_backing_mib_per_sequence": 36.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 78.50549713946694,
+        "minimum": 78.50549713946694,
+        "maximum": 78.50549713946694,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.737961498714867,
+        "minimum": 12.737961498714867,
+        "maximum": 12.737961498714867,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.552962303161621,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 73.72282066941122,
+        "minimum": 73.72282066941122,
+        "maximum": 73.72282066941122,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.564320937803132,
+        "minimum": 13.564320937803132,
+        "maximum": 13.564320937803132,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.552962303161621,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 81.82663615421802,
+        "minimum": 81.82663615421802,
+        "maximum": 81.82663615421802,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.220959421028965,
+        "minimum": 12.220959421028965,
+        "maximum": 12.220959421028965,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.552962303161621,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 76.5040138625093,
+        "minimum": 76.5040138625093,
+        "maximum": 76.5040138625093,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.07120959427266,
+        "minimum": 13.07120959427266,
+        "maximum": 13.07120959427266,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.552962303161621,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 81.29091868669965,
+        "minimum": 81.29091868669965,
+        "maximum": 81.29091868669965,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.30149709408579,
+        "minimum": 12.30149709408579,
+        "maximum": 12.30149709408579,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.547926902770996,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 76.49649870844553,
+        "minimum": 76.49649870844553,
+        "maximum": 76.49649870844553,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.072493733488955,
+        "minimum": 13.072493733488955,
+        "maximum": 13.072493733488955,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.547926902770996,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 76.78343563984187,
+        "minimum": 76.78343563984187,
+        "maximum": 76.78343563984187,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.023642295593163,
+        "minimum": 13.023642295593163,
+        "maximum": 13.023642295593163,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.549903869628906,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 76.2425255115492,
+        "minimum": 76.2425255115492,
+        "maximum": 76.2425255115492,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.116039812302915,
+        "minimum": 13.116039812302915,
+        "maximum": 13.116039812302915,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.549903869628906,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 79.13748724376217,
+        "minimum": 79.13748724376217,
+        "maximum": 79.13748724376217,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.636236438993365,
+        "minimum": 12.636236438993365,
+        "maximum": 12.636236438993365,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.579543113708496,
+      "peak_reserved_gib": 8.611328125,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 75.2975443915382,
+        "minimum": 75.2975443915382,
+        "maximum": 75.2975443915382,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.280645578561234,
+        "minimum": 13.280645578561234,
+        "maximum": 13.280645578561234,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.579543113708496,
+      "peak_reserved_gib": 8.611328125,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 82.25756683024568,
+        "minimum": 82.25756683024568,
+        "maximum": 82.25756683024568,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.156936298197252,
+        "minimum": 12.156936298197252,
+        "maximum": 12.156936298197252,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.579543113708496,
+      "peak_reserved_gib": 8.611328125,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 77.03896677902974,
+        "minimum": 77.03896677902974,
+        "maximum": 77.03896677902974,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.980444076674758,
+        "minimum": 12.980444076674758,
+        "maximum": 12.980444076674758,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.579543113708496,
+      "peak_reserved_gib": 8.611328125,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 81.52036229545314,
+        "minimum": 81.52036229545314,
+        "maximum": 81.52036229545314,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.266873844055226,
+        "minimum": 12.266873844055226,
+        "maximum": 12.266873844055226,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.547926902770996,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 76.56765960601221,
+        "minimum": 76.56765960601221,
+        "maximum": 76.56765960601221,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.06034434310277,
+        "minimum": 13.06034434310277,
+        "maximum": 13.06034434310277,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.547926902770996,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 81.84724055959838,
+        "minimum": 81.84724055959838,
+        "maximum": 81.84724055959838,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.217882889672183,
+        "minimum": 12.217882889672183,
+        "maximum": 12.217882889672183,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.549903869628906,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 76.81936386051277,
+        "minimum": 76.81936386051277,
+        "maximum": 76.81936386051277,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.017551171287778,
+        "minimum": 13.017551171287778,
+        "maximum": 13.017551171287778,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.549903869628906,
+      "peak_reserved_gib": 8.572265625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 78.56614737575809,
+        "minimum": 78.56614737575809,
+        "maximum": 78.56614737575809,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.72812825118308,
+        "minimum": 12.72812825118308,
+        "maximum": 12.72812825118308,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.551833152770996,
+      "peak_reserved_gib": 8.576171875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 73.90024675436727,
+        "minimum": 73.90024675436727,
+        "maximum": 73.90024675436727,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.531754546420416,
+        "minimum": 13.531754546420416,
+        "maximum": 13.531754546420416,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.551833152770996,
+      "peak_reserved_gib": 8.576171875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 77.13763135037611,
+        "minimum": 77.13763135037611,
+        "maximum": 77.13763135037611,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.963841156306444,
+        "minimum": 12.963841156306444,
+        "maximum": 12.963841156306444,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.574227809906006,
+      "peak_reserved_gib": 8.591796875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 73.80184044107361,
+        "minimum": 73.80184044107361,
+        "maximum": 73.80184044107361,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.549797593441326,
+        "minimum": 13.549797593441326,
+        "maximum": 13.549797593441326,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.574227809906006,
+      "peak_reserved_gib": 8.591796875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 157.6522730760694,
+        "minimum": 157.6522730760694,
+        "maximum": 157.6522730760694,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.68614756372699,
+        "minimum": 12.68614756372699,
+        "maximum": 12.68614756372699,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.588030815124512,
+      "peak_reserved_gib": 8.62890625,
+      "kv_backing_mib_per_sequence": 10.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 148.74753927055477,
+        "minimum": 148.74753927055477,
+        "maximum": 148.74753927055477,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.445600578052108,
+        "minimum": 13.445600578052108,
+        "maximum": 13.445600578052108,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.588973045349121,
+      "peak_reserved_gib": 8.62890625,
+      "kv_backing_mib_per_sequence": 12.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 158.81201229247498,
+        "minimum": 158.81201229247498,
+        "maximum": 158.81201229247498,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.593505813129013,
+        "minimum": 12.593505813129013,
+        "maximum": 12.593505813129013,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.631237506866455,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 149.6809797966325,
+        "minimum": 149.6809797966325,
+        "maximum": 149.6809797966325,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.36175112373894,
+        "minimum": 13.36175112373894,
+        "maximum": 13.36175112373894,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.635387897491455,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 36.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 149.7567637243713,
+        "minimum": 149.7567637243713,
+        "maximum": 149.7567637243713,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.3549894526368,
+        "minimum": 13.3549894526368,
+        "maximum": 13.3549894526368,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.639582633972168,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 147.0513030355611,
+        "minimum": 147.0513030355611,
+        "maximum": 147.0513030355611,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.600695530840312,
+        "minimum": 13.600695530840312,
+        "maximum": 13.600695530840312,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.639582633972168,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 155.97878426733226,
+        "minimum": 155.97878426733226,
+        "maximum": 155.97878426733226,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.822256625440787,
+        "minimum": 12.822256625440787,
+        "maximum": 12.822256625440787,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.639582633972168,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 146.67000174884953,
+        "minimum": 146.67000174884953,
+        "maximum": 146.67000174884953,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.636053563459427,
+        "minimum": 13.636053563459427,
+        "maximum": 13.636053563459427,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.639582633972168,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 149.35753237920474,
+        "minimum": 149.35753237920474,
+        "maximum": 149.35753237920474,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.390687219725805,
+        "minimum": 13.390687219725805,
+        "maximum": 13.390687219725805,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.631709098815918,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 141.21677822716123,
+        "minimum": 141.21677822716123,
+        "maximum": 141.21677822716123,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 14.162623061565682,
+        "minimum": 14.162623061565682,
+        "maximum": 14.162623061565682,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.631709098815918,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 156.07650777973942,
+        "minimum": 156.07650777973942,
+        "maximum": 156.07650777973942,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.814228281058604,
+        "minimum": 12.814228281058604,
+        "maximum": 12.814228281058604,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.635664939880371,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 146.6981401028104,
+        "minimum": 146.6981401028104,
+        "maximum": 146.6981401028104,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.633438014949206,
+        "minimum": 13.633438014949206,
+        "maximum": 13.633438014949206,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.635664939880371,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 151.3216359108777,
+        "minimum": 151.3216359108777,
+        "maximum": 151.3216359108777,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.216880639447481,
+        "minimum": 13.216880639447481,
+        "maximum": 13.216880639447481,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.694697380065918,
+      "peak_reserved_gib": 8.74609375,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 146.22835282160668,
+        "minimum": 146.22835282160668,
+        "maximum": 146.22835282160668,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.677238110176404,
+        "minimum": 13.677238110176404,
+        "maximum": 13.677238110176404,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.694697380065918,
+      "peak_reserved_gib": 8.74609375,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 157.34691001249374,
+        "minimum": 157.34691001249374,
+        "maximum": 157.34691001249374,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.71076756347611,
+        "minimum": 12.71076756347611,
+        "maximum": 12.71076756347611,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.694697380065918,
+      "peak_reserved_gib": 8.74609375,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 147.96217800741033,
+        "minimum": 147.96217800741033,
+        "maximum": 147.96217800741033,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.516967828763882,
+        "minimum": 13.516967828763882,
+        "maximum": 13.516967828763882,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.694697380065918,
+      "peak_reserved_gib": 8.74609375,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 156.12798937368274,
+        "minimum": 156.12798937368274,
+        "maximum": 156.12798937368274,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.810002921469277,
+        "minimum": 12.810002921469277,
+        "maximum": 12.810002921469277,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.631709098815918,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 146.9976037010227,
+        "minimum": 146.9976037010227,
+        "maximum": 146.9976037010227,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.605663967609871,
+        "minimum": 13.605663967609871,
+        "maximum": 13.605663967609871,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.631709098815918,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 156.3416171064858,
+        "minimum": 156.3416171064858,
+        "maximum": 156.3416171064858,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.792499124770984,
+        "minimum": 12.792499124770984,
+        "maximum": 12.792499124770984,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.635664939880371,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 147.34815034376302,
+        "minimum": 147.34815034376302,
+        "maximum": 147.34815034376302,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.573295595051604,
+        "minimum": 13.573295595051604,
+        "maximum": 13.573295595051604,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.635664939880371,
+      "peak_reserved_gib": 8.6875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 144.08370427479633,
+        "minimum": 144.08370427479633,
+        "maximum": 144.08370427479633,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.880820250051329,
+        "minimum": 13.880820250051329,
+        "maximum": 13.880820250051329,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.639521598815918,
+      "peak_reserved_gib": 8.697265625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 136.49077980059892,
+        "minimum": 136.49077980059892,
+        "maximum": 136.49077980059892,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 14.653004422143567,
+        "minimum": 14.653004422143567,
+        "maximum": 14.653004422143567,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.639521598815918,
+      "peak_reserved_gib": 8.697265625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 150.57185361986083,
+        "minimum": 150.57185361986083,
+        "maximum": 150.57185361986083,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.282694952067686,
+        "minimum": 13.282694952067686,
+        "maximum": 13.282694952067686,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.684542179107666,
+      "peak_reserved_gib": 8.728515625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 141.9005870472193,
+        "minimum": 141.9005870472193,
+        "maximum": 141.9005870472193,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 14.094374389969744,
+        "minimum": 14.094374389969744,
+        "maximum": 14.094374389969744,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.684542179107666,
+      "peak_reserved_gib": 8.728515625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 644.3854627606155,
+        "minimum": 644.3854627606155,
+        "maximum": 644.3854627606155,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.41492935878341,
+        "minimum": 12.41492935878341,
+        "maximum": 12.41492935878341,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.9501314163208,
+      "peak_reserved_gib": 9.009765625,
+      "kv_backing_mib_per_sequence": 10.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 602.081509336309,
+        "minimum": 602.081509336309,
+        "maximum": 602.081509336309,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.28723748520133,
+        "minimum": 13.28723748520133,
+        "maximum": 13.28723748520133,
+        "n": 1
+      },
+      "peak_allocated_gib": 8.963772773742676,
+      "peak_reserved_gib": 9.041015625,
+      "kv_backing_mib_per_sequence": 12.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 644.5621821390072,
+        "minimum": 644.5621821390072,
+        "maximum": 644.5621821390072,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.4115255621291,
+        "minimum": 12.4115255621291,
+        "maximum": 12.4115255621291,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.146859645843506,
+      "peak_reserved_gib": 9.42578125,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 603.3918399440734,
+        "minimum": 603.3918399440734,
+        "maximum": 603.3918399440734,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.258382812637137,
+        "minimum": 13.258382812637137,
+        "maximum": 13.258382812637137,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.152734279632568,
+      "peak_reserved_gib": 9.42578125,
+      "kv_backing_mib_per_sequence": 36.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 631.411345592442,
+        "minimum": 631.411345592442,
+        "maximum": 631.411345592442,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.670028905631625,
+        "minimum": 12.670028905631625,
+        "maximum": 12.670028905631625,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.1848726272583,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 592.895582846673,
+        "minimum": 592.895582846673,
+        "maximum": 592.895582846673,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.493101030690013,
+        "minimum": 13.493101030690013,
+        "maximum": 13.493101030690013,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.1848726272583,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 628.8385349114609,
+        "minimum": 628.8385349114609,
+        "maximum": 628.8385349114609,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.721866673018667,
+        "minimum": 12.721866673018667,
+        "maximum": 12.721866673018667,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.1848726272583,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 592.7748955262311,
+        "minimum": 592.7748955262311,
+        "maximum": 592.7748955262311,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.495848188540549,
+        "minimum": 13.495848188540549,
+        "maximum": 13.495848188540549,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.1848726272583,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 38.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 632.297372378729,
+        "minimum": 632.297372378729,
+        "maximum": 632.297372378729,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.652274624997517,
+        "minimum": 12.652274624997517,
+        "maximum": 12.652274624997517,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.1377534866333,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 593.6884528316687,
+        "minimum": 593.6884528316687,
+        "maximum": 593.6884528316687,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.47508101571293,
+        "minimum": 13.47508101571293,
+        "maximum": 13.47508101571293,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.1377534866333,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 628.9449079394773,
+        "minimum": 628.9449079394773,
+        "maximum": 628.9449079394773,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.719715032289969,
+        "minimum": 12.719715032289969,
+        "maximum": 12.719715032289969,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.153581619262695,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 592.9910805808314,
+        "minimum": 592.9910805808314,
+        "maximum": 592.9910805808314,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.490928045939654,
+        "minimum": 13.490928045939654,
+        "maximum": 13.490928045939654,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.153581619262695,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 631.2753470327536,
+        "minimum": 631.2753470327536,
+        "maximum": 631.2753470327536,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.67275846839766,
+        "minimum": 12.67275846839766,
+        "maximum": 12.67275846839766,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.4053316116333,
+      "peak_reserved_gib": 9.576171875,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 592.7930670902812,
+        "minimum": 592.7930670902812,
+        "maximum": 592.7930670902812,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.495434484866564,
+        "minimum": 13.495434484866564,
+        "maximum": 13.495434484866564,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.4053316116333,
+      "peak_reserved_gib": 9.576171875,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 633.8694413510788,
+        "minimum": 633.8694413510788,
+        "maximum": 633.8694413510788,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.620895531654241,
+        "minimum": 12.620895531654241,
+        "maximum": 12.620895531654241,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.4053316116333,
+      "peak_reserved_gib": 9.576171875,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 596.0851520997862,
+        "minimum": 596.0851520997862,
+        "maximum": 596.0851520997862,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.42090131220175,
+        "minimum": 13.42090131220175,
+        "maximum": 13.42090131220175,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.4053316116333,
+      "peak_reserved_gib": 9.576171875,
+      "kv_backing_mib_per_sequence": 66.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 610.1492262298989,
+        "minimum": 610.1492262298989,
+        "maximum": 610.1492262298989,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.111546579239075,
+        "minimum": 13.111546579239075,
+        "maximum": 13.111546579239075,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.1377534866333,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 574.7713963937488,
+        "minimum": 574.7713963937488,
+        "maximum": 574.7713963937488,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.91857710768818,
+        "minimum": 13.91857710768818,
+        "maximum": 13.91857710768818,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.1377534866333,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 633.4167963480227,
+        "minimum": 633.4167963480227,
+        "maximum": 633.4167963480227,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 12.629914530407405,
+        "minimum": 12.629914530407405,
+        "maximum": 12.629914530407405,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.153581619262695,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 595.3796716474466,
+        "minimum": 595.3796716474466,
+        "maximum": 595.3796716474466,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.436804078082787,
+        "minimum": 13.436804078082787,
+        "maximum": 13.436804078082787,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.153581619262695,
+      "peak_reserved_gib": 9.259765625,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          256,
+          320
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 609.9379639259417,
+        "minimum": 609.9379639259417,
+        "maximum": 609.9379639259417,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.11608798459929,
+        "minimum": 13.11608798459929,
+        "maximum": 13.11608798459929,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.1690034866333,
+      "peak_reserved_gib": 9.279296875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          320,
+          384
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 574.2622666839734,
+        "minimum": 574.2622666839734,
+        "maximum": 574.2622666839734,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.930917046309332,
+        "minimum": 13.930917046309332,
+        "maximum": 13.930917046309332,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.1690034866333,
+      "peak_reserved_gib": 9.279296875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "logical_windows": [
+        [
+          1024,
+          1088
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 607.6860209214772,
+        "minimum": 607.6860209214772,
+        "maximum": 607.6860209214772,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.164693154976703,
+        "minimum": 13.164693154976703,
+        "maximum": 13.164693154976703,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.3481764793396,
+      "peak_reserved_gib": 9.466796875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "logical_windows": [
+        [
+          1088,
+          1152
+        ]
+      ],
+      "tokens_per_second": {
+        "median": 571.7290578290176,
+        "minimum": 571.7290578290176,
+        "maximum": 571.7290578290176,
+        "n": 1
+      },
+      "ms_per_step": {
+        "median": 13.99264195242722,
+        "minimum": 13.99264195242722,
+        "maximum": 13.99264195242722,
+        "n": 1
+      },
+      "peak_allocated_gib": 9.347970485687256,
+      "peak_reserved_gib": 9.466796875,
+      "kv_backing_mib_per_sequence": 34.0,
+      "recurrent_mib_per_sequence": 48.0,
+      "conv_mib_per_sequence": 1.5
+    }
+  ],
+  "paired_ratios": [
+    {
+      "batch": 1,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0484626762550158,
+        "minimum": 1.0484626762550158,
+        "maximum": 1.0484626762550158,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0477747290267432,
+        "minimum": 1.0477747290267432,
+        "maximum": 1.0477747290267432,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0244292430907407,
+        "minimum": 1.0244292430907407,
+        "maximum": 1.0244292430907407,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0190666565075017,
+        "minimum": 1.0190666565075017,
+        "maximum": 1.0190666565075017,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9537773948919969,
+        "minimum": 0.9537773948919969,
+        "maximum": 0.9537773948919969,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9544036254137184,
+        "minimum": 0.9544036254137184,
+        "maximum": 0.9544036254137184,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9761533134128065,
+        "minimum": 0.9761533134128065,
+        "maximum": 0.9761533134128065,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9812900791270651,
+        "minimum": 0.9812900791270651,
+        "maximum": 0.9812900791270651,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9876179819056172,
+        "minimum": 0.9876179819056172,
+        "maximum": 0.9876179819056172,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.035480592426341,
+        "minimum": 1.035480592426341,
+        "maximum": 1.035480592426341,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.990311209417529,
+        "minimum": 0.990311209417529,
+        "maximum": 0.990311209417529,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0376230590995978,
+        "minimum": 1.0376230590995978,
+        "maximum": 1.0376230590995978,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9159903014195574,
+        "minimum": 0.9159903014195574,
+        "maximum": 0.9159903014195574,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9383672511616966,
+        "minimum": 0.9383672511616966,
+        "maximum": 0.9383672511616966,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9779360600155244,
+        "minimum": 0.9779360600155244,
+        "maximum": 0.9779360600155244,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9965820309581399,
+        "minimum": 0.9965820309581399,
+        "maximum": 0.9965820309581399,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9614555562594915,
+        "minimum": 0.9614555562594915,
+        "maximum": 0.9614555562594915,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0080502656160815,
+        "minimum": 1.0080502656160815,
+        "maximum": 1.0080502656160815,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9747897421653059,
+        "minimum": 0.9747897421653059,
+        "maximum": 0.9747897421653059,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0213600579553022,
+        "minimum": 1.0213600579553022,
+        "maximum": 1.0213600579553022,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9812941138541544,
+        "minimum": 0.9812941138541544,
+        "maximum": 0.9812941138541544,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0052663863050106,
+        "minimum": 1.0052663863050106,
+        "maximum": 1.0052663863050106,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9881517320427541,
+        "minimum": 0.9881517320427541,
+        "maximum": 0.9881517320427541,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.006992481694906,
+        "minimum": 1.006992481694906,
+        "maximum": 1.006992481694906,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9904055335472907,
+        "minimum": 0.9904055335472907,
+        "maximum": 0.9904055335472907,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0384032362807691,
+        "minimum": 1.0384032362807691,
+        "maximum": 1.0384032362807691,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9912324468038451,
+        "minimum": 0.9912324468038451,
+        "maximum": 0.9912324468038451,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0385883083524146,
+        "minimum": 1.0385883083524146,
+        "maximum": 1.0385883083524146,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9763991142855813,
+        "minimum": 0.9763991142855813,
+        "maximum": 0.9763991142855813,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0002518056020477,
+        "minimum": 1.0002518056020477,
+        "maximum": 1.0002518056020477,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9853349626419311,
+        "minimum": 0.9853349626419311,
+        "maximum": 0.9853349626419311,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0041220059194569,
+        "minimum": 1.0041220059194569,
+        "maximum": 1.0041220059194569,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9545142455136366,
+        "minimum": 0.9545142455136366,
+        "maximum": 0.9545142455136366,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0007725603747646,
+        "minimum": 1.0007725603747646,
+        "maximum": 1.0007725603747646,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.95670055460318,
+        "minimum": 0.95670055460318,
+        "maximum": 0.95670055460318,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0024066643590819,
+        "minimum": 1.0024066643590819,
+        "maximum": 1.0024066643590819,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9202156897855532,
+        "minimum": 0.9202156897855532,
+        "maximum": 0.9202156897855532,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9426958625672381,
+        "minimum": 0.9426958625672381,
+        "maximum": 0.9426958625672381,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9466302510126725,
+        "minimum": 0.9466302510126725,
+        "maximum": 0.9466302510126725,
+        "n": 1
+      }
+    },
+    {
+      "batch": 1,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9646793248483413,
+        "minimum": 0.9646793248483413,
+        "maximum": 0.9646793248483413,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0527222220575618,
+        "minimum": 1.0527222220575618,
+        "maximum": 1.0527222220575618,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.011534996290264,
+        "minimum": 1.011534996290264,
+        "maximum": 1.011534996290264,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0181641884083854,
+        "minimum": 1.0181641884083854,
+        "maximum": 1.0181641884083854,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0205289289689845,
+        "minimum": 1.0205289289689845,
+        "maximum": 1.0205289289689845,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9499182016367856,
+        "minimum": 0.9499182016367856,
+        "maximum": 0.9499182016367856,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.988596542549128,
+        "minimum": 0.988596542549128,
+        "maximum": 0.988596542549128,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9821598631977226,
+        "minimum": 0.9821598631977226,
+        "maximum": 0.9821598631977226,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9798840303432413,
+        "minimum": 0.9798840303432413,
+        "maximum": 0.9798840303432413,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9473858477583617,
+        "minimum": 0.9473858477583617,
+        "maximum": 0.9473858477583617,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9973341347980693,
+        "minimum": 0.9973341347980693,
+        "maximum": 0.9973341347980693,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9493721974808877,
+        "minimum": 0.9493721974808877,
+        "maximum": 0.9493721974808877,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9603232022569095,
+        "minimum": 0.9603232022569095,
+        "maximum": 0.9603232022569095,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.982775204008512,
+        "minimum": 0.982775204008512,
+        "maximum": 0.982775204008512,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.000626517977212,
+        "minimum": 1.000626517977212,
+        "maximum": 1.000626517977212,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9800720191845698,
+        "minimum": 0.9800720191845698,
+        "maximum": 0.9800720191845698,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0001918480508991,
+        "minimum": 1.0001918480508991,
+        "maximum": 1.0001918480508991,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9598443013749818,
+        "minimum": 0.9598443013749818,
+        "maximum": 0.9598443013749818,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0104494257727588,
+        "minimum": 1.0104494257727588,
+        "maximum": 1.0104494257727588,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9830640126129012,
+        "minimum": 0.9830640126129012,
+        "maximum": 0.9830640126129012,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9944036523514831,
+        "minimum": 0.9944036523514831,
+        "maximum": 0.9944036523514831,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9907746129601138,
+        "minimum": 0.9907746129601138,
+        "maximum": 0.9907746129601138,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0087712297001665,
+        "minimum": 1.0087712297001665,
+        "maximum": 1.0087712297001665,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9885168991306881,
+        "minimum": 0.9885168991306881,
+        "maximum": 0.9885168991306881,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.008810092337583,
+        "minimum": 1.008810092337583,
+        "maximum": 1.008810092337583,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9903313560112693,
+        "minimum": 0.9903313560112693,
+        "maximum": 0.9903313560112693,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0425438256734616,
+        "minimum": 1.0425438256734616,
+        "maximum": 1.0425438256734616,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.988235532647373,
+        "minimum": 0.988235532647373,
+        "maximum": 0.988235532647373,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9996348258503673,
+        "minimum": 0.9996348258503673,
+        "maximum": 0.9996348258503673,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9844445319322598,
+        "minimum": 0.9844445319322598,
+        "maximum": 0.9844445319322598,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.002326167887882,
+        "minimum": 1.002326167887882,
+        "maximum": 1.002326167887882,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.984414656718315,
+        "minimum": 0.984414656718315,
+        "maximum": 0.984414656718315,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0046236352821125,
+        "minimum": 1.0046236352821125,
+        "maximum": 1.0046236352821125,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9139335669792338,
+        "minimum": 0.9139335669792338,
+        "maximum": 0.9139335669792338,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9621181754433724,
+        "minimum": 0.9621181754433724,
+        "maximum": 0.9621181754433724,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9176002538928579,
+        "minimum": 0.9176002538928579,
+        "maximum": 0.9176002538928579,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9281847694174573,
+        "minimum": 0.9281847694174573,
+        "maximum": 0.9281847694174573,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9481137569276642,
+        "minimum": 0.9481137569276642,
+        "maximum": 0.9481137569276642,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9653354738410803,
+        "minimum": 0.9653354738410803,
+        "maximum": 0.9653354738410803,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9480201642186988,
+        "minimum": 0.9480201642186988,
+        "maximum": 0.9480201642186988,
+        "n": 1
+      }
+    },
+    {
+      "batch": 2,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9674820028311096,
+        "minimum": 0.9674820028311096,
+        "maximum": 0.9674820028311096,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0205478049432262,
+        "minimum": 1.0205478049432262,
+        "maximum": 1.0205478049432262,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0154933292731436,
+        "minimum": 1.0154933292731436,
+        "maximum": 1.0154933292731436,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0250042679553029,
+        "minimum": 1.0250042679553029,
+        "maximum": 1.0250042679553029,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "native_dynamic",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0179105837611715,
+        "minimum": 1.0179105837611715,
+        "maximum": 1.0179105837611715,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9798659064830684,
+        "minimum": 0.9798659064830684,
+        "maximum": 0.9798659064830684,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9847430516513257,
+        "minimum": 0.9847430516513257,
+        "maximum": 0.9847430516513257,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9756056938131761,
+        "minimum": 0.9756056938131761,
+        "maximum": 0.9756056938131761,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "native_preallocated",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9824045608259696,
+        "minimum": 0.9824045608259696,
+        "maximum": 0.9824045608259696,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9812409014782864,
+        "minimum": 0.9812409014782864,
+        "maximum": 0.9812409014782864,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0014032481241777,
+        "minimum": 1.0014032481241777,
+        "maximum": 1.0014032481241777,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9860599331245163,
+        "minimum": 0.9860599331245163,
+        "maximum": 0.9860599331245163,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0013372843514685,
+        "minimum": 1.0013372843514685,
+        "maximum": 1.0013372843514685,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9757707252577195,
+        "minimum": 0.9757707252577195,
+        "maximum": 0.9757707252577195,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0001691579350036,
+        "minimum": 1.0001691579350036,
+        "maximum": 1.0001691579350036,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9827628438525022,
+        "minimum": 0.9827628438525022,
+        "maximum": 0.9827628438525022,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0003647000846896,
+        "minimum": 1.0003647000846896,
+        "maximum": 1.0003647000846896,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.97965485491914,
+        "minimum": 0.97965485491914,
+        "maximum": 0.97965485491914,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.999784611789703,
+        "minimum": 0.999784611789703,
+        "maximum": 0.999784611789703,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9845727827511815,
+        "minimum": 0.9845727827511815,
+        "maximum": 0.9845727827511815,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9998270930677209,
+        "minimum": 0.9998270930677209,
+        "maximum": 0.9998270930677209,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9834108467976758,
+        "minimum": 0.9834108467976758,
+        "maximum": 0.9834108467976758,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0080003151211563,
+        "minimum": 1.0080003151211563,
+        "maximum": 1.0080003151211563,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9878906419334998,
+        "minimum": 0.9878906419334998,
+        "maximum": 0.9878906419334998,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "random_pp_C2048",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0055843400227271,
+        "minimum": 1.0055843400227271,
+        "maximum": 1.0055843400227271,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9468699427450692,
+        "minimum": 0.9468699427450692,
+        "maximum": 0.9468699427450692,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9663260416351986,
+        "minimum": 0.9663260416351986,
+        "maximum": 0.9663260416351986,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9546405054480666,
+        "minimum": 0.9546405054480666,
+        "maximum": 0.9546405054480666,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9694310651364537,
+        "minimum": 0.9694310651364537,
+        "maximum": 0.9694310651364537,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9827085949194256,
+        "minimum": 0.9827085949194256,
+        "maximum": 0.9827085949194256,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 1.0072805039487702,
+        "minimum": 1.0072805039487702,
+        "maximum": 1.0072805039487702,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9867214506955059,
+        "minimum": 0.9867214506955059,
+        "maximum": 0.9867214506955059,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "recency_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 1.0043942078871324,
+        "minimum": 1.0043942078871324,
+        "maximum": 1.0043942078871324,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.946542091922594,
+        "minimum": 0.946542091922594,
+        "maximum": 0.946542091922594,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9659914541979727,
+        "minimum": 0.9659914541979727,
+        "maximum": 0.9659914541979727,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9537948895274969,
+        "minimum": 0.9537948895274969,
+        "maximum": 0.9537948895274969,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 256,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.968572347809988,
+        "minimum": 0.968572347809988,
+        "maximum": 0.968572347809988,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9427888228019291,
+        "minimum": 0.9427888228019291,
+        "maximum": 0.9427888228019291,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "throughput",
+      "paired_throughput_ratio": {
+        "median": 0.9663625671525331,
+        "minimum": 0.9663625671525331,
+        "maximum": 0.9663625671525331,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_dynamic",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9475253392256838,
+        "minimum": 0.9475253392256838,
+        "maximum": 0.9475253392256838,
+        "n": 1
+      }
+    },
+    {
+      "batch": 8,
+      "method": "snapkv_pp_C1024",
+      "reference": "native_preallocated",
+      "nominal_context": 1024,
+      "mode": "synchronized",
+      "paired_throughput_ratio": {
+        "median": 0.9644960711797178,
+        "minimum": 0.9644960711797178,
+        "maximum": 0.9644960711797178,
+        "n": 1
+      }
+    }
+  ],
+  "runs": [
+    {
+      "method": "native_dynamic",
+      "batch": 1,
+      "total_wall_seconds": 13.730008744983934,
+      "overall_peak_allocated_bytes": 9181714944,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 41, 2527, 13801, 25.88, 9905",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 51, 2902, 13801, 318.49, 10043"
+    },
+    {
+      "method": "native_preallocated",
+      "batch": 1,
+      "total_wall_seconds": 13.66924989700783,
+      "overall_peak_allocated_bytes": 9186436096,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 51, 2902, 13801, 318.49, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 53, 2902, 13801, 321.53, 10027"
+    },
+    {
+      "method": "random_pp_C1024",
+      "batch": 1,
+      "total_wall_seconds": 13.531580762006342,
+      "overall_peak_allocated_bytes": 9181762560,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 53, 2902, 13801, 321.53, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 55, 2895, 13801, 311.80, 10027"
+    },
+    {
+      "method": "random_pp_C2048",
+      "batch": 1,
+      "total_wall_seconds": 13.52131450199522,
+      "overall_peak_allocated_bytes": 9215972352,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 55, 2895, 13801, 311.80, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2895, 13801, 328.32, 10067"
+    },
+    {
+      "method": "recency_pp_C1024",
+      "batch": 1,
+      "total_wall_seconds": 13.43348385905847,
+      "overall_peak_allocated_bytes": 9181762560,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2895, 13801, 328.32, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 57, 2895, 13801, 328.54, 10027"
+    },
+    {
+      "method": "snapkv_pp_C1024",
+      "batch": 1,
+      "total_wall_seconds": 14.04206842603162,
+      "overall_peak_allocated_bytes": 9206507008,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 57, 2895, 13801, 328.54, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 58, 2895, 13801, 319.22, 10047"
+    },
+    {
+      "method": "native_dynamic",
+      "batch": 2,
+      "total_wall_seconds": 13.856954818009399,
+      "overall_peak_allocated_bytes": 9272177152,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 58, 2895, 13801, 309.06, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2902, 13801, 268.76, 10145"
+    },
+    {
+      "method": "native_preallocated",
+      "batch": 2,
+      "total_wall_seconds": 14.21118383295834,
+      "overall_peak_allocated_bytes": 9284229632,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2902, 13801, 268.76, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2902, 13801, 262.23, 10145"
+    },
+    {
+      "method": "random_pp_C1024",
+      "batch": 2,
+      "total_wall_seconds": 14.454376696958207,
+      "overall_peak_allocated_bytes": 9275800064,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2902, 13801, 262.23, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2902, 13801, 261.27, 10145"
+    },
+    {
+      "method": "random_pp_C2048",
+      "batch": 2,
+      "total_wall_seconds": 14.116255496046506,
+      "overall_peak_allocated_bytes": 9340871680,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2902, 13801, 261.27, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2902, 13801, 264.56, 10205"
+    },
+    {
+      "method": "recency_pp_C1024",
+      "batch": 2,
+      "total_wall_seconds": 14.066052513080649,
+      "overall_peak_allocated_bytes": 9275800064,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2902, 13801, 264.56, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 57, 2902, 13801, 263.97, 10145"
+    },
+    {
+      "method": "snapkv_pp_C1024",
+      "batch": 2,
+      "total_wall_seconds": 14.83507324999664,
+      "overall_peak_allocated_bytes": 9324956160,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 57, 2902, 13801, 263.97, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2902, 13801, 258.91, 10187"
+    },
+    {
+      "method": "native_dynamic",
+      "batch": 8,
+      "total_wall_seconds": 14.175652081961744,
+      "overall_peak_allocated_bytes": 9827673600,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 56, 2902, 13801, 258.91, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 58, 2902, 13801, 316.06, 10901"
+    },
+    {
+      "method": "native_preallocated",
+      "batch": 8,
+      "total_wall_seconds": 13.935213225078769,
+      "overall_peak_allocated_bytes": 9879898112,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 58, 2902, 13801, 316.06, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 59, 2902, 13801, 304.98, 10731"
+    },
+    {
+      "method": "random_pp_C1024",
+      "batch": 8,
+      "total_wall_seconds": 13.923811541986652,
+      "overall_peak_allocated_bytes": 9834331648,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 59, 2902, 13801, 304.98, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 59, 2902, 13801, 305.94, 10731"
+    },
+    {
+      "method": "random_pp_C2048",
+      "batch": 8,
+      "total_wall_seconds": 13.903276055003516,
+      "overall_peak_allocated_bytes": 10116614144,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 59, 2902, 13801, 305.94, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 60, 2902, 13801, 307.26, 11055"
+    },
+    {
+      "method": "recency_pp_C1024",
+      "batch": 8,
+      "total_wall_seconds": 14.063184957019985,
+      "overall_peak_allocated_bytes": 9834331648,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 60, 2902, 13801, 307.26, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 60, 2902, 13801, 308.77, 10731"
+    },
+    {
+      "method": "snapkv_pp_C1024",
+      "batch": 8,
+      "total_wall_seconds": 14.432649344089441,
+      "overall_peak_allocated_bytes": 10037528064,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 60, 2902, 13801, 308.77, 9917",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 60, 2902, 13801, 305.68, 10943"
+    }
+  ],
+  "notes": [
+    "Model plus LM head on fixed teacher-forced inputs; excludes sampling, grading, EOS and serving scheduling.",
+    "Matched logical windows at each batch. Three adjacent windows are not independent workloads; median/range only.",
+    "Native preallocation reserves the maximum length at every point; shorter-context backing memory exceeds live KV.",
+    "Decode-window peak and whole-run peak are separate; PyTorch allocated/reserved bytes exclude some device overhead.",
+    "Native-preallocated full-vocabulary endpoint logits must exactly match DynamicCache.",
+    "No-eviction preallocation also retains adapter position bookkeeping; its difference from DynamicCache is not allocator-only.",
+    "Compressed-cache quality loss in the separate MATH study must accompany speed/memory results."
+  ]
+}

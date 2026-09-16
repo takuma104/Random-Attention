@@ -34,7 +34,7 @@ preallocated nativeは最大長33536+64 slotsを初めから確保する。し�
 - 対応する各window終端でnative_dynamicとnative_preallocatedの**全vocabulary logitsの完全一致**を検証。
 - 圧縮条件もeviction前なら同じ照合を行う。入力hash、logical長、eviction回数、全window数を監査。
 - peak allocated/reserved、KV backing bytes、DeltaNet recurrent/conv bytes、prefill/履歴を含むrun全体のpeakも保存。
-- 速度の主要な対照はnative_preallocated対圧縮。native_dynamicとの差も示し、allocator由来の差を隠さない。
+- 速度の主要な対照はnative_preallocated対圧縮。native_dynamicとの差も示す。preallocated対照は絶対positionの記録などadapter共通のbookkeepingも含むため、Dynamicとの差を純粋にallocator単独の効果とは呼ばない。
 - 小さなcontextの全条件・B1/2/8 smokeを先に実行。モデル精度ではなく実装・数値・計数のgate。
 - 本matrixの概算は2〜3 GPU時間。生成ソースは主評価/probeと分離。
 

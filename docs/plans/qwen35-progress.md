@@ -192,3 +192,12 @@
 - head間選択多様性や元value保持率の差は観測したが、accuracy優位を保証しない。SnapKVのlookup上の強さとMATH上の弱さを区別して報告する。
 - 詳細: [遅延参照報告](qwen35-retrieval-confirm-v1-report.md)、`qwen35-retrieval-confirm-v1-analysis.json`。
 - 次は同じ入力token列・batch・論理contextのdecode効率測定。native DynamicCacheに加え、evictionなしpreallocated cacheを対照にしてallocatorの交絡を分ける。
+
+## 2026-09-17 06:08: 効率測定smoke通過
+
+- B1/2/8×6条件、context256/1024、計18 cells/72 windows、4分16秒で完了。strict CPU audit通過。
+- evictionなしpreallocated対照の全vocabulary logitsがDynamicCacheと全測定窓で完全一致。圧縮条件もeviction前は一致。
+- logical window、eviction回数、KV/recurrent/conv/position/query backing bytes、reference hash、全cell/window数を監査。測定窓のoff-by-oneやstorage改変を拒否するCPU tests2件通過。
+- 記録: `qwen35-efficiency-smoke-v1-analysis.json`。短いsmokeの時間を最終性能とはみなさない。
+- 本測定は[効率protocol](qwen35-efficiency-protocol.md)通り、context8192/16384/32768、B1/2/8、6条件、128 steps×2 modes×3反復、324 windows。約2〜3時間を見込む。
+- preallocated対照はadapterのposition記録も含む。Dynamicとの差をallocator単独の効果とは呼ばず、主な速度比較は同じadapterのevictionなし対照に対して行う。
