@@ -1,0 +1,171 @@
+{
+  "audit": "passed",
+  "input_path": "results/qwen35/retrieval_posteviction_smoke_v1",
+  "manifest_commit": "1b5de717f92ad4e5688a0d27144ec43b192fb5ae",
+  "completed_data_sha256": "4205cd352c456145e75de23da0e34cfbfb91292e4a1ace9d7fa775cd6eb50994",
+  "n_cases": 2,
+  "gaps": [
+    2048
+  ],
+  "total_generation_hours": 0.09105908022307428,
+  "cells": {
+    "native": {
+      "2048": {
+        "n_independent_cases": 2,
+        "n_row_readouts": 4,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.9917877912521362,
+        "mean_label_mass": 0.9994285404682159,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 1.0,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 1.0,
+        "generation_seconds": 53.944689797004685
+      }
+    },
+    "random_pp_C1024": {
+      "2048": {
+        "n_independent_cases": 2,
+        "n_row_readouts": 4,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.5995185002684593,
+        "mean_label_mass": 0.9990609884262085,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 0.234375,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 0.36056089513293654,
+        "generation_seconds": 54.519176345085725
+      }
+    },
+    "random_shared_pp_C1024": {
+      "2048": {
+        "n_independent_cases": 2,
+        "n_row_readouts": 4,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.5346183702349663,
+        "mean_label_mass": 0.9991422295570374,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 0.21875,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 1.0,
+        "generation_seconds": 54.42928555700928
+      }
+    },
+    "recency_pp_C1024": {
+      "2048": {
+        "n_independent_cases": 2,
+        "n_row_readouts": 4,
+        "accuracy": 0.5,
+        "mean_target_probability": 0.3038608282804489,
+        "mean_label_mass": 0.9988479614257812,
+        "any_full_value_head_rate": 0.0,
+        "full_value_head_fraction": 0.0,
+        "any_fact_token_rate": 0.0,
+        "mean_older_head_jaccard": 1.0,
+        "generation_seconds": 54.31391053297557
+      }
+    },
+    "snapkv_pp_C1024": {
+      "2048": {
+        "n_independent_cases": 2,
+        "n_row_readouts": 4,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.9761617183685303,
+        "mean_label_mass": 0.999353438615799,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 0.921875,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 0.5732340876954546,
+        "generation_seconds": 56.557780666975304
+      }
+    },
+    "random_pp_C2048": {
+      "2048": {
+        "n_independent_cases": 2,
+        "n_row_readouts": 4,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.9918451458215714,
+        "mean_label_mass": 0.9994152635335922,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 0.921875,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 0.8826099916591046,
+        "generation_seconds": 54.04784590401687
+      }
+    }
+  },
+  "paired_case_contrasts": {
+    "random_pp_C1024 - random_shared_pp_C1024": {
+      "2048": {
+        "n_cases": 2,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "case_wins": 0,
+        "case_losses": 0,
+        "case_ties": 2,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260916
+      }
+    },
+    "random_pp_C1024 - recency_pp_C1024": {
+      "2048": {
+        "n_cases": 2,
+        "difference": 0.5,
+        "ci95": [
+          0.0,
+          1.0
+        ],
+        "case_wins": 1,
+        "case_losses": 0,
+        "case_ties": 1,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260916
+      }
+    },
+    "random_pp_C1024 - snapkv_pp_C1024": {
+      "2048": {
+        "n_cases": 2,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "case_wins": 0,
+        "case_losses": 0,
+        "case_ties": 2,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260916
+      }
+    },
+    "random_pp_C1024 - native": {
+      "2048": {
+        "n_cases": 2,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "case_wins": 0,
+        "case_losses": 0,
+        "case_ties": 2,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260916
+      }
+    }
+  },
+  "primary_diversity_contrast": null,
+  "native_calibration_gate": null,
+  "notes": [
+    "Cases, not heads or duplicate rows, are the independent units. Paired bootstrap seed20260916,10000 replicates.",
+    "Gap-specific contrasts are exploratory; small samples and saturated outcomes can give degenerate bootstrap CIs.",
+    "Retained source positions are measured before the final query token; later-token KV or DeltaNet can already carry the fact.",
+    "Teacher-forced lookup is not free-generation MATH accuracy or a causal architecture comparison."
+  ]
+}

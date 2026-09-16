@@ -175,3 +175,11 @@
 - 記録: `qwen35-retrieval-calibration-v1-analysis.json`、`qwen35-retrieval-control-v1-analysis.json`。
 - 確認gridは32case×2seeds×6条件×5gapで固定（約20時間）。主比較は遠距離3gapをcase内平均したRandom1024−Random-shared1024。
 - まず固定した2校正case、gap2048、全6条件のpost-eviction実装smokeを行う。圧縮の精度を見てgridを変えない。
+
+## 2026-09-16 10:41: Post-eviction smoke通過、確認実験へ
+
+- 固定した2校正case×6条件、gap2048の12 batchesが5分32秒で完了。trace/counter/retention/paired inputsの監査通過。
+- Older-generated KV位置のhead間JaccardはRandom1024で0.361、Random-sharedで1.000。Recencyでは元fact tokenが全て消え、nativeでは全保持。設計した選択・測定の挙動を確認した。
+- 2caseだけの精度から優劣は判断せず、事前固定した確認gridを変更しない。
+- 記録: `qwen35-retrieval-posteviction-smoke-v1-analysis.json`。
+- 次: `retrieval_confirm_v1`、別nonce32case×2seeds×6条件×5gap、960 batches。約20時間を見込み、生成ソースを固定して実行する。
