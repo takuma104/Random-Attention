@@ -33,7 +33,7 @@ factのtoken span、queryの長さ、fact終端からquery開始までの距離�
 - layer/head別にfact spanの保持数、どれか1 tokenの保持、value span全体の保持、head間の選択重複率を記録する。
 - adapterはattention計算**後**にevictする。最後のquery tokenを処理した後のpositionsだけを見ると、そのlogitに実際に使われたKVとずれる可能性がある。
 - 最後のquery tokenのforward直前にresident positionsを保存する。新規tokenはfactではないため、これが最終logit計算に利用可能だったfactの保持状況となる。
-- KVからfactが消えてもDeltaNet状態には情報が残り得る。保持と正答の関連だけでDeltaNetへの因果帰属はしない。
+- 元factのKVが消えても、DeltaNet状態や後続tokenのKVへ情報が転写されている可能性がある。保持と正答の関連だけでDeltaNetへの因果帰属はしない。
 
 ## 対照と限界
 
@@ -42,3 +42,14 @@ factのtoken span、queryの長さ、fact終端からquery開始までの距離�
 - 生成領域への注入はモデル自身の自然な推論生成ではない。このprobeだけからMATHでのcap増加の原因を断定しない。
 - 事前分布に対する4択chanceは25%。独立単位はnonce問題であり、head数や同一問題のseed数を独立sample数として数えない。
 - 推定計算量は約1000万teacher-forced token slots、B2で概ね1日前後。校正で実測後に更新する。
+
+## 校正v1の固定 (2026-09-16、GPU実行前)
+
+- 別script `scripts/qwen35/run_retrieval_probe.py`。MATH主評価の生成ソースは変更しない。
+- `calibration-000`〜`007`の8問。nonce/data seedはcase IDから固定。確認用は別の`confirm-*` IDで、校正に使わない。
+- 各caseでA/B/C/Dの4候補valueを生成し、正解labelをindex mod4で均等割付け。値はcolor-wordの任意の記号として使う。fillerはkey/valueを含まない別の簡単な算術文。
+- native、gap=0/8192/16384、B2で同一traceの2row。nativeでは2rowは同じ出力になることを確認し、独立標本数は各gap8問として数える。
+- **校正gate: 各gapでnative正答が7/8以上**。未達なら確認gridを開始せず、課題設計を調査して新versionへ進む。確認用結果を見て調整しない。
+- 校正の前に1問gap0の全6条件を実行し、eviction前の4 label logitsがnativeと完全一致することを検証する。
+- cacheのfact/value token保持数とolder-generated head間Jaccardを最終query token直前に記録。label probability massも保存し、条件付き4択確率だけを全vocabulary上のconfidenceと混同しない。
+- 確認gridの候補（32問×2seeds×6条件×5gap）は校正通過後に最終固定する。teacher-forced workloadの速度を自由生成のserving速度とは呼ばない。
