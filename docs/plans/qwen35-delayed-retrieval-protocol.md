@@ -53,3 +53,13 @@ factのtoken span、queryの長さ、fact終端からquery開始までの距離�
 - 校正の前に1問gap0の全6条件を実行し、eviction前の4 label logitsがnativeと完全一致することを検証する。
 - cacheのfact/value token保持数とolder-generated head間Jaccardを最終query token直前に記録。label probability massも保存し、条件付き4択確率だけを全vocabulary上のconfidenceと混同しない。
 - 確認gridの候補（32問×2seeds×6条件×5gap）は校正通過後に最終固定する。teacher-forced workloadの速度を自由生成のserving速度とは呼ばない。
+
+## 校正通過・確認grid固定 (2026-09-16 10:30、圧縮long-gap smoke/確認結果を見る前)
+
+- nativeは3距離全て8/8正答。平均正解条件付き確率は0.9946/0.9878/0.9874、4 labelの確率massは各距離約0.999。24 batchesを監査し、事前の7/8 gateを通過。
+- 確認は`confirm-000`〜`031`、2 eviction seeds、上記6条件、gap0/512/2048/8192/16384で固定。合計960 batches、1920 row readouts。独立単位は32 cases。
+- **主な機構比較**: C1024のRandom−Random-sharedについて、gap2048/8192/16384の正答差を2 seeds・3 gapsにわたってcase内で平均し、32 casesをcluster bootstrap（10000回、seed20260916）する。95% CIとcase単位のexact sign testを報告。方向の一致したCIとp<.05の場合のみ、このprobeでhead別選択が有利と述べる。
+- 各gapの個別差、他selectorとの比較、条件付き確率、retention/Jaccardは副次的・探索的。都合のよい距離だけを主比較に変更しない。
+- 確認データのnative成績が低い距離は、そのまま開示してtask妥当性の制限とする。問題や距離を除外しない。
+- 本実行前に固定した校正case000/001、gap2048、全6条件で**実装監査用**smokeを行う。counter、native全保持、Recencyで十分古いfactが消えること、Random-sharedのhead Jaccard=1等を検証する。圧縮条件の正答率をgrid開始の採否基準にはしない。
+- 実測から確認gridの概算は約20 GPU時間。ソース・samplingなし・teacher-forcing条件・dataset seedsを固定したまま実行する。

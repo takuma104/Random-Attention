@@ -166,3 +166,12 @@
 - fact/value span、retentionの測定位置、head共有選択とrow別RNGをCPU testで確認。元MATH生成ソースは変更していない。
 - 校正gateを実行前に固定: calibration用8問、native、gap0/8192/16384でそれぞれ7/8以上の正答。B2の同一trace2rowを独立問題として数えない。
 - 次に長距離native校正を実行し、通過した場合のみ別nonceの確認gridを最終固定する。
+
+## 2026-09-16 10:30: 遅延参照native校正通過
+
+- native、8校正case×3gapの24 batches、43分44秒。gap0/8192/16384の全てで8/8正答、事前gateを通過。
+- 平均正解条件付き確率0.9946/0.9878/0.9874、label massは約0.999。重複rowを独立標本として数えず8case単位で判定。
+- strict CPU auditorを追加し、trace hash、生成領域のfact span、最終query直前のsnapshot/counter、全head保持、paired inputsを監査。off-by-one/改変traceの拒否を2 CPU testsで確認。
+- 記録: `qwen35-retrieval-calibration-v1-analysis.json`、`qwen35-retrieval-control-v1-analysis.json`。
+- 確認gridは32case×2seeds×6条件×5gapで固定（約20時間）。主比較は遠距離3gapをcase内平均したRandom1024−Random-shared1024。
+- まず固定した2校正case、gap2048、全6条件のpost-eviction実装smokeを行う。圧縮の精度を見てgridを変えない。

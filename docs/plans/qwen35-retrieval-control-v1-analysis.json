@@ -1,0 +1,171 @@
+{
+  "audit": "passed",
+  "input_path": "results/qwen35/retrieval_control_v1",
+  "manifest_commit": "65662bb55770d326a6055e80bfec2954555e5030",
+  "completed_data_sha256": "ad5b4f06d5a889a656f4787a930472abd404bd28855ff0c8e3b653bba2591674",
+  "n_cases": 1,
+  "gaps": [
+    0
+  ],
+  "total_generation_hours": 0.0017043076677752348,
+  "cells": {
+    "native": {
+      "0": {
+        "n_independent_cases": 1,
+        "n_row_readouts": 2,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.9929317235946655,
+        "mean_label_mass": 0.9993931651115417,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 1.0,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 1.0,
+        "generation_seconds": 1.431201781029813
+      }
+    },
+    "random_pp_C1024": {
+      "0": {
+        "n_independent_cases": 1,
+        "n_row_readouts": 2,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.9929317235946655,
+        "mean_label_mass": 0.9993931651115417,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 1.0,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 1.0,
+        "generation_seconds": 0.9387999969767407
+      }
+    },
+    "random_shared_pp_C1024": {
+      "0": {
+        "n_independent_cases": 1,
+        "n_row_readouts": 2,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.9929317235946655,
+        "mean_label_mass": 0.9993931651115417,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 1.0,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 1.0,
+        "generation_seconds": 0.9364433740265667
+      }
+    },
+    "recency_pp_C1024": {
+      "0": {
+        "n_independent_cases": 1,
+        "n_row_readouts": 2,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.9929317235946655,
+        "mean_label_mass": 0.9993931651115417,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 1.0,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 1.0,
+        "generation_seconds": 0.9399007379543036
+      }
+    },
+    "snapkv_pp_C1024": {
+      "0": {
+        "n_independent_cases": 1,
+        "n_row_readouts": 2,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.9929317235946655,
+        "mean_label_mass": 0.9993931651115417,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 1.0,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 1.0,
+        "generation_seconds": 0.9677695379359648
+      }
+    },
+    "random_pp_C2048": {
+      "0": {
+        "n_independent_cases": 1,
+        "n_row_readouts": 2,
+        "accuracy": 1.0,
+        "mean_target_probability": 0.9929317235946655,
+        "mean_label_mass": 0.9993931651115417,
+        "any_full_value_head_rate": 1.0,
+        "full_value_head_fraction": 1.0,
+        "any_fact_token_rate": 1.0,
+        "mean_older_head_jaccard": 1.0,
+        "generation_seconds": 0.9213921760674566
+      }
+    }
+  },
+  "paired_case_contrasts": {
+    "random_pp_C1024 - random_shared_pp_C1024": {
+      "0": {
+        "n_cases": 1,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "case_wins": 0,
+        "case_losses": 0,
+        "case_ties": 1,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260916
+      }
+    },
+    "random_pp_C1024 - recency_pp_C1024": {
+      "0": {
+        "n_cases": 1,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "case_wins": 0,
+        "case_losses": 0,
+        "case_ties": 1,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260916
+      }
+    },
+    "random_pp_C1024 - snapkv_pp_C1024": {
+      "0": {
+        "n_cases": 1,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "case_wins": 0,
+        "case_losses": 0,
+        "case_ties": 1,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260916
+      }
+    },
+    "random_pp_C1024 - native": {
+      "0": {
+        "n_cases": 1,
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "case_wins": 0,
+        "case_losses": 0,
+        "case_ties": 1,
+        "exact_sign_p": 1.0,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260916
+      }
+    }
+  },
+  "primary_diversity_contrast": null,
+  "native_calibration_gate": null,
+  "notes": [
+    "Cases, not heads or duplicate rows, are the independent units. Paired bootstrap seed20260916,10000 replicates.",
+    "Gap-specific contrasts are exploratory; small samples and saturated outcomes can give degenerate bootstrap CIs.",
+    "Retained source positions are measured before the final query token; later-token KV or DeltaNet can already carry the fact.",
+    "Teacher-forced lookup is not free-generation MATH accuracy or a causal architecture comparison."
+  ]
+}
