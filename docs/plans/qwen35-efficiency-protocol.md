@@ -43,3 +43,15 @@ preallocated nativeは最大長33536+64 slotsを初めから確保する。し�
 Phase 1のnative B8 peakを参考に、圧縮のbatchを増やしたdecode-memory matched点を追加する案。batchの選定はメモリ制約に基づき、精度で選ばない。Phase 1の実測を見て手順・許容差を固定してから実行する。
 
 これは同じ精度を保証する比較ではない。主評価でC1024/C2048の精度低下が確認されているので、速度・メモリと必ず並記する。最大serving同時接続数やprefill込みの完全iso-memoryを未測定のまま主張しない。
+
+## Phase 2の固定 (2026-09-17、メモリ校正前)
+
+- 対照: Phase 1のnative_preallocated B8、context32768、decode-window peak allocated **17.15313148498535 GiB**。
+- 対象: Random1024、Random2048、Recency1024、SnapKV1024。batchは8の倍数。
+- 同じtoken列のprefix、context4096、128steps×2modes×1反復で先にメモリを校正する。両容量ともevictionが作動し、KV/query/recurrentのshapeはboundedな定常状態となる。
+- 初期候補はPhase 1のB1/B8 peakの線形外挿から、Random1024 B96、Random2048 B64、Recency1024 B96、SnapKV1024 B72。
+- 校正の最大decode allocatedが対照の**95〜100%**になることを要求する。予算超過ならBを8減らし、95%未満なら8増やして再測定。適合する8刻みがない場合は予算以下の近い点を選び、非一致率を明示する。測定速度や精度でbatchを選ばない。
+- 選定後はcontext32768、128steps×2modes×3反復で本測定。全ての履歴を実modelでteacher-forceする。32kで再度予算を監査し、外れた点をiso-memoryと表示しない。
+- native対照とは同じ入力hash、window位置、samplingなしの条件を照合する。異なるbatchのaggregate throughput比とms/stepの両方を示す。
+- **揃えるのはPyTorchのdecode peak allocatedだけ**。reserved/NVML使用量、prefillを含むrun全体のpeak、実サービス同時接続数は同じとは限らず、別途表示する。
+- 高batchのモデル精度は未評価。主評価B2での精度低下を必ず併記する。成功しても同等精度の高速化・最適な最大batchとは主張しない。

@@ -201,3 +201,12 @@
 - 記録: `qwen35-efficiency-smoke-v1-analysis.json`。短いsmokeの時間を最終性能とはみなさない。
 - 本測定は[効率protocol](qwen35-efficiency-protocol.md)通り、context8192/16384/32768、B1/2/8、6条件、128 steps×2 modes×3反復、324 windows。約2〜3時間を見込む。
 - preallocated対照はadapterのposition記録も含む。Dynamicとの差をallocator単独の効果とは呼ばず、主な速度比較は同じadapterのevictionなし対照に対して行う。
+
+## 2026-09-17 08:24: 同batch効率測定完了
+
+- 18 cells / 324 windows、2時間11分、全監査通過。evictionなしの2 cache実装で全54対応window終端の全vocabulary logitsが完全一致。
+- 32k・B8のthroughput: Dynamic285.1、preallocated487.8、Random1024 636.3 tokens/s。RandomはDynamic比2.23倍だが、同じadapter対照比は1.30倍。
+- B1/2ではpreallocated対照に対しRandom1024の速度比は0.999/0.992で、明確な改善なし。cache実装差を圧縮効果へ混ぜない。
+- B8のdecode peak allocatedはpreallocated17.15 GiB、Random1024 9.15 GiB。sampling/servingを含まない測定で、別MATH評価での精度低下を伴う点も併記。
+- 詳細: [効率報告](qwen35-efficiency-v1-report.md)、`qwen35-efficiency-v1-analysis.json`。
+- 次のdecode allocated-memory matched比較を校正前に固定。native preallocated B8の17.1531 GiBに対し95〜100%予算へ入る圧縮batchを8刻みでメモリだけから選ぶ。初期候補はRandom1024/Recency B96、Random2048 B64、SnapKV B72。
