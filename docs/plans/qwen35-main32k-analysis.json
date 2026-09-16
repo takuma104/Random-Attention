@@ -1,0 +1,358 @@
+{
+  "audit": "passed",
+  "input_path": "results/qwen35/main32k_b2_v3",
+  "manifest_commit": "fa2864a7469422b17c27c691073dd78b9d34d198",
+  "completed_data_sha256": "b3ad6d1939371a128587508e329ab92c2b3d09fa7d84a74ba07b41d056d26a66",
+  "n_problems": 500,
+  "runs_per_problem": 2,
+  "batch_size": 2,
+  "max_new_tokens": 32768,
+  "total_generation_hours": 141.71930006668134,
+  "cells": {
+    "native": {
+      "n": 1000,
+      "final_accuracy": 0.933,
+      "paper_accuracy": 0.934,
+      "cap_rate": 0.049,
+      "thinking_unclosed_rate": 0.041,
+      "n_eos": 951,
+      "n_eos_incorrect": 18,
+      "mean_tokens": 9701.405,
+      "median_tokens": 6082.5,
+      "p90_tokens": 24385.3,
+      "eviction_exposure": 0.0,
+      "generation_seconds": 77460.26749018661,
+      "aggregate_tok_s": 125.24362895117893,
+      "peak_allocated_gib": 10.754591941833496,
+      "mean_kv_mib": 306.20965625,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5,
+      "useful_row_step_fraction": 0.8766263808254456,
+      "mean_request_latency_seconds": 135.77467639424185,
+      "eos_required_accuracy": 0.933
+    },
+    "random_pp_C1024": {
+      "n": 1000,
+      "final_accuracy": 0.714,
+      "paper_accuracy": 0.715,
+      "cap_rate": 0.278,
+      "thinking_unclosed_rate": 0.27,
+      "n_eos": 722,
+      "n_eos_incorrect": 10,
+      "mean_tokens": 14165.084,
+      "median_tokens": 6632.5,
+      "p90_tokens": 32768.0,
+      "eviction_exposure": 0.985,
+      "generation_seconds": 108757.59898958483,
+      "aggregate_tok_s": 130.24454503962082,
+      "peak_allocated_gib": 8.839469909667969,
+      "mean_kv_mib": 34.0,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5,
+      "useful_row_step_fraction": 0.9198118439114856,
+      "mean_request_latency_seconds": 200.09704931414512,
+      "eos_required_accuracy": 0.712
+    },
+    "random_pp_C2048": {
+      "n": 1000,
+      "final_accuracy": 0.813,
+      "paper_accuracy": 0.814,
+      "cap_rate": 0.175,
+      "thinking_unclosed_rate": 0.165,
+      "n_eos": 825,
+      "n_eos_incorrect": 14,
+      "mean_tokens": 11703.442,
+      "median_tokens": 5874.5,
+      "p90_tokens": 32768.0,
+      "eviction_exposure": 0.893,
+      "generation_seconds": 92602.37434190977,
+      "aggregate_tok_s": 126.38382204745783,
+      "peak_allocated_gib": 8.894214630126953,
+      "mean_kv_mib": 66.0,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5,
+      "useful_row_step_fraction": 0.8916961182702647,
+      "mean_request_latency_seconds": 165.1646341141326,
+      "eos_required_accuracy": 0.811
+    },
+    "recency_pp_C1024": {
+      "n": 1000,
+      "final_accuracy": 0.682,
+      "paper_accuracy": 0.686,
+      "cap_rate": 0.308,
+      "thinking_unclosed_rate": 0.293,
+      "n_eos": 692,
+      "n_eos_incorrect": 12,
+      "mean_tokens": 14788.65,
+      "median_tokens": 7258.5,
+      "p90_tokens": 32768.0,
+      "eviction_exposure": 0.985,
+      "generation_seconds": 113799.22130337206,
+      "aggregate_tok_s": 129.9538769301033,
+      "peak_allocated_gib": 8.839469909667969,
+      "mean_kv_mib": 34.0,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5,
+      "useful_row_step_fraction": 0.9176224917580175,
+      "mean_request_latency_seconds": 208.87027023709763,
+      "eos_required_accuracy": 0.68
+    },
+    "snapkv_pp_C1024": {
+      "n": 1000,
+      "final_accuracy": 0.684,
+      "paper_accuracy": 0.686,
+      "cap_rate": 0.304,
+      "thinking_unclosed_rate": 0.299,
+      "n_eos": 696,
+      "n_eos_incorrect": 12,
+      "mean_tokens": 14755.081,
+      "median_tokens": 7546.0,
+      "p90_tokens": 32768.0,
+      "eviction_exposure": 0.985,
+      "generation_seconds": 117570.01811499952,
+      "aggregate_tok_s": 125.50037191937419,
+      "peak_allocated_gib": 8.9346923828125,
+      "mean_kv_mib": 34.0,
+      "recurrent_mib": 48.0,
+      "conv_mib": 1.5,
+      "useful_row_step_fraction": 0.9204549736235421,
+      "mean_request_latency_seconds": 216.46581664415962,
+      "eos_required_accuracy": 0.684
+    }
+  },
+  "paired_contrasts": {
+    "random_pp_C1024 - native": {
+      "final_correct": {
+        "n_problems": 500,
+        "difference": -0.219,
+        "ci95": [
+          -0.254,
+          -0.185
+        ],
+        "problem_wins": 2,
+        "problem_losses": 133,
+        "problem_ties": 365,
+        "exact_sign_p": 4.2157084511325866e-37,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 500,
+        "difference": -0.219,
+        "ci95": [
+          -0.254,
+          -0.185
+        ],
+        "problem_wins": 3,
+        "problem_losses": 133,
+        "problem_ties": 364,
+        "exact_sign_p": 9.62796454058168e-36,
+        "bootstrap_replicates": 10000
+      }
+    },
+    "random_pp_C2048 - native": {
+      "final_correct": {
+        "n_problems": 500,
+        "difference": -0.12,
+        "ci95": [
+          -0.145,
+          -0.096
+        ],
+        "problem_wins": 0,
+        "problem_losses": 85,
+        "problem_ties": 415,
+        "exact_sign_p": 5.169878828456423e-26,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 500,
+        "difference": -0.12,
+        "ci95": [
+          -0.145,
+          -0.096
+        ],
+        "problem_wins": 0,
+        "problem_losses": 84,
+        "problem_ties": 416,
+        "exact_sign_p": 1.0339757656912846e-25,
+        "bootstrap_replicates": 10000
+      }
+    },
+    "recency_pp_C1024 - native": {
+      "final_correct": {
+        "n_problems": 500,
+        "difference": -0.251,
+        "ci95": [
+          -0.287025,
+          -0.217
+        ],
+        "problem_wins": 0,
+        "problem_losses": 152,
+        "problem_ties": 348,
+        "exact_sign_p": 3.503246160812043e-46,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 500,
+        "difference": -0.248,
+        "ci95": [
+          -0.284,
+          -0.213
+        ],
+        "problem_wins": 1,
+        "problem_losses": 150,
+        "problem_ties": 349,
+        "exact_sign_p": 1.064986832886861e-43,
+        "bootstrap_replicates": 10000
+      }
+    },
+    "snapkv_pp_C1024 - native": {
+      "final_correct": {
+        "n_problems": 500,
+        "difference": -0.249,
+        "ci95": [
+          -0.284,
+          -0.214
+        ],
+        "problem_wins": 0,
+        "problem_losses": 152,
+        "problem_ties": 348,
+        "exact_sign_p": 3.503246160812043e-46,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 500,
+        "difference": -0.248,
+        "ci95": [
+          -0.283,
+          -0.213
+        ],
+        "problem_wins": 0,
+        "problem_losses": 151,
+        "problem_ties": 349,
+        "exact_sign_p": 7.006492321624085e-46,
+        "bootstrap_replicates": 10000
+      }
+    },
+    "random_pp_C1024 - recency_pp_C1024": {
+      "final_correct": {
+        "n_problems": 500,
+        "difference": 0.032,
+        "ci95": [
+          0.016,
+          0.04802499999999964
+        ],
+        "problem_wins": 38,
+        "problem_losses": 9,
+        "problem_ties": 453,
+        "exact_sign_p": 2.4904030624384174e-05,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 500,
+        "difference": 0.029,
+        "ci95": [
+          0.013,
+          0.046
+        ],
+        "problem_wins": 37,
+        "problem_losses": 11,
+        "problem_ties": 452,
+        "exact_sign_p": 0.0002222449626216872,
+        "bootstrap_replicates": 10000
+      }
+    },
+    "random_pp_C1024 - snapkv_pp_C1024": {
+      "final_correct": {
+        "n_problems": 500,
+        "difference": 0.03,
+        "ci95": [
+          0.015,
+          0.046
+        ],
+        "problem_wins": 35,
+        "problem_losses": 9,
+        "problem_ties": 456,
+        "exact_sign_p": 0.00010604466626773501,
+        "bootstrap_replicates": 10000
+      },
+      "paper_correct": {
+        "n_problems": 500,
+        "difference": 0.029,
+        "ci95": [
+          0.013975000000000024,
+          0.045
+        ],
+        "problem_wins": 36,
+        "problem_losses": 11,
+        "problem_ties": 453,
+        "exact_sign_p": 0.00034600114031491097,
+        "bootstrap_replicates": 10000
+      }
+    }
+  },
+  "notes": [
+    "Final preregistered B2 main analysis; no B1 pilot scores pooled.",
+    "Problem-clustered percentile bootstrap, 10000 replicates, seed20260910; marginal 95% CIs.",
+    "Holm adjustment applies ONLY to the two preregistered C1024 selector sign tests.",
+    "Accuracy-preservation criterion applies ONLY to Random C2048 vs native.",
+    "All other contrasts and paper-compatible metrics are secondary/exploratory.",
+    "Non-significance is not equivalence. Caps remain in the denominator.",
+    "Generation tok/s and shared batch peak memory are not iso-workload serving benchmarks."
+  ],
+  "primary_decisions": {
+    "accuracy_preservation": {
+      "n_problems": 500,
+      "difference": -0.12,
+      "ci95": [
+        -0.145,
+        -0.096
+      ],
+      "problem_wins": 0,
+      "problem_losses": 85,
+      "problem_ties": 415,
+      "exact_sign_p": 5.169878828456423e-26,
+      "bootstrap_replicates": 10000,
+      "margin": -0.02,
+      "criterion": "Two-sided 95% paired problem-bootstrap CI lower bound > -0.02",
+      "supports_target": false
+    },
+    "selector_comparisons": {
+      "random_pp_C1024 - recency_pp_C1024": {
+        "n_problems": 500,
+        "difference": 0.032,
+        "ci95": [
+          0.016,
+          0.04802499999999964
+        ],
+        "problem_wins": 38,
+        "problem_losses": 9,
+        "problem_ties": 453,
+        "exact_sign_p": 2.4904030624384174e-05,
+        "bootstrap_replicates": 10000,
+        "holm_p": 4.980806124876835e-05,
+        "supported_direction": "random",
+        "family_size": 2,
+        "ci_multiplicity_adjusted": false
+      },
+      "random_pp_C1024 - snapkv_pp_C1024": {
+        "n_problems": 500,
+        "difference": 0.03,
+        "ci95": [
+          0.015,
+          0.046
+        ],
+        "problem_wins": 35,
+        "problem_losses": 9,
+        "problem_ties": 456,
+        "exact_sign_p": 0.00010604466626773501,
+        "bootstrap_replicates": 10000,
+        "holm_p": 0.00010604466626773501,
+        "supported_direction": "random",
+        "family_size": 2,
+        "ci_multiplicity_adjusted": false
+      }
+    }
+  },
+  "analysis_protocol": "docs/plans/qwen35-main32k-protocol.md",
+  "original_manifest_sha256": "ae7f93f814f573d734ff1036987534fa8ad747db9eae6d467b9ee546926b841c"
+}

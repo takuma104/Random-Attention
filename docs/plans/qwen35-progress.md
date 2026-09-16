@@ -140,3 +140,12 @@
 - 生成111.539時間、全体外挿139.424時間（5.81日）。残り約28生成時間、完了は暫定で9月16日午前の見込み。
 - 4000回答中886回答が32k cap、legacy graderのEOS不正解は56例（既知の表記差による誤判定を含む）。途中の成績による条件変更や仮説検定は行わない。
 - 記録: `qwen35-main32k-progress-400.json`。このまま全500問完了まで待ち、最終監査・事前固定統計・別途のgrading感度分析へ進む。異常終了時は直ちに診断する。
+
+## 2026-09-16 09:25: 主評価5000回答完了
+
+- 全500問×2反復×5条件を完了。生成141.719 GPU時間、全件監査通過、未処理journalなし。再開後に新しいXidなし。
+- Legacy graderのfinal score: native93.3%、Random1024 71.4%、Random2048 81.3%、Recency1024 68.2%、SnapKV1024 68.4%。
+- 主比較Random2048−nativeは−12.0pp、95% CI [−14.5,−9.6]pp。低下2pp以内という目標を達成しない。
+- Random1024はRecency比+3.2pp / SnapKV比+3.0pp。対応付きCIはそれぞれ[1.6,4.8]/[1.5,4.6]pp、事前固定した2比較Holm補正sign testも通過。
+- 詳細: [主評価報告](qwen35-main32k-report.md)、`qwen35-main32k-analysis.json`、`qwen35-main32k-progress-500.json`。
+- この数値には既知のgrader表記差問題がある。元スコアを保ち、全条件に同じ規則を適用する別versionの感度分析を次に実施する。
