@@ -55,3 +55,16 @@ Phase 1のnative B8 peakを参考に、圧縮のbatchを増やしたdecode-memor
 - native対照とは同じ入力hash、window位置、samplingなしの条件を照合する。異なるbatchのaggregate throughput比とms/stepの両方を示す。
 - **揃えるのはPyTorchのdecode peak allocatedだけ**。reserved/NVML使用量、prefillを含むrun全体のpeak、実サービス同時接続数は同じとは限らず、別途表示する。
 - 高batchのモデル精度は未評価。主評価B2での精度低下を必ず併記する。成功しても同等精度の高速化・最適な最大batchとは主張しない。
+
+### 校正結果と本測定batchの固定（32k測定前）
+
+| 条件 | 選定B | 4k decode peak GiB | 予算比 | 95〜100%内 |
+|---|---:|---:|---:|---|
+| Random1024 | 96 | 16.7500 | 97.650% | yes |
+| Random2048 | 64 | 16.2590 | 94.787% | **no** |
+| Recency1024 | 96 | 16.7496 | 97.648% | yes |
+| SnapKV1024 | 72 | 16.4452 | 95.873% | yes |
+
+Random2048 B64は95%未満だったため、固定ルール通りB72も測定したが17.2495 GiB（100.562%）で予算超過。8刻みで区間に入らず、B64をunder-budget fallbackとして使う。**許容差を事後に緩めず、Random2048を厳密な許容区間内のmemory-matched点とは呼ばない。**
+
+全5校正cells（各2 windows）の監査通過。CPU選定コードは速度を参照せず、メモリとbatchのみで選定する。証拠hash・全試行・選定理由は`qwen35-efficiency-memory-selection-v1.json`に記録。本測定でも実測メモリを再監査する。

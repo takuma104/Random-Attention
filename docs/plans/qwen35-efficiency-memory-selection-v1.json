@@ -1,0 +1,83 @@
+{
+  "calibration_root": "results/qwen35/efficiency_memory_calibration_v1",
+  "reference_root": "results/qwen35/efficiency_v1",
+  "reference_data_sha256": "ce1ec22d62490b3db78cf391a96a8ccf8baafab127886008420cc95b0ca03d6e",
+  "budget_decode_allocated_gib": 17.15313148498535,
+  "calibrations": [
+    {
+      "method": "random_pp_C1024",
+      "batch": 96,
+      "path": "results/qwen35/efficiency_memory_calibration_v1/random1024_B96",
+      "data_sha256": "8d5347e0762d5f2a195d107a4bef6e1d083535c3fc140e9f521afe9421fb0321",
+      "peak_allocated_gib": 16.75001621246338,
+      "whole_run_peak_allocated_gib": 16.795641899108887
+    },
+    {
+      "method": "random_pp_C2048",
+      "batch": 64,
+      "path": "results/qwen35/efficiency_memory_calibration_v1/random2048_B64",
+      "data_sha256": "86eaa138f68d3e64a669f6b142b2ae38ea53cba0cd67f5fafc36d01ba001f03e",
+      "peak_allocated_gib": 16.258950233459473,
+      "whole_run_peak_allocated_gib": 16.258950233459473
+    },
+    {
+      "method": "random_pp_C2048",
+      "batch": 72,
+      "path": "results/qwen35/efficiency_memory_calibration_v1/random2048_B72",
+      "data_sha256": "86724de7811f66aee98e9b976f5536d1e4a46c94065b3b576a26ca20182b78a9",
+      "peak_allocated_gib": 17.24951171875,
+      "whole_run_peak_allocated_gib": 17.24951171875
+    },
+    {
+      "method": "recency_pp_C1024",
+      "batch": 96,
+      "path": "results/qwen35/efficiency_memory_calibration_v1/recency1024_B96",
+      "data_sha256": "1a8340c426960ed12bb4e831abf63fd16a395b5de0c5ca8b2325e8120b87afa5",
+      "peak_allocated_gib": 16.749619483947754,
+      "whole_run_peak_allocated_gib": 16.795519828796387
+    },
+    {
+      "method": "snapkv_pp_C1024",
+      "batch": 72,
+      "path": "results/qwen35/efficiency_memory_calibration_v1/snapkv1024_B72",
+      "data_sha256": "08ee4459175242f5c1cf5d28882567667e47266b11e4165bf0287f1d34f5f0df",
+      "peak_allocated_gib": 16.445212841033936,
+      "whole_run_peak_allocated_gib": 16.445212841033936
+    }
+  ],
+  "selected": [
+    {
+      "method": "random_pp_C1024",
+      "batch": 96,
+      "calibration_fraction": 0.9764990274297827,
+      "calibration_within_95_to_100_percent": true,
+      "measurement_subdir": "random_pp_C1024_B96",
+      "reason": "Within prespecified interval"
+    },
+    {
+      "method": "random_pp_C2048",
+      "batch": 64,
+      "calibration_fraction": 0.9478706700109784,
+      "calibration_within_95_to_100_percent": false,
+      "measurement_subdir": "random_pp_C2048_B64",
+      "reason": "Adjacent batch exceeds budget; closest under-budget grid point, NOT within tolerance"
+    },
+    {
+      "method": "recency_pp_C1024",
+      "batch": 96,
+      "calibration_fraction": 0.9764758987948758,
+      "calibration_within_95_to_100_percent": true,
+      "measurement_subdir": "recency_pp_C1024_B96",
+      "reason": "Within prespecified interval"
+    },
+    {
+      "method": "snapkv_pp_C1024",
+      "batch": 72,
+      "calibration_fraction": 0.9587294807032128,
+      "calibration_within_95_to_100_percent": true,
+      "measurement_subdir": "snapkv_pp_C1024_B72",
+      "reason": "Within prespecified interval"
+    }
+  ],
+  "rule": "Memory-only, batch multiples of 8, target 95-100% of native_preallocated B8 decode peak allocated; disclose fallback outside interval"
+}

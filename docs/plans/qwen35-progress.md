@@ -210,3 +210,5 @@
 - B8のdecode peak allocatedはpreallocated17.15 GiB、Random1024 9.15 GiB。sampling/servingを含まない測定で、別MATH評価での精度低下を伴う点も併記。
 - 詳細: [効率報告](qwen35-efficiency-v1-report.md)、`qwen35-efficiency-v1-analysis.json`。
 - 次のdecode allocated-memory matched比較を校正前に固定。native preallocated B8の17.1531 GiBに対し95〜100%予算へ入る圧縮batchを8刻みでメモリだけから選ぶ。初期候補はRandom1024/Recency B96、Random2048 B64、SnapKV B72。
+- 校正5 cells/10 windows監査通過。Random1024 B96=97.650%、Recency B96=97.648%、SnapKV B72=95.873%で区間内。Random2048 B64=94.787%、追加B72=100.562%でどちらも区間外。固定ルールのunder-budget fallback B64を使い、memory-matchedの許容差内とは表示しない。
+- 選定記録: `qwen35-efficiency-memory-selection-v1.json`。32k本測定は上記4つの選定batchで実施し、同じtrace/windowと実測メモリを再監査する。
