@@ -227,3 +227,11 @@
 - baseline5000回答のraw SHA不変、全500 prompts・1000 seed pairs一致、source/hash・package環境・kernel/model/data一致。既存Random1024/2048の2000 pre-eviction prefixesもnativeと完全一致。`qwen35-frontier-preflight.json`。
 - 新規2比較は500問題cluster bootstrap（10000回、seed20260917）、Bonferroni個別97.5% CIで2pp目標を判定。通常95% CIと別の表記レビュー感度も併記する。CPU tests3件通過。
 - 新規生成はfrozen runnerの設定引数のみで行い、2000回答・1000 batches、暫定約2日。最初の20問で運用/paired-prefix監査し、途中精度による条件変更をしない。
+
+## 2026-09-17 12:03: frontier最初の20問監査通過
+
+- 10:07:51 JST開始、job `qwen35-frontier32k-b2-v1-e2c6`。20/500問、80回答・40 batchesの不変な完了prefixをCPU監査し、EOS/cache/event/batch/採点/source整合性を確認。
+- 全80回答でnativeとのeviction前prefixが完全一致（計373277 tokens）。旧main5000回答のraw SHAも不変。
+- 生成時間1.921h。20問からの単純外挿は約48h（約2日）で、当初見積もりと同程度。ただし固定dataset prefixの暫定見積もり。
+- 共有peak allocatedはC4096=8.885 GiB、C8192=9.136 GiB。監査時GPU56°C・約255W、開始以降kernel logに新しいNVRM/Xid記録なし。
+- `qwen35-frontier-progress-020.json`、`qwen35-frontier-prefix-020.json`。運用監査のみで、途中の有意差/精度維持判定や条件変更は行っていない。固定条件で継続し、次は100問で監査する。
