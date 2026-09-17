@@ -212,3 +212,10 @@
 - 次のdecode allocated-memory matched比較を校正前に固定。native preallocated B8の17.1531 GiBに対し95〜100%予算へ入る圧縮batchを8刻みでメモリだけから選ぶ。初期候補はRandom1024/Recency B96、Random2048 B64、SnapKV B72。
 - 校正5 cells/10 windows監査通過。Random1024 B96=97.650%、Recency B96=97.648%、SnapKV B72=95.873%で区間内。Random2048 B64=94.787%、追加B72=100.562%でどちらも区間外。固定ルールのunder-budget fallback B64を使い、memory-matchedの許容差内とは表示しない。
 - 選定記録: `qwen35-efficiency-memory-selection-v1.json`。32k本測定は上記4つの選定batchで実施し、同じtrace/windowと実測メモリを再監査する。
+
+## 2026-09-17 09:44: decode allocated-memory予算比較完了
+
+- 4 cells / 24 windows、54分43秒、全監査通過。Random1024 B96・Recency B96・SnapKV B72は32k実測でも予算の95〜100%以内。Random2048 B64は94.79%のunder-budget fallbackであり許容区間外。
+- native preallocated B8=487.8 tok/s・16.40 ms/stepに対し、Random1024 B96=3643.9 tok/s・26.35 ms/step。集約throughputは7.47倍だが1系列のstepは1.61倍遅い。Recencyもほぼ同じ、SnapKV B72は3137.8 tok/s。
+- allocatedのみの予算比較。Random1024のreservedはnativeより大きく、最大serving batchや実QPSではない。高batch精度は未評価で、別MATH評価での精度低下を併記。
+- [メモリ予算比較報告](qwen35-efficiency-memory-v1-report.md)、`qwen35-efficiency-memory-v1-analysis.json`。06:00以降のkernel logに新しいNVRM/Xid記録なし。

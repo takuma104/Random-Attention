@@ -1,0 +1,351 @@
+{
+  "audit": "passed",
+  "selection_sha256": "b35c6772c4682a2715eee0e93f94eb05b3a7a9c84da9dbf3b95a4b4ddf98eabe",
+  "reference_data_sha256": "ce1ec22d62490b3db78cf391a96a8ccf8baafab127886008420cc95b0ca03d6e",
+  "input_token_sha256": "cea5f2a4712b090914a9998e76d88b1eb0adcf1e507f449acd3d809c956f6968",
+  "total_compressed_run_wall_hours": 0.9076703803583384,
+  "reference": {
+    "method": "native_preallocated",
+    "batch": 8,
+    "peak_decode_allocated_gib": 17.15313148498535,
+    "peak_decode_reserved_gib": 17.279296875,
+    "whole_run_peak_allocated_gib": 17.169631004333496,
+    "metrics": [
+      {
+        "mode": "throughput",
+        "aggregate_tokens_per_second": {
+          "median": 487.8100331561927,
+          "minimum": 487.0779615332785,
+          "maximum": 489.1137001283639,
+          "n": 3
+        },
+        "ms_per_step": {
+          "median": 16.399826687120367,
+          "minimum": 16.356115148482786,
+          "maximum": 16.424475405983685,
+          "n": 3
+        },
+        "paired_aggregate_throughput_ratio": {
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "n": 3
+        },
+        "paired_step_latency_ratio": {
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "n": 3
+        }
+      },
+      {
+        "mode": "synchronized",
+        "aggregate_tokens_per_second": {
+          "median": 471.45528750275133,
+          "minimum": 470.8827133634109,
+          "maximum": 472.400321883086,
+          "n": 3
+        },
+        "ms_per_step": {
+          "median": 16.968735343652952,
+          "minimum": 16.934789477090817,
+          "maximum": 16.989368632494006,
+          "n": 3
+        },
+        "paired_aggregate_throughput_ratio": {
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "n": 3
+        },
+        "paired_step_latency_ratio": {
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "n": 3
+        }
+      }
+    ]
+  },
+  "comparisons": [
+    {
+      "method": "random_pp_C1024",
+      "batch": 96,
+      "data_sha256": "8bef8148b69376df7f036e1eafcf1268a496dc8385c9a726e70873845623c938",
+      "peak_decode_allocated_gib": 16.749836921691895,
+      "fraction_of_reference_budget": 0.9764885750659306,
+      "within_95_to_100_percent": true,
+      "peak_decode_reserved_gib": 17.552734375,
+      "whole_run_peak_allocated_gib": 16.795737266540527,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 42, 2490, 13801, 46.14, 9907",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 71, 2865, 13801, 494.31, 19223",
+      "paired_metrics": [
+        {
+          "mode": "throughput",
+          "aggregate_tokens_per_second": {
+            "median": 3643.923042699597,
+            "minimum": 3643.5666350659226,
+            "maximum": 3644.804779663898,
+            "n": 3
+          },
+          "ms_per_step": {
+            "median": 26.34523256256216,
+            "minimum": 26.338859226598288,
+            "maximum": 26.34780960943317,
+            "n": 3
+          },
+          "paired_aggregate_throughput_ratio": {
+            "median": 7.469232667256934,
+            "minimum": 7.451855833740393,
+            "maximum": 7.481190549514596,
+            "n": 3
+          },
+          "paired_step_latency_ratio": {
+            "median": 1.6065907348963309,
+            "minimum": 1.604022771586616,
+            "maximum": 1.6103371116851983,
+            "n": 3
+          }
+        },
+        {
+          "mode": "synchronized",
+          "aggregate_tokens_per_second": {
+            "median": 3596.4032476768366,
+            "minimum": 3595.1344636698705,
+            "maximum": 3596.540541047507,
+            "n": 3
+          },
+          "ms_per_step": {
+            "median": 26.693335921663675,
+            "minimum": 26.69231693744223,
+            "maximum": 26.702756453232723,
+            "n": 3
+          },
+          "paired_aggregate_throughput_ratio": {
+            "median": 7.628301862360274,
+            "minimum": 7.613332113557729,
+            "maximum": 7.6348830858338825,
+            "n": 3
+          },
+          "paired_step_latency_ratio": {
+            "median": 1.5730892951694333,
+            "minimum": 1.5717333016225694,
+            "maximum": 1.5761823891316322,
+            "n": 3
+          }
+        }
+      ]
+    },
+    {
+      "method": "random_pp_C2048",
+      "batch": 64,
+      "data_sha256": "24edda5a1bb890b1d2033ca415b4fa28446c1c4275ada13e4116d9230e7436fc",
+      "peak_decode_allocated_gib": 16.259045600891113,
+      "fraction_of_reference_budget": 0.9478762297789848,
+      "within_95_to_100_percent": false,
+      "peak_decode_reserved_gib": 16.916015625,
+      "whole_run_peak_allocated_gib": 16.259045600891113,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 61, 2535, 13801, 77.37, 9907",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 72, 2872, 13801, 505.05, 18571",
+      "paired_metrics": [
+        {
+          "mode": "throughput",
+          "aggregate_tokens_per_second": {
+            "median": 2895.16401870517,
+            "minimum": 2894.7612344067584,
+            "maximum": 2896.365118934671,
+            "n": 3
+          },
+          "ms_per_step": {
+            "median": 22.105828749772627,
+            "minimum": 22.096661633440817,
+            "maximum": 22.10890460992232,
+            "n": 3
+          },
+          "paired_aggregate_throughput_ratio": {
+            "median": 5.934197818108181,
+            "minimum": 5.921660174668065,
+            "maximum": 5.943943777688994,
+            "n": 3
+          },
+          "paired_step_latency_ratio": {
+            "median": 1.3481181863516636,
+            "minimum": 1.3459077506803743,
+            "maximum": 1.350972491502087,
+            "n": 3
+          }
+        },
+        {
+          "mode": "synchronized",
+          "aggregate_tokens_per_second": {
+            "median": 2850.4825989930505,
+            "minimum": 2850.421242315573,
+            "maximum": 2851.479233814469,
+            "n": 3
+          },
+          "ms_per_step": {
+            "median": 22.45233842950256,
+            "minimum": 22.444490999987465,
+            "maximum": 22.45282172680163,
+            "n": 3
+          },
+          "paired_aggregate_throughput_ratio": {
+            "median": 6.046005459847428,
+            "minimum": 6.034040340257249,
+            "maximum": 6.055603981396948,
+            "n": 3
+          },
+          "paired_step_latency_ratio": {
+            "median": 1.3231876903071604,
+            "minimum": 1.3210903527668443,
+            "maximum": 1.325811487640624,
+            "n": 3
+          }
+        }
+      ]
+    },
+    {
+      "method": "recency_pp_C1024",
+      "batch": 96,
+      "data_sha256": "192136246ccbfd419afd811040c53a3286e59a3733fb98f49f25400ecf578c5c",
+      "peak_decode_allocated_gib": 16.749836921691895,
+      "fraction_of_reference_budget": 0.9764885750659306,
+      "within_95_to_100_percent": true,
+      "peak_decode_reserved_gib": 17.552734375,
+      "whole_run_peak_allocated_gib": 16.795737266540527,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 61, 2550, 13801, 69.78, 9907",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 72, 2880, 13801, 492.13, 19223",
+      "paired_metrics": [
+        {
+          "mode": "throughput",
+          "aggregate_tokens_per_second": {
+            "median": 3645.427157318378,
+            "minimum": 3644.9803258286865,
+            "maximum": 3645.8952994664637,
+            "n": 3
+          },
+          "ms_per_step": {
+            "median": 26.334362437410164,
+            "minimum": 26.330981038881873,
+            "maximum": 26.337590718867432,
+            "n": 3
+          },
+          "paired_aggregate_throughput_ratio": {
+            "median": 7.473046697567909,
+            "minimum": 7.454085417173202,
+            "maximum": 7.483361214608458,
+            "n": 3
+          },
+          "paired_step_latency_ratio": {
+            "median": 1.6057707767175309,
+            "minimum": 1.603557499880468,
+            "maximum": 1.6098554454921632,
+            "n": 3
+          }
+        },
+        {
+          "mode": "synchronized",
+          "aggregate_tokens_per_second": {
+            "median": 3601.090363753307,
+            "minimum": 3600.7418146043674,
+            "maximum": 3601.576770343991,
+            "n": 3
+          },
+          "ms_per_step": {
+            "median": 26.658592343665077,
+            "minimum": 26.654991999748745,
+            "maximum": 26.661172875719785,
+            "n": 3
+          },
+          "paired_aggregate_throughput_ratio": {
+            "median": 7.6382436663886,
+            "minimum": 7.6222255739603675,
+            "maximum": 7.648564426200159,
+            "n": 3
+          },
+          "paired_step_latency_ratio": {
+            "median": 1.571041789725158,
+            "minimum": 1.5689218696902125,
+            "maximum": 1.5743433310338286,
+            "n": 3
+          }
+        }
+      ]
+    },
+    {
+      "method": "snapkv_pp_C1024",
+      "batch": 72,
+      "data_sha256": "ed20f4092a268161b2d3f4794da1c1e2621850642eac67c099a9ea824e25f7c9",
+      "peak_decode_allocated_gib": 16.444705486297607,
+      "fraction_of_reference_budget": 0.9586999027374185,
+      "within_95_to_100_percent": true,
+      "peak_decode_reserved_gib": 17.041015625,
+      "whole_run_peak_allocated_gib": 16.444705486297607,
+      "gpu_before": "NVIDIA GeForce RTX 5090, 610.57.04, 60, 2557, 13801, 64.94, 9907",
+      "gpu_after": "NVIDIA GeForce RTX 5090, 610.57.04, 72, 2872, 13801, 497.33, 18699",
+      "paired_metrics": [
+        {
+          "mode": "throughput",
+          "aggregate_tokens_per_second": {
+            "median": 3137.8486994566074,
+            "minimum": 3136.3331183553514,
+            "maximum": 3139.7439014589827,
+            "n": 3
+          },
+          "ms_per_step": {
+            "median": 22.945657007767295,
+            "minimum": 22.931806624910678,
+            "maximum": 22.956745116971433,
+            "n": 3
+          },
+          "paired_aggregate_throughput_ratio": {
+            "median": 6.429414946762942,
+            "minimum": 6.4192515986262135,
+            "maximum": 6.442189848990368,
+            "n": 3
+          },
+          "paired_step_latency_ratio": {
+            "median": 1.3998163245835125,
+            "minimum": 1.397040480173135,
+            "maximum": 1.402032598617274,
+            "n": 3
+          }
+        },
+        {
+          "mode": "synchronized",
+          "aggregate_tokens_per_second": {
+            "median": 3090.67162512989,
+            "minimum": 3090.6310554497672,
+            "maximum": 3091.015848073596,
+            "n": 3
+          },
+          "ms_per_step": {
+            "median": 23.295907405554317,
+            "minimum": 23.293313117392245,
+            "maximum": 23.296213203138905,
+            "n": 3
+          },
+          "paired_aggregate_throughput_ratio": {
+            "median": 6.556328733624729,
+            "minimum": 6.542484164299104,
+            "maximum": 6.563483788508766,
+            "n": 3
+          },
+          "paired_step_latency_ratio": {
+            "median": 1.3727194540814711,
+            "minimum": 1.3712230105233207,
+            "maximum": 1.3756242696178034,
+            "n": 3
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Only decode PyTorch peak allocated is budgeted; reserved, NVML and prefill peak are not matched.",
+    "Batch was selected from calibration memory, not speed or accuracy; fallback outside 95-100% must be labeled.",
+    "Same trace and logical windows, different batches; repeated identical inputs are not independent serving requests.",
+    "Model+LM head only. No sampling/EOS/scheduler. Adjacent windows give descriptive ranges, not confidence intervals.",
+    "High-batch accuracy is untested; substantial B2 MATH accuracy loss prevents claims of quality-preserving speedup."
+  ]
+}
