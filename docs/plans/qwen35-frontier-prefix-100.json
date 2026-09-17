@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "scope": "Operational paired-prefix audit only; no hypothesis tests",
+  "n_problems": 100,
+  "n_matched_prefixes": 400,
+  "n_matched_tokens": 1729071,
+  "native_data_sha256": "b3ad6d1939371a128587508e329ab92c2b3d09fa7d84a74ba07b41d056d26a66",
+  "selected_data_sha256": "da011e8a3180d9099cf8370cb82fe3bc2aa9adfce250bf885109f3222babd2e7",
+  "source_and_generation_settings_match": true
+}
