@@ -219,3 +219,11 @@
 - native preallocated B8=487.8 tok/s・16.40 ms/stepに対し、Random1024 B96=3643.9 tok/s・26.35 ms/step。集約throughputは7.47倍だが1系列のstepは1.61倍遅い。Recencyもほぼ同じ、SnapKV B72は3137.8 tok/s。
 - allocatedのみの予算比較。Random1024のreservedはnativeより大きく、最大serving batchや実QPSではない。高batch精度は未評価で、別MATH評価での精度低下を併記。
 - [メモリ予算比較報告](qwen35-efficiency-memory-v1-report.md)、`qwen35-efficiency-memory-v1-analysis.json`。06:00以降のkernel logに新しいNVRM/Xid記録なし。
+
+## 2026-09-17: 大容量frontierの開始gate通過
+
+- [拡張protocol](qwen35-capacity-frontier-protocol.md)を新しい精度結果の前に固定。Random C4096/C8192を各500問×2runで評価し、既存nativeを再利用。主評価後の拡張であり元C2048の失敗を置き換えない。
+- B2実checkpoint検証5分32秒。両容量とも2 evictions、eviction前16 checkpointsのlogits完全一致、eviction後計1024 eager-reference比較通過。最大絶対誤差はC4096=.0625、C8192=.125で、既存rtol=.03/atol=.03の複合基準を通過。`qwen35-frontier-validation.json`。
+- baseline5000回答のraw SHA不変、全500 prompts・1000 seed pairs一致、source/hash・package環境・kernel/model/data一致。既存Random1024/2048の2000 pre-eviction prefixesもnativeと完全一致。`qwen35-frontier-preflight.json`。
+- 新規2比較は500問題cluster bootstrap（10000回、seed20260917）、Bonferroni個別97.5% CIで2pp目標を判定。通常95% CIと別の表記レビュー感度も併記する。CPU tests3件通過。
+- 新規生成はfrozen runnerの設定引数のみで行い、2000回答・1000 batches、暫定約2日。最初の20問で運用/paired-prefix監査し、途中精度による条件変更をしない。

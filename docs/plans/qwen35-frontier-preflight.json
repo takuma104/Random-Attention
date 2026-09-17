@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "baseline_data_sha256": "b3ad6d1939371a128587508e329ab92c2b3d09fa7d84a74ba07b41d056d26a66",
+  "baseline_manifest_sha256": "ae7f93f814f573d734ff1036987534fa8ad747db9eae6d467b9ee546926b841c",
+  "source_hashes": {
+    "kvcompress/qwen35/__init__.py": "be8e82884ca7d42dd1854f5b741dd677edf7ddb587b989ed44ede26b3a6fd302",
+    "kvcompress/qwen35/batch.py": "e2f05f9e50b431783e9c815972a6f5f60b41976965ebf0594ba5d125f3aec43b",
+    "kvcompress/qwen35/cache.py": "25a3321a2f509dbeba417c5e075f6a25969c7fec7fc9a652e936b82ba1d78017",
+    "kvcompress/qwen35/generate.py": "59175a51933dc1440707105d986ffb86d6fe623c00427e50941d40d5d858cfe9",
+    "kvcompress/qwen35/grade.py": "a59149def3524fe1507c8b9445aa1ce310d9a9c0fbe543648e2f666466423a61",
+    "kvcompress/qwen35/runtime.py": "8e00295f04f5b8d3c4e82c0c1ece4ebd3f4b96918c7e7223344b3b69934fdbe1",
+    "kvcompress/qwen35/test_batch.py": "34a6195eb283ef98859735c72e7ce569021a6bd6eadfe9978e9d4ab1e2974fac",
+    "kvcompress/qwen35/test_batch_recovery.py": "5935d0f949f0e524c7cbc5ceecec164c8ecd03ba2f7406e2d1fb1a59d17e5e28",
+    "kvcompress/qwen35/test_cache.py": "b230a602f4d246b90b2ff9eb40a6fb26de93a439f2c9e1ffb8e2333684fd0f39",
+    "kvcompress/qwen35/test_generate.py": "57a4abea22e8bf7a24c47407ec25cc42380d4f093164fb8df7ceea025b4881ce",
+    "scripts/qwen35/run_math.py": "0dd0f43b0b473c14445bb5ada2738cc0d5447d135924eef79cc158e6c2c35b2e",
+    "kvcompress/harness/Utils/grader.py": "605c1d66b55bfbebcdb7af6c40fe72e5f16df6d5ec894ad7c2df6cff304dd62e",
+    "kvcompress/harness/Utils/parser.py": "856032a36948aa6e091ab25da865c14927f0d60161e1bae79b6a57d34b1f9c1c",
+    "kvcompress/harness/Utils/math_normalization.py": "0d0c8dca754f9a3c4218a286c158663f5480fc45475f1f40e39a5e6daec2c8b6",
+    "scripts/qwen35/run_math_batch.py": "ddd2db7444c7972dd93b0a754224bf02a1f6f95aba0dd0f42edfbab8b5a2f73a"
+  },
+  "package_environment_exact_match": true,
+  "kernels": {
+    "torch_chunk_gated_delta_rule": "fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule",
+    "torch_recurrent_gated_delta_rule": "fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule",
+    "causal_conv1d_fn": "transformers.models.qwen3_5.modeling_qwen3_5.causal_conv1d_fn",
+    "causal_conv1d_update": "transformers.models.qwen3_5.modeling_qwen3_5.causal_conv1d_update"
+  },
+  "n_baseline_answers_audited": 5000,
+  "n_current_prompts_matched": 500,
+  "n_seed_pairs_matched": 1000,
+  "original_compressed_pre_eviction_prefixes_matched": 2000,
+  "source_script_sha256": "bf3ae4fa9dbb15eebcac9a0ac87910dfb6469c2d473a04d68ee815ee9955087a"
+}

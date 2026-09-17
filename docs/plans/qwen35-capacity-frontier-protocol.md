@@ -34,8 +34,8 @@
 - 500問題clusterをresampleして同一問題の両runを保持。10000 bootstrap、seed20260917。
 - この新規2比較familyについてBonferroni方式の**個別97.5%両側percentile CI**（quantiles .0125/.9875）を用い、同時95%のnominal coverageを意図する。bootstrapの近似性や後続実験である点を明示する。
 - 2pp低下以内の目標を支持したとするのは、その条件の下限が**-0.02より大きい**場合だけ。非有意を同等としない。旧条件を含む研究全体の多重性を補正したとは主張しない。
-- 参考として通常95% CI、EOS-required/paper metric、cap率、生成長、eviction率、native長による層別を報告。C4096−C8192等は探索的。
-- 既知のgrader表記問題があるため、旧レビュー方針に沿った別のmasked sensitivity reviewも行う。既存nativeの判断を恣意的に変更せず、新規条件にも等しく適用し、全overlayをSHA-linked sidecarとして保存する。未解決ambiguityはlegacyのまま、欠落boxは救済しない。
+- 参考として通常95% CI、EOS-required/paper metric、cap率、生成長、eviction率、native長による層別を報告。native生成長の区間は[0,4096)、[4096,8192)、[8192,16384)、[16384,32769)。層別はrow単位の記述集計で有意差検定しない。C4096−C8192等は探索的。
+- 既知のgrader表記問題があるため、旧レビュー方針に沿った別のmasked sensitivity reviewも行う。既存nativeの判断を恣意的に変更せず、新規条件にも等しく適用し、全overlayをSHA-linked sidecarとして保存する。未解決ambiguityはlegacyのまま、欠落boxは救済しない。AI-assisted reviewであり独立human審査とは呼ばない。
 - legacyと表記レビュー感度の結論が異なれば両方示し、頑健な精度維持とは称さない。新しいレビューを元主評価の事前登録に遡って組み込まない。
 - この生成runの速度は生成長が異なるため、固定workload性能として扱わない。高容量での効率再測定は精度結果を見て別手順で固定する。
 

@@ -125,6 +125,23 @@ throughput and per-step-barrier timing are separate; neither includes sampling
 or a serving scheduler. Preallocation includes adapter position bookkeeping,
 not just a different allocator. See `docs/plans/qwen35-efficiency-protocol.md`.
 
+## Post-main capacity frontier
+
+See `docs/plans/qwen35-capacity-frontier-protocol.md`. Generation uses the unchanged
+B2 runner with `--cells random_pp:4096,random_pp:8192 --subset all --limit 500
+--runs 2 --max-new-tokens 32768`. Native answers are reused, never regenerated.
+`preflight_frontier.py` verifies all original raw bytes, prompts, seeds and the
+frozen environment before launch. Final CPU analysis:
+
+```bash
+.venv/bin/python scripts/qwen35/analyze_frontier.py results/qwen35/frontier32k_b2_v1 \
+  --out docs/plans/qwen35-frontier32k-analysis.json
+```
+
+`audit_frontier_prefix.py ROOT --problems N --out REPORT` complements
+`audit_progress.py` with cross-run settings and pre-eviction prefix checks.
+No interim hypothesis tests. This extension does not replace the original result.
+
 Per-answer tok/s is a workload diagnostic, not a fixed-workload speed benchmark.
 Native uses DynamicCache, compressed uses preallocated bounded storage; allocator
 and cache-growth costs therefore differ. An iso-kernel/allocator efficiency study
