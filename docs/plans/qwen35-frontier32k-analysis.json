@@ -1,0 +1,270 @@
+{
+  "audit": "passed",
+  "protocol": "docs/plans/qwen35-capacity-frontier-protocol.md",
+  "analysis_source_sha256": "8d13f95430c814a62897ddb58a633780aef548577f1fd150a402a1b1a98bd2a5",
+  "completed_data_sha256": "993523c1f7287262f4ade9464c29ecc39459fe42b6a3f04fb47b91f6014f479e",
+  "reference_data_sha256": "b3ad6d1939371a128587508e329ab92c2b3d09fa7d84a74ba07b41d056d26a66",
+  "manifest_sha256": "74a1c730b8398d408fd438bbb78893978473efe0cb042e25c9b8003cda5d9349",
+  "reference_manifest_sha256": "ae7f93f814f573d734ff1036987534fa8ad747db9eae6d467b9ee546926b841c",
+  "matched_pre_eviction_prefixes": 2000,
+  "matched_prefix_tokens": 9161707,
+  "cells": {
+    "native": {
+      "n": 1000,
+      "final_accuracy": 0.933,
+      "paper_accuracy": 0.934,
+      "eos_required_accuracy": 0.933,
+      "cap_rate": 0.049,
+      "mean_tokens": 9701.405,
+      "median_tokens": 6082.5,
+      "eviction_exposure": 0.0,
+      "n_eos_wrong": 18,
+      "generation_hours": 21.516740969496283,
+      "aggregate_generation_tok_s": 125.24362895117893,
+      "shared_peak_allocated_gib": 10.754591941833496
+    },
+    "random_pp_C4096": {
+      "n": 1000,
+      "final_accuracy": 0.871,
+      "paper_accuracy": 0.871,
+      "eos_required_accuracy": 0.87,
+      "cap_rate": 0.113,
+      "mean_tokens": 10660.652,
+      "median_tokens": 5940.5,
+      "eviction_exposure": 0.663,
+      "n_eos_wrong": 17,
+      "generation_hours": 23.749201164479697,
+      "aggregate_generation_tok_s": 124.69018228079415,
+      "shared_peak_allocated_gib": 9.004743576049805
+    },
+    "random_pp_C8192": {
+      "n": 1000,
+      "final_accuracy": 0.914,
+      "paper_accuracy": 0.915,
+      "eos_required_accuracy": 0.914,
+      "cap_rate": 0.071,
+      "mean_tokens": 10047.05,
+      "median_tokens": 6082.5,
+      "eviction_exposure": 0.391,
+      "n_eos_wrong": 15,
+      "generation_hours": 22.64259819607965,
+      "aggregate_generation_tok_s": 123.25649194735217,
+      "shared_peak_allocated_gib": 9.224498748779297
+    }
+  },
+  "contrasts": {
+    "random_pp_C4096": {
+      "final_correct": {
+        "n_problems": 500,
+        "difference": -0.062,
+        "ci95": [
+          -0.083,
+          -0.043
+        ],
+        "ci97_5": [
+          -0.085,
+          -0.04
+        ],
+        "wins": 6,
+        "losses": 51,
+        "ties": 443,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260917
+      },
+      "paper_correct": {
+        "n_problems": 500,
+        "difference": -0.063,
+        "ci95": [
+          -0.084,
+          -0.044
+        ],
+        "ci97_5": [
+          -0.08601249999999998,
+          -0.041
+        ],
+        "wins": 6,
+        "losses": 52,
+        "ties": 442,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260917
+      },
+      "final_correct_terminated": {
+        "n_problems": 500,
+        "difference": -0.063,
+        "ci95": [
+          -0.084,
+          -0.044
+        ],
+        "ci97_5": [
+          -0.087,
+          -0.041
+        ],
+        "wins": 6,
+        "losses": 52,
+        "ties": 442,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260917
+      }
+    },
+    "random_pp_C8192": {
+      "final_correct": {
+        "n_problems": 500,
+        "difference": -0.019,
+        "ci95": [
+          -0.033,
+          -0.006
+        ],
+        "ci97_5": [
+          -0.035,
+          -0.004
+        ],
+        "wins": 9,
+        "losses": 22,
+        "ties": 469,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260917
+      },
+      "paper_correct": {
+        "n_problems": 500,
+        "difference": -0.019,
+        "ci95": [
+          -0.033,
+          -0.006
+        ],
+        "ci97_5": [
+          -0.035,
+          -0.004
+        ],
+        "wins": 9,
+        "losses": 22,
+        "ties": 469,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260917
+      },
+      "final_correct_terminated": {
+        "n_problems": 500,
+        "difference": -0.019,
+        "ci95": [
+          -0.033,
+          -0.006
+        ],
+        "ci97_5": [
+          -0.035,
+          -0.004
+        ],
+        "wins": 9,
+        "losses": 22,
+        "ties": 469,
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 20260917
+      }
+    }
+  },
+  "primary_decisions": {
+    "random_pp_C4096": {
+      "n_problems": 500,
+      "difference": -0.062,
+      "ci95": [
+        -0.083,
+        -0.043
+      ],
+      "ci97_5": [
+        -0.085,
+        -0.04
+      ],
+      "wins": 6,
+      "losses": 51,
+      "ties": 443,
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260917,
+      "family_size": 2,
+      "margin": -0.02,
+      "supports_target": false,
+      "criterion": "Individual 97.5% two-sided percentile CI lower > -0.02; Bonferroni new two-contrast family"
+    },
+    "random_pp_C8192": {
+      "n_problems": 500,
+      "difference": -0.019,
+      "ci95": [
+        -0.033,
+        -0.006
+      ],
+      "ci97_5": [
+        -0.035,
+        -0.004
+      ],
+      "wins": 9,
+      "losses": 22,
+      "ties": 469,
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260917,
+      "family_size": 2,
+      "margin": -0.02,
+      "supports_target": false,
+      "criterion": "Individual 97.5% two-sided percentile CI lower > -0.02; Bonferroni new two-contrast family"
+    }
+  },
+  "native_length_strata": [
+    {
+      "native_generated_length_interval": [
+        0,
+        4096
+      ],
+      "n_rows": 336,
+      "n_problems": 212,
+      "final_accuracy": {
+        "native": 0.9851190476190477,
+        "random_pp_C4096": 0.9851190476190477,
+        "random_pp_C8192": 0.9851190476190477
+      }
+    },
+    {
+      "native_generated_length_interval": [
+        4096,
+        8192
+      ],
+      "n_rows": 275,
+      "n_problems": 202,
+      "final_accuracy": {
+        "native": 0.9854545454545455,
+        "random_pp_C4096": 0.9818181818181818,
+        "random_pp_C8192": 0.9854545454545455
+      }
+    },
+    {
+      "native_generated_length_interval": [
+        8192,
+        16384
+      ],
+      "n_rows": 187,
+      "n_problems": 140,
+      "final_accuracy": {
+        "native": 0.983957219251337,
+        "random_pp_C4096": 0.9625668449197861,
+        "random_pp_C8192": 0.983957219251337
+      }
+    },
+    {
+      "native_generated_length_interval": [
+        16384,
+        32769
+      ],
+      "n_rows": 202,
+      "n_problems": 124,
+      "final_accuracy": {
+        "native": 0.7277227722772277,
+        "random_pp_C4096": 0.44554455445544555,
+        "random_pp_C8192": 0.6336633663366337
+      }
+    }
+  ],
+  "notes": [
+    "Prospectively fixed post-main extension; same MATH500 and already-known native data, not independent replication.",
+    "Original C2048 preservation failure remains unchanged. New family has two comparisons only.",
+    "Legacy raw scores are primary; separate formatting sensitivity must not rewrite these data.",
+    "500 problem clusters retain two runs. Individual 97.5% bootstrap CIs use Bonferroni for nominal 95% family coverage.",
+    "Bootstrap coverage is approximate; adjustment is not study-wide across all prior/adaptive experiments.",
+    "All capped answers remain in denominator. Native-generated-length strata are descriptive row summaries only.",
+    "Generation throughput/shared memory are not fixed-workload serving measurements."
+  ]
+}

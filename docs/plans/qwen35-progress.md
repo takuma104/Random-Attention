@@ -259,3 +259,11 @@
 - 累計生成36.891h、単純外挿は全体約46.11h。残り100問は約9時間を暫定目安とするが、条件やサンプル数は変更しない。
 - 共有peak allocatedはC4096=9.005 GiB、C8192=9.224 GiB。監査時GPU55°C・約252W、開始以降kernel logに新しいNVRM/Xid記録なし。
 - `qwen35-frontier-progress-400.json`、`qwen35-frontier-prefix-400.json`。中間仮説検定は行わず、全500問完了後に事前固定の最終解析を実行する。
+
+## 2026-09-19 08:46: frontier全2000回答完了
+
+- 46.392 GPU生成時間、1000 B2 batches、全監査通過。全2000 pre-eviction prefixes（9161707 tokens）がnativeと完全一致。旧main5000回答および前回1600回答のSHA不変、全期間新しいXidなし。
+- Legacy finalはC4096=87.1%、C8192=91.4%、既存native93.3%。差は−6.2pp/−1.9pp、新規2比較familyの個別97.5% CIは[−8.5,−4.0]/[−3.5,−0.4]pp。
+- 両方ともCI下限>−2ppの基準を満たさず。C8192の点推定だけで精度維持成功としない。元C2048主比較の失敗を置き換えない。
+- [frontier legacy報告](qwen35-frontier32k-report.md)、`qwen35-frontier32k-analysis.json`、`qwen35-frontier-progress-500.json`。
+- 次に固定方針に沿った別のmasked grading sensitivityを実施する。raw scoresを保存し、旧native review判断は固定する。
