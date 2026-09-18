@@ -243,3 +243,11 @@
 - 累計生成8.197h、単純外挿は全体約41hへ更新（固定dataset prefixによる暫定値）。共有peak allocatedはC4096=8.886 GiB、C8192=9.139 GiB。
 - 監査時GPU57°C・約254W、開始以降kernel logに新しいNVRM/Xid記録なし。
 - `qwen35-frontier-progress-100.json`、`qwen35-frontier-prefix-100.json`。精度の中間仮説検定・条件変更・早期終了は行わず継続。次は250問で監査する。
+
+## 2026-09-18 09:56: frontier半分の250問監査通過
+
+- 250/500問、1000回答・500 batchesの完了prefixをCPU監査し、全整合性チェック通過。全1000 native対応pre-eviction prefixes（計4564494 tokens）が完全一致。
+- 前回100問・400回答のbyte SHAと旧main5000回答のSHAは不変。frozen source/settings一致、採点例外なし。
+- 累計生成23.725h、単純外挿は全体約47.45h（約2日）。固定prefixからの暫定値であり、速度や精度に基づく条件変更はしない。
+- 共有peak allocatedはC4096=8.982 GiB、C8192=9.201 GiB。監査時GPU56°C・約256W、開始以降kernel logに新しいNVRM/Xid記録なし。
+- `qwen35-frontier-progress-250.json`、`qwen35-frontier-prefix-250.json`。中間仮説検定なしで固定条件を継続。次は400問で監査する。
