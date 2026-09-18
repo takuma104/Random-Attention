@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "n_files_identical": 131,
+  "packets_sha256": "56807d34cd68aa0a7aa606728ffa915f657c2f406794440120fbcfd4528ca692",
+  "metadata_sha256": "53d76e042ec6eccbb3248d4fe8386cc94851ade34c704177a9d7295ead6662eb",
+  "note": "Fresh wrapper invocation reproduces packets, private mapping, metadata and every final-text file byte-for-byte; original review directory unchanged."
+}

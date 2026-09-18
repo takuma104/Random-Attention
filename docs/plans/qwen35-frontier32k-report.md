@@ -31,7 +31,7 @@ native生成長で層別した記述集計では、≥16384 tokensの202回答�
 - 全2000回答のeviction前prefix（計9161707 tokens）がnativeと完全一致。旧main5000回答と途中400問の1600回答のSHAは不変。
 - 20/100/250/400問の運用監査で条件変更や中間仮説検定なし。全期間kernel logに新しいNVRM/Xid記録なし。
 - B2共有peak allocatedはC4096 9.005 GiB、C8192 9.224 GiB。自由生成の長さが異なるので、このrunの時間やメモリを固定workloadの速度倍率としない。
-- 表記graderの感度レビューはこのlegacy結果と分離して次に行う。旧nativeのreview判断を固定し、新規条件にも同じ原則を適用。raw scoreを変更しない。
+- 表記graderの別感度レビューも完了。新規27 false negativesを補正し、native94.7%（旧判断固定）、C4096 88.5%、C8192 92.7%。Reviewed C8192−nativeは−2.0pp、97.5% CI [−3.8,−0.4]で目標判定は変わらない。詳細は`qwen35-frontier-grading-sensitivity-report.md`。raw scoreは不変。
 
 Protocol: `qwen35-capacity-frontier-protocol.md`。機械可読結果: `qwen35-frontier32k-analysis.json`。
 新規raw SHA256: `993523c1f7287262f4ade9464c29ecc39459fe42b6a3f04fb47b91f6014f479e`。

@@ -267,3 +267,11 @@
 - 両方ともCI下限>−2ppの基準を満たさず。C8192の点推定だけで精度維持成功としない。元C2048主比較の失敗を置き換えない。
 - [frontier legacy報告](qwen35-frontier32k-report.md)、`qwen35-frontier32k-analysis.json`、`qwen35-frontier-progress-500.json`。
 - 次に固定方針に沿った別のmasked grading sensitivityを実施する。raw scoresを保存し、旧native review判断は固定する。
+
+## 2026-09-19: frontier grading sensitivity完了
+
+- 133 records / 108 condition/run-masked packetsをAI-assisted review。73 exact gold、35非exact、必要な8 contextual text variantsを確認。判断を`54ee93e`で保存・push後にunmask。旧mainの判断/集約結果は既知で、独立human審査ではない。
+- 新規27 false negatives補正: C4096 +14、C8192 +13。旧native +14 correctionsはそのまま固定。Reviewed accuracyはnative94.7%、C4096 88.5%、C8192 92.7%。
+- 新規2比較の97.5% CIはC4096−native −6.2pp [−8.6,−4.0]、C8192−native −2.0pp [−3.8,−0.4]。両方とも2pp目標は支持されず、legacy結論不変。
+- 固定100 accepted sampleでfalse positive0（全件保証ではない）。新規remaining EOS-wrongはbranch ambiguity3、missing/empty box2。未解決はlegacyを維持、box欠落は救済しない。
+- 全raw SHA不変、overlay/context/native凍結監査通過、CPU tests8件通過。[感度報告](qwen35-frontier-grading-sensitivity-report.md)とSHA-linked sidecarsを保存。
