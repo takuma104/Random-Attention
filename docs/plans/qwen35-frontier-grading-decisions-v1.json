@@ -1,0 +1,774 @@
+{
+  "packets_sha256": "56807d34cd68aa0a7aa606728ffa915f657c2f406794440120fbcfd4528ca692",
+  "review": "AI-assisted condition/run-masked frontier sensitivity; original main review known, not independent human adjudication.",
+  "decisions": [
+    {
+      "case_id": "case_002bfb8fba91aa5c",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_0350df78c2e072bb",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_041bc6ad9ce28a17",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_07e6988e843bf51b",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_0920f48348de22c5",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_0a2dd4867f3b6faa",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_1533479daa0db6e2",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_179cee7eee7b7f10",
+      "category": "currency_format",
+      "new_final_correct": true,
+      "rationale": "Question asks dollars; 36 equals supplied $36.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_187151c76aa43c07",
+      "category": "explicit_roots",
+      "new_final_correct": true,
+      "rationale": "Explicit unordered set is exactly {-2,1-sqrt(5),1+sqrt(5)}.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_18e5bb3dade8558b",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_19f2b3782f3b1a73",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_1bb16d5254c5aab9",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_1c72d5f2598253c9",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_1f026830c2061bf0",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_1feefbbbaa4ca583",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_22744cda4ea7586d",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_2388aba00d430068",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_29bcc6c7489d9051",
+      "category": "fraction_format",
+      "new_final_correct": true,
+      "rationale": "Identical 3/4 fraction with LaTeX braces.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_29e6ae9a67f2e4d5",
+      "category": "fraction_format",
+      "new_final_correct": true,
+      "rationale": "dfrac and frac denote the same 17/50.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_2bcd83d13f3b1b5e",
+      "category": "fraction_format",
+      "new_final_correct": true,
+      "rationale": "7/4 equals supplied fraction; direction slope -1/4 gives b=7/4.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_2dbf71c86cff834c",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_32f14f7734ed29cc",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_330242a752cbb72d",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_347e9e3acb7c4459",
+      "category": "thousands_separator",
+      "new_final_correct": true,
+      "rationale": "58500 equals 58,500.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_39145216a72f3693",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_3ba1ed2462be243c",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_3c155343bd6f9208",
+      "category": "whitespace",
+      "new_final_correct": true,
+      "rationale": "Same ordered pair (-2,1), only spacing differs.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_3c36c2ddac0ce530",
+      "category": "contextual_base_suffix",
+      "new_final_correct": true,
+      "rationale": "Read final text explicitly identifies 2516 as octal and verifies binary conversion.",
+      "reviewed_final_text_variants": [
+        "ea19f604f6cb6b9659f6"
+      ]
+    },
+    {
+      "case_id": "case_4004bb0436f11b7b",
+      "category": "fraction_format",
+      "new_final_correct": true,
+      "rationale": "4/9 equals supplied fraction; 8 math books out of 18.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_4129fb49f6c86c92",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_447ff3effb1fd8db",
+      "category": "explicit_roots",
+      "new_final_correct": true,
+      "rationale": "Question requests real roots separated by commas; both 1 +/- sqrt(19) given.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_464417699d874ce3",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_466519d0c156fad7",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_48eabf529fce29c7",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_492962aa8c018828",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_4ce1c4f9e4f50245",
+      "category": "currency_format",
+      "new_final_correct": true,
+      "rationale": "Dollar cost 18.90 matches supplied $18.90.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_4d51bd7975d834e1",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_4d6d2c3045ffdddd",
+      "category": "interval_notation",
+      "new_final_correct": true,
+      "rationale": "Requested interval [-2,7] matches gold with redundant x-in prefix.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5230c1443699f2d7",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5519246e55a82cee",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_560724b5a5837ec5",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_57290f575566c918",
+      "category": "base_subscript_braces",
+      "new_final_correct": true,
+      "rationale": "Same base-five subscript and digits, only braces differ.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5861e576adc6b8cf",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5a6645cb9b683a15",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5a7ee299519a576a",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5b102f2e04958f55",
+      "category": "explicit_roots",
+      "new_final_correct": true,
+      "rationale": "Both requested real roots 1 +/- sqrt(19) explicitly listed.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5b77002b14a0583c",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5bb0e91a094532e8",
+      "category": "whitespace",
+      "new_final_correct": true,
+      "rationale": "Same polynomial -13x+3.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_5f0ad79ccd33f7e3",
+      "category": "percent_format",
+      "new_final_correct": true,
+      "rationale": "Question asks percent decrease; 10% corresponds to gold 10.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_627bb6a85639521e",
+      "category": "contextual_units",
+      "new_final_correct": true,
+      "rationale": "Both final text variants calculate 6*(12 inches)^2=864 square inches.",
+      "reviewed_final_text_variants": [
+        "05b81a654cabb5b9ae1e",
+        "4afc76ac3c675b93994e"
+      ]
+    },
+    {
+      "case_id": "case_67b190ead615fbf9",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_69f990e244f4fcc1",
+      "category": "degree_format",
+      "new_final_correct": true,
+      "rationale": "Question asks number of degrees; 180 denotes 180 degrees.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_6cbf898bce4fdfa9",
+      "category": "missing_final_box",
+      "new_final_correct": false,
+      "rationale": "Empty final box; no recovery from reasoning body.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_6d337050e83aa7b0",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_700ef9c23e625a96",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_703400f874de526e",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_753f019de3fc069b",
+      "category": "algebraic_equivalence",
+      "new_final_correct": true,
+      "rationale": "11(sqrt(5)+1) expands to supplied 11sqrt(5)+11.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_7bb2a5ef8956a35d",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_8337f22152d9751c",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_8398e0de229e61bd",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_89c5d41dcdea3bc3",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_8ddf7e8fa43c44c7",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_9113051d7855e0a2",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_94b59504aa5cc773",
+      "category": "whitespace",
+      "new_final_correct": true,
+      "rationale": "Same 3sqrt(5).",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_982fd1bbdce52028",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_9867e3b122f79c19",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_98e53c4549750955",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_993ae3ca04e31258",
+      "category": "contextual_units",
+      "new_final_correct": true,
+      "rationale": "All four final text variants compute half*10cm*3cm=15 square cm.",
+      "reviewed_final_text_variants": [
+        "185d50dc25298689402e",
+        "4a178b77446863243bda",
+        "515eacf480159c73d31a",
+        "76d5c406c9b9817c3210"
+      ]
+    },
+    {
+      "case_id": "case_9a0f8d2a748dd3ff",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_a0756cc5ebe9704f",
+      "category": "degree_format",
+      "new_final_correct": true,
+      "rationale": "Question explicitly requests degrees; 30 denotes 30 degrees.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_a5ea63e1864d7145",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_a7566adb7b8b738f",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_aa7b401a7e823a5a",
+      "category": "missing_final_box",
+      "new_final_correct": false,
+      "rationale": "No extracted final box; no recovery from reasoning body.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ac2ec8a1f366655e",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_aedd3ff075e90857",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_b2fd0b9f50f9eb57",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_b36ca7a7d5580f9a",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_b4f773da0e7da135",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_b8e63608dab6549d",
+      "category": "inverse_cotangent_branch_ambiguity",
+      "new_final_correct": null,
+      "rationale": "Positive-only gold versus four roots depends on inverse-cotangent branch. Same unresolved policy as original review; retain legacy.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_b9abf696aae578ae",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_bade9c24005902b5",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_be8f5aaf89228f98",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_bebb9ffb0f3526a8",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_c12523279837a63c",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_c1f01a2577a9a88a",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_c7d1607db615e3e2",
+      "category": "contextual_base_suffix",
+      "new_final_correct": true,
+      "rationale": "Final text explicitly identifies base six and verifies 4*216+3*36+4*6+3=999.",
+      "reviewed_final_text_variants": [
+        "d27f8a9b3247cdeee076"
+      ]
+    },
+    {
+      "case_id": "case_c842f606700e42ee",
+      "category": "whitespace",
+      "new_final_correct": true,
+      "rationale": "Identical closed interval, spacing only.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_cb33d2d3549edb79",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_cb4f69a65288872c",
+      "category": "whitespace",
+      "new_final_correct": true,
+      "rationale": "Identical polynomial x^3+3x-6.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_cb880268d5b48469",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_cea4e8004fe0faf4",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ceb851c40fc6279e",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_cedf331228e601bf",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_cf335f809f36f639",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_d0d6644ef8a050a7",
+      "category": "text_wrapper",
+      "new_final_correct": true,
+      "rationale": "east equals text-wrapped east; 2250 degrees clockwise leaves a 90 degree turn.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_d6db96ccea3371a1",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_d8f396a4723bedf0",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_dde3dd3cb052556e",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_dfd49c3e883cfe4f",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ed7b0e3d37098b16",
+      "category": "thousands_separator",
+      "new_final_correct": true,
+      "rationale": "10080 equals 10,080 including LaTeX spacing.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ef59cd33da79a6c7",
+      "category": "whitespace",
+      "new_final_correct": true,
+      "rationale": "Same two open intervals and union.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f3b8ea4c6ff938f7",
+      "category": "whitespace",
+      "new_final_correct": true,
+      "rationale": "Same mixed number 137 1/2.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f434a4908a488471",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f7f4f063d2ccf193",
+      "category": "fraction_format",
+      "new_final_correct": true,
+      "rationale": "35/64 equals supplied LaTeX fraction.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_f94f3b7fe6982a1d",
+      "category": "assignment_prefix",
+      "new_final_correct": true,
+      "rationale": "Question asks x values; 5 equals x=5.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_fd75d9c41c5e79db",
+      "category": "ordinal_grade",
+      "new_final_correct": true,
+      "rationale": "12th grade matches grade 12; 11.6/8.6 is closest to 1.35.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_fe65c79cb0654793",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    },
+    {
+      "case_id": "case_ffb5b775f25c8b80",
+      "category": "exact_gold_match",
+      "new_final_correct": true,
+      "rationale": "Exact supplied gold string; not a re-proof of dataset correctness.",
+      "reviewed_final_text_variants": []
+    }
+  ]
+}
