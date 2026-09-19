@@ -21,4 +21,11 @@ The unchanged-code fixed50 questions ×2 runs ×native/Random1024/Random2048 at3
 - All60 audited answers reached EOS. No interim contrasts/hypothesis tests or parameter/sample-size changes were made. Generation accounting .401799 GPU hours; deterministic-prefix runtime extrapolation is provisional.
 - The separate8k→32k audit passed all12 overlapping trajectories, **69,929 tokens exact**, including unchanged termination for all9 already-EOS answers. Smoke raw SHA remains unchanged.
 - Pilot manifest SHA `b6f4de7349587205b14ad04980572567f3b9fec314fc69aa6d26c996a2aaa0aa`; first10 data SHA `7de329448326d3f9c6c8630763b53c2794daf1dae944926fbac9da72dee037f6`.
-- Reports: `qwen3-control-progress-10.json`, `qwen3-control-8k-32k-prefix-early.json`. Continue the fixed run; next audit at25 questions. No generation-source edits or competing GPU workloads.
+- Reports: `qwen3-control-progress-10.json`, `qwen3-control-8k-32k-prefix-early.json`. No generation-source edits or competing GPU workloads.
+
+## 11:46 JST: first25-question operational audit
+
+- 150 answers /75 batches complete. Strict source, dataset,36-layer cache, pairing and grading-status audit passed;100 pre-eviction prefixes /149,635 tokens exact.
+- First10 raw data SHA remains unchanged. First25 data SHA: `8ad7b64e4b1da05fe27177c0d94eba6fc8b6c8ba246e93f12b4c744cbccc8456`.
+- Generation accounting1.684811 GPU hours. Capped and EOS-wrong answers remain included; no exclusions, source/sampling changes, interim hypothesis tests or adaptation.
+- Report: `qwen3-control-progress-25.json`. Continue unchanged to all50 questions and the preregistered final exploratory analysis.
