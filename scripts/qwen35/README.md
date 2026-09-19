@@ -142,6 +142,12 @@ frozen environment before launch. Final CPU analysis:
 `audit_progress.py` with cross-run settings and pre-eviction prefix checks.
 No interim hypothesis tests. This extension does not replace the original result.
 
+The separate frontier grading sensitivity uses `prepare_frontier_review.py`,
+`record_frontier_review_decisions.py` and `analyze_frontier_review.py`. The second
+script records specific curated decisions, not a universal grader. Use new review
+and decision output paths when replaying; original native judgments are frozen.
+See `docs/plans/qwen35-frontier-grading-sensitivity-report.md`.
+
 Per-answer tok/s is a workload diagnostic, not a fixed-workload speed benchmark.
 Native uses DynamicCache, compressed uses preallocated bounded storage; allocator
 and cache-growth costs therefore differ. An iso-kernel/allocator efficiency study
