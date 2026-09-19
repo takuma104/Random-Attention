@@ -58,4 +58,8 @@ native/noopは各forwardでfull logits exact、native hooks inert、各層のpro
 
 全500 MATH promptの最大は814 tokensで、C1024の条件P<960を全件満たす。256-token sampled replayとnative/eviction前prefixも完全一致。ただし**全sampleが256 capに到達したため、実際のEOS終了はこの試験でまだ確認できていない**。
 
-次に非MATH500の固定問題「17+25」を4096 capでnative/Random1024各2 rows生成し、256→4096 prefix、EOS、grading連携を確認する。samplingは変更しない。加えてscripted Qwen3 configで両EOS IDs、早く終わるrowのresident維持・相手row独立性・終了時counterを直接検証する。これは実装smokeで、MATH精度pilotではない。
+非MATH500の固定問題「17+25」の4096 cap検証も29秒で完了（`qwen3-control-generation-validation.json`）。native1132/975 tokens、Random1024 1175/975 tokensで全4 answersがEOS終了、legacy graderで正解。Randomの長いrowは72 layer eviction events、短いrowはevictionなし。256→4096とnative/eviction前prefixが完全一致。sampling変更なし。
+
+加えてscripted Qwen3 configで両EOS IDs、早く終わるrowのresident維持・相手row独立性・終了時counterを直接検証した。これらは実装smokeで、MATH精度pilotではない。新しいharness/accounting/statistics testsと共有RNG/recovery testsを含め16件通過。
+
+次段階は独立したrunner/CPU auditorと`qwen3-control-pilot-protocol.md`で固定した探索的pilot。プロトコルはQwen3 MATH500のsmokeを含む全outcome取得前に固定する。

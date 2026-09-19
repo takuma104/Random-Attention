@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "source_hashes": {
+    "kvcompress/qwen35/__init__.py": "be8e82884ca7d42dd1854f5b741dd677edf7ddb587b989ed44ede26b3a6fd302",
+    "kvcompress/qwen35/batch.py": "e2f05f9e50b431783e9c815972a6f5f60b41976965ebf0594ba5d125f3aec43b",
+    "kvcompress/qwen35/cache.py": "25a3321a2f509dbeba417c5e075f6a25969c7fec7fc9a652e936b82ba1d78017",
+    "kvcompress/qwen35/generate.py": "59175a51933dc1440707105d986ffb86d6fe623c00427e50941d40d5d858cfe9",
+    "kvcompress/qwen35/grade.py": "a59149def3524fe1507c8b9445aa1ce310d9a9c0fbe543648e2f666466423a61",
+    "kvcompress/qwen35/runtime.py": "8e00295f04f5b8d3c4e82c0c1ece4ebd3f4b96918c7e7223344b3b69934fdbe1",
+    "kvcompress/qwen35/test_batch.py": "34a6195eb283ef98859735c72e7ce569021a6bd6eadfe9978e9d4ab1e2974fac",
+    "kvcompress/qwen35/test_batch_recovery.py": "5935d0f949f0e524c7cbc5ceecec164c8ecd03ba2f7406e2d1fb1a59d17e5e28",
+    "kvcompress/qwen35/test_cache.py": "b230a602f4d246b90b2ff9eb40a6fb26de93a439f2c9e1ffb8e2333684fd0f39",
+    "kvcompress/qwen35/test_generate.py": "57a4abea22e8bf7a24c47407ec25cc42380d4f093164fb8df7ceea025b4881ce",
+    "scripts/qwen35/run_math.py": "0dd0f43b0b473c14445bb5ada2738cc0d5447d135924eef79cc158e6c2c35b2e",
+    "kvcompress/harness/Utils/grader.py": "605c1d66b55bfbebcdb7af6c40fe72e5f16df6d5ec894ad7c2df6cff304dd62e",
+    "kvcompress/harness/Utils/parser.py": "856032a36948aa6e091ab25da865c14927f0d60161e1bae79b6a57d34b1f9c1c",
+    "kvcompress/harness/Utils/math_normalization.py": "0d0c8dca754f9a3c4218a286c158663f5480fc45475f1f40e39a5e6daec2c8b6",
+    "kvcompress/qwen3_control/__init__.py": "43019b9762b7858bd4254d4974091b4a5ff2bf87d1187bf56fb541106b412139",
+    "kvcompress/qwen3_control/cache.py": "3aa83d061db9d2361b7337f09eed991376d1dba8a48e1e804ba5999b6cb35cb2",
+    "kvcompress/qwen3_control/runtime.py": "5a477d097980b2ae996c8e890ac618fb4a9467c49d346c273e62b19b7e685b0a",
+    "scripts/qwen3_control/validate_generation.py": "c1bef26a0b7b85acb8520bb9fef3705645a7eeab61288c2df23f4fd283a0d6bd"
+  },
+  "raw_sha256": "e1075470864ac791ccf32df86e94ebff8f4ee50c1e02bcf3e513ee1facda4e5d",
+  "summary": {
+    "native": [
+      {
+        "tokens": 1132,
+        "termination": "eos",
+        "final_correct": true,
+        "eviction_layer_events": 0,
+        "token_sha256": "4029dcc40dd358d4250d34cd436d5c93175defb313e4e27f72262ff3e1e20bba"
+      },
+      {
+        "tokens": 975,
+        "termination": "eos",
+        "final_correct": true,
+        "eviction_layer_events": 0,
+        "token_sha256": "f56cddfaa1ba289a4e4d2d0f9a7b20d6898dd00acc2a28c4c75da3285e9e7fc2"
+      }
+    ],
+    "random_pp": [
+      {
+        "tokens": 1175,
+        "termination": "eos",
+        "final_correct": true,
+        "eviction_layer_events": 72,
+        "token_sha256": "962185e7c9d8f5377cbf84c60b33365a7e7e0f99c4f8295d97dc00f7b7bd3209"
+      },
+      {
+        "tokens": 975,
+        "termination": "eos",
+        "final_correct": true,
+        "eviction_layer_events": 0,
+        "token_sha256": "f56cddfaa1ba289a4e4d2d0f9a7b20d6898dd00acc2a28c4c75da3285e9e7fc2"
+      }
+    ]
+  },
+  "scope": "Fixed arithmetic implementation smoke, NOT MATH500 accuracy evidence",
+  "prefix_matches_native": true,
+  "extension_256_to_4096_prefix_exact": true,
+  "extension_reference_sha256": "a89419042fc00050203a1e410b3d905c0379d7e580f96238ba11c1dc9e2e2493"
+}
