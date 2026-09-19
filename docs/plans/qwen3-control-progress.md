@@ -13,4 +13,12 @@ Protocol committed **before Qwen3 MATH outcomes**: `13802cd`, `qwen3-control-pil
 - Mean tokens5865/6037.5/5579.75; shared peak allocated9.813/7.829/8.114GiB. Unequal sampled lengths/row residency do not establish a speedup.
 - Reports: `qwen3-control-smoke-analysis.json`, `qwen3-control-smoke-resume-audit.json`. Numerical, sampler, accounting and shared recovery/RNG tests passed16 tests; new CPU output-cap prefix tests add3.
 
-Next: unchanged-code fixed50 questions ×2 runs ×native/Random1024/Random2048 at32768 cap (`results/qwen3_control/pilot32k_b2_v1`). Operational audits at10/25/50, plus exact8k→32k overlap audit. Final problem-cluster intervals are descriptive/exploratory, not confirmatory preservation or causal architecture tests.
+The unchanged-code fixed50 questions ×2 runs ×native/Random1024/Random2048 at32768 cap (`results/qwen3_control/pilot32k_b2_v1`) started10:04:35, job `qwen3-control-pilot32k-9025`. Operational audits at10/25/50, plus exact8k→32k overlap audit. Final problem-cluster intervals are descriptive/exploratory, not confirmatory preservation or causal architecture tests.
+
+## 10:29 JST: first10-question operational audit
+
+- 60 answers /30 batches complete; no pending journals or grading exceptions in the audited prefix. Source/environment-related file hashes,36-layer state accounting and paired pre-eviction prefixes passed:40 prefixes /59,949 tokens exact.
+- All60 audited answers reached EOS. No interim contrasts/hypothesis tests or parameter/sample-size changes were made. Generation accounting .401799 GPU hours; deterministic-prefix runtime extrapolation is provisional.
+- The separate8k→32k audit passed all12 overlapping trajectories, **69,929 tokens exact**, including unchanged termination for all9 already-EOS answers. Smoke raw SHA remains unchanged.
+- Pilot manifest SHA `b6f4de7349587205b14ad04980572567f3b9fec314fc69aa6d26c996a2aaa0aa`; first10 data SHA `7de329448326d3f9c6c8630763b53c2794daf1dae944926fbac9da72dee037f6`.
+- Reports: `qwen3-control-progress-10.json`, `qwen3-control-8k-32k-prefix-early.json`. Continue the fixed run; next audit at25 questions. No generation-source edits or competing GPU workloads.
