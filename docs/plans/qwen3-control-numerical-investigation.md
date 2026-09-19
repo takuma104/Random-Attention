@@ -43,3 +43,19 @@ TF32は無効を要求。元の不合格を合格として書き換えない。Q
 - sampled replay/EOS/counterと全500 prompt適合性も検証する。accuracy pilotは全gateの通過後にprotocolを固定してから開始する。
 
 `test_numerics.py`はBF16 rounding、ゼロ一致、小さな異常rowが大きなrowに隠れないこと、非有限値拒否を検証。adapter testsと合わせ7件通過。
+
+## v2実行結果
+
+`qwen3-control-validation-v2-06f3`、09:33–09:37、4分14秒。追加traceの結果による閾値調整なしで全3 gate通過。
+
+| C / trace | eviction前exact logits比較 | post-eviction比較 | pre head相対L2 / Linf最大 | post row相対L2 / Linf最大 |
+|---|---:|---:|---:|---:|
+|256 calibration|867|540|.3697% / .5880%|.3040% / .5545%|
+|1024 held-out|3171|216|.3525% / .5418%|.3221% / .5571%|
+|2048 held-out|6243|216|.3844% / .5438%|.3142% / .5479%|
+
+native/noopは各forwardでfull logits exact、native hooks inert、各層のprompt/recent/position/counter/memory検証通過。C1024/C2048は各policyで36層×2 evictionを実行。再現可能な集約は`qwen3-control-validation-{v2,C1024-v2,C2048-v2}.json`。
+
+全500 MATH promptの最大は814 tokensで、C1024の条件P<960を全件満たす。256-token sampled replayとnative/eviction前prefixも完全一致。ただし**全sampleが256 capに到達したため、実際のEOS終了はこの試験でまだ確認できていない**。
+
+次に非MATH500の固定問題「17+25」を4096 capでnative/Random1024各2 rows生成し、256→4096 prefix、EOS、grading連携を確認する。samplingは変更しない。加えてscripted Qwen3 configで両EOS IDs、早く終わるrowのresident維持・相手row独立性・終了時counterを直接検証する。これは実装smokeで、MATH精度pilotではない。

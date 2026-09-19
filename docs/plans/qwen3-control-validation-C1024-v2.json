@@ -1,0 +1,167 @@
+{
+  "status": "passed",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "source_hashes": {
+    "kvcompress/qwen35/__init__.py": "be8e82884ca7d42dd1854f5b741dd677edf7ddb587b989ed44ede26b3a6fd302",
+    "kvcompress/qwen35/batch.py": "e2f05f9e50b431783e9c815972a6f5f60b41976965ebf0594ba5d125f3aec43b",
+    "kvcompress/qwen35/cache.py": "25a3321a2f509dbeba417c5e075f6a25969c7fec7fc9a652e936b82ba1d78017",
+    "kvcompress/qwen35/generate.py": "59175a51933dc1440707105d986ffb86d6fe623c00427e50941d40d5d858cfe9",
+    "kvcompress/qwen35/grade.py": "a59149def3524fe1507c8b9445aa1ce310d9a9c0fbe543648e2f666466423a61",
+    "kvcompress/qwen35/runtime.py": "8e00295f04f5b8d3c4e82c0c1ece4ebd3f4b96918c7e7223344b3b69934fdbe1",
+    "kvcompress/qwen35/test_batch.py": "34a6195eb283ef98859735c72e7ce569021a6bd6eadfe9978e9d4ab1e2974fac",
+    "kvcompress/qwen35/test_batch_recovery.py": "5935d0f949f0e524c7cbc5ceecec164c8ecd03ba2f7406e2d1fb1a59d17e5e28",
+    "kvcompress/qwen35/test_cache.py": "b230a602f4d246b90b2ff9eb40a6fb26de93a439f2c9e1ffb8e2333684fd0f39",
+    "kvcompress/qwen35/test_generate.py": "57a4abea22e8bf7a24c47407ec25cc42380d4f093164fb8df7ceea025b4881ce",
+    "scripts/qwen35/run_math.py": "0dd0f43b0b473c14445bb5ada2738cc0d5447d135924eef79cc158e6c2c35b2e",
+    "kvcompress/harness/Utils/grader.py": "605c1d66b55bfbebcdb7af6c40fe72e5f16df6d5ec894ad7c2df6cff304dd62e",
+    "kvcompress/harness/Utils/parser.py": "856032a36948aa6e091ab25da865c14927f0d60161e1bae79b6a57d34b1f9c1c",
+    "kvcompress/harness/Utils/math_normalization.py": "0d0c8dca754f9a3c4218a286c158663f5480fc45475f1f40e39a5e6daec2c8b6",
+    "kvcompress/qwen3_control/__init__.py": "43019b9762b7858bd4254d4974091b4a5ff2bf87d1187bf56fb541106b412139",
+    "kvcompress/qwen3_control/cache.py": "3aa83d061db9d2361b7337f09eed991376d1dba8a48e1e804ba5999b6cb35cb2",
+    "kvcompress/qwen3_control/runtime.py": "5a477d097980b2ae996c8e890ac618fb4a9467c49d346c273e62b19b7e685b0a",
+    "scripts/qwen3_control/validate_model.py": "0df6b1649f1ec9b8e70fc05a9fe503ed1279741f407665ea140d79445d45f73c",
+    "scripts/qwen3_control/numerics.py": "69fabf8de93c88806984cd3eb6db898531e61ef22532a1f5e0824d8a3829c010"
+  },
+  "batch": 2,
+  "capacity": 1024,
+  "recent": 64,
+  "prompt_tokens": 32,
+  "decode_steps": 1120,
+  "trace": "heldout",
+  "eviction_seeds": [
+    17,
+    23
+  ],
+  "logical_length": 1152,
+  "samples_sha256": "2a2c17a9868a37509d1df1c787a7eea80d932efffa67ba1e08639ec6770b6bcb",
+  "native_hooks_inert": true,
+  "noop_logit_max_error": 0.0,
+  "pre_eviction_logit_max_error": 0.0,
+  "pre_eviction_checks": 3171,
+  "reference": "same-input FP32 eager before and after o_proj",
+  "gate_version": 2,
+  "relative_l2_limit": 0.01,
+  "relative_linf_limit": 0.01,
+  "same_input_sdpa_replay_exact": true,
+  "reference_units": {
+    "pre_projection": "each batch row and query head",
+    "post_projection": "each batch row"
+  },
+  "cells": {
+    "random_pp": {
+      "reference_checks": 72,
+      "fp32_oracle_error": {
+        "pre_projection": {
+          "max_abs": 0.06117439270019531,
+          "mean_abs": 0.0019484435906633735,
+          "max_group_relative_l2": 0.0033739986829459667,
+          "max_group_relative_linf": 0.004686365835368633
+        },
+        "post_projection": {
+          "max_abs": 0.4561920166015625,
+          "mean_abs": 0.006421662867069244,
+          "max_group_relative_l2": 0.003046841360628605,
+          "max_group_relative_linf": 0.005571097135543823
+        }
+      },
+      "original_gate_failures": 673,
+      "original_max_abs": 1.0,
+      "eviction_layer_events": 72,
+      "cache_bytes": {
+        "kv": 320864256,
+        "recurrent": 0,
+        "conv": 0,
+        "positions": 5013504,
+        "queries": 0
+      }
+    },
+    "recency_pp": {
+      "reference_checks": 72,
+      "fp32_oracle_error": {
+        "pre_projection": {
+          "max_abs": 0.061550140380859375,
+          "mean_abs": 0.0019333313684910536,
+          "max_group_relative_l2": 0.003524778876453638,
+          "max_group_relative_linf": 0.005418251268565655
+        },
+        "post_projection": {
+          "max_abs": 0.44549560546875,
+          "mean_abs": 0.006375262979418039,
+          "max_group_relative_l2": 0.0032210303470492363,
+          "max_group_relative_linf": 0.004976300988346338
+        }
+      },
+      "original_gate_failures": 1034,
+      "original_max_abs": 1.0,
+      "eviction_layer_events": 72,
+      "cache_bytes": {
+        "kv": 320864256,
+        "recurrent": 0,
+        "conv": 0,
+        "positions": 5013504,
+        "queries": 0
+      }
+    },
+    "snapkv_pp": {
+      "reference_checks": 72,
+      "fp32_oracle_error": {
+        "pre_projection": {
+          "max_abs": 0.059505462646484375,
+          "mean_abs": 0.0019489004043862224,
+          "max_group_relative_l2": 0.0034778683912009,
+          "max_group_relative_linf": 0.0044802408665418625
+        },
+        "post_projection": {
+          "max_abs": 0.1358795166015625,
+          "mean_abs": 0.006297789514064789,
+          "max_group_relative_l2": 0.003020521719008684,
+          "max_group_relative_linf": 0.004041634034365416
+        }
+      },
+      "original_gate_failures": 474,
+      "original_max_abs": 0.25,
+      "eviction_layer_events": 72,
+      "cache_bytes": {
+        "kv": 320864256,
+        "recurrent": 0,
+        "conv": 0,
+        "positions": 5013504,
+        "queries": 37748736
+      }
+    }
+  },
+  "sampling_replay": {
+    "native": [
+      {
+        "tokens": 256,
+        "termination": "length",
+        "token_sha256": "85dee117c6cfd62ce95775d53bc0137b729b85aa8d744719d8803a2f3cfe4723"
+      },
+      {
+        "tokens": 256,
+        "termination": "length",
+        "token_sha256": "25ae0e15d1762ac653255234bcc30bc8ad42165382bd4fbf8a0865d1adb29de6"
+      }
+    ],
+    "random_pp": [
+      {
+        "tokens": 256,
+        "termination": "length",
+        "token_sha256": "85dee117c6cfd62ce95775d53bc0137b729b85aa8d744719d8803a2f3cfe4723"
+      },
+      {
+        "tokens": 256,
+        "termination": "length",
+        "token_sha256": "25ae0e15d1762ac653255234bcc30bc8ad42165382bd4fbf8a0865d1adb29de6"
+      }
+    ]
+  },
+  "no_eviction_sampling_matches_native": true,
+  "prompt_audit": {
+    "n": 500,
+    "maximum": 814,
+    "ineligible_C1024": []
+  },
+  "parameter_bytes": 8044936192,
+  "elapsed_seconds": 72.93971086596139
+}
