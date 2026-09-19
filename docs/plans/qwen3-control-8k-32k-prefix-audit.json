@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "short_manifest_sha256": "0a89429efab729ec739959eb558b989e9d6ca1f381c24fc502cc123dc6673e64",
+  "long_manifest_sha256": "b6f4de7349587205b14ad04980572567f3b9fec314fc69aa6d26c996a2aaa0aa",
+  "short_data_sha256": "d421472be8ccd916ecf1da0416f8cf975946306f97f42ebfad8af0fa227eb632",
+  "long_two_problem_data_sha256": "cb42648deae067f91021b0a646ff080dfddb5ec85a518dc8867f06179fc82b2b",
+  "exact_prefixes": 12,
+  "exact_prefix_tokens": 69929,
+  "already_eos_unchanged": 9,
+  "source_sha256": "3d39babca54fa9d6b75f63da869f12a45edcf6596b8cfe4a6949f611ce68279d",
+  "auditor_sha256": "db2a5417538283b8a82dc55dbecdeddeeb77bbd5b5acb5b6a6990089605e4136"
+}

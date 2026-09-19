@@ -17,3 +17,13 @@ The runner freezes sources, protocol, environment and validation sidecars. Do no
 `--phase smoke` fixes2 questions/2 runs/3 cells/8192 cap. `--phase pilot` fixes50 questions/2 runs/3 cells/32768 cap. Neither permits ad-hoc parameter selection. Smoke records are not pooled into pilot accuracy. Final clustered intervals are exploratory only. Outputs under `work/` and `results/` remain ignored.
 
 Numerical provenance includes the initial BF16 eager-reference failure, FP32 investigation and prospectively fixed held-out v2 gates; see `docs/plans/qwen3-control-numerical-investigation.md`. Do not relabel the original failed gate as passed.
+
+Completed pilot: `docs/plans/qwen3-control-pilot-report.md`. Additional CPU-only checks:
+
+```bash
+.venv/bin/python scripts/qwen3_control/audit_extension.py results/qwen3_control/smoke8k_b2_v1 results/qwen3_control/pilot32k_b2_v1 --out docs/plans/qwen3-control-8k-32k-prefix-audit.json
+.venv/bin/python scripts/qwen3_control/audit_completed_pilot.py results/qwen3_control/pilot32k_b2_v1 --out docs/plans/qwen3-control-pilot-integrity.json
+.venv/bin/python scripts/qwen3_control/compare_matched_pilot.py --out docs/plans/qwen3-qwen35-matched-pilot-descriptive.json
+```
+
+The last comparison uses only the same50 questions and legacy scores from both models; it is post-hoc descriptive, not a causal architecture test.

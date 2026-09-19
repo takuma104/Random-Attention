@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "manifest_sha256": "b6f4de7349587205b14ad04980572567f3b9fec314fc69aa6d26c996a2aaa0aa",
+  "data_sha256": "5cba2925451fe7d1a8072bcf0ab1ec24695b267e8368d37cc66d0dd714a029ff",
+  "n_problems": 50,
+  "n_answers": 300,
+  "pre_eviction_prefixes": 200,
+  "pre_eviction_prefix_tokens": 296609,
+  "frozen_sources_match": true,
+  "scope": "Exploratory pilot; descriptive clustered intervals, not confirmatory preservation tests",
+  "cells": {
+    "native": {
+      "n": 100,
+      "final_accuracy": 0.98,
+      "paper_accuracy": 0.98,
+      "eos_required_accuracy": 0.98,
+      "cap_rate": 0.0,
+      "eos_wrong": 2,
+      "mean_tokens": 4779.39,
+      "eviction_exposure": 0.0,
+      "generation_hours": 0.8750641207442903,
+      "useful_tok_s": 151.71554882219706,
+      "useful_row_fraction": 0.8967061542906675,
+      "peak_shared_allocated_gib": 14.20298719406128
+    },
+    "random_pp_C1024": {
+      "n": 100,
+      "final_accuracy": 0.91,
+      "paper_accuracy": 0.91,
+      "eos_required_accuracy": 0.91,
+      "cap_rate": 0.08,
+      "eos_wrong": 1,
+      "mean_tokens": 6066.07,
+      "eviction_exposure": 1.0,
+      "generation_hours": 1.109255713935256,
+      "useful_tok_s": 151.9054103824787,
+      "useful_row_fraction": 0.8321540276558385,
+      "peak_shared_allocated_gib": 7.866556167602539
+    },
+    "random_pp_C2048": {
+      "n": 100,
+      "final_accuracy": 0.93,
+      "paper_accuracy": 0.93,
+      "eos_required_accuracy": 0.93,
+      "cap_rate": 0.06,
+      "eos_wrong": 1,
+      "mean_tokens": 5556.5,
+      "eviction_exposure": 0.77,
+      "generation_hours": 0.9853025499179623,
+      "useful_tok_s": 156.6495714794135,
+      "useful_row_fraction": 0.8575877960618716,
+      "peak_shared_allocated_gib": 8.14071273803711
+    }
+  },
+  "analysis_source_sha256": "db2a5417538283b8a82dc55dbecdeddeeb77bbd5b5acb5b6a6990089605e4136",
+  "contrasts": {
+    "random_pp_C1024": {
+      "difference": -0.07,
+      "ci95": [
+        -0.13,
+        -0.02
+      ],
+      "problem_wins": 0,
+      "problem_losses": 6,
+      "problem_ties": 44
+    },
+    "random_pp_C2048": {
+      "difference": -0.05,
+      "ci95": [
+        -0.11,
+        0.0
+      ],
+      "problem_wins": 0,
+      "problem_losses": 3,
+      "problem_ties": 47
+    }
+  },
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260919,
+  "independent_problem_clusters": 50
+}

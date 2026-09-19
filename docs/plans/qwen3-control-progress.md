@@ -28,4 +28,13 @@ The unchanged-code fixed50 questions ×2 runs ×native/Random1024/Random2048 at3
 - 150 answers /75 batches complete. Strict source, dataset,36-layer cache, pairing and grading-status audit passed;100 pre-eviction prefixes /149,635 tokens exact.
 - First10 raw data SHA remains unchanged. First25 data SHA: `8ad7b64e4b1da05fe27177c0d94eba6fc8b6c8ba246e93f12b4c744cbccc8456`.
 - Generation accounting1.684811 GPU hours. Capped and EOS-wrong answers remain included; no exclusions, source/sampling changes, interim hypothesis tests or adaptation.
-- Report: `qwen3-control-progress-25.json`. Continue unchanged to all50 questions and the preregistered final exploratory analysis.
+- Report: `qwen3-control-progress-25.json`. No changes to the fixed run.
+
+## 13:04 JST: pilot complete
+
+- 300 answers /150 batches, exit0,2.969622 generation-accounting GPU hours. All final integrity/source/EOS/cache audits passed;200 pre-eviction prefixes /296,609 tokens exact. Earlier10/25 snapshots and12 smoke→pilot extension prefixes remain unchanged.
+- Legacy final/paper/EOS-required all agree: native98%, Random1024 91%, Random2048 93%. Cap0/8/6%; mean tokens4779/6066/5557.
+- Fixed exploratory contrasts: Random1024−native−7pp,95% CI[−13,−2]; Random2048−native−5pp,95% CI[−11,0]. No confirmatory preservation/equivalence claim.
+- Post-hoc comparison restricted to the same50 IDs gives Qwen3.5 native97%, Random1024 77%, Random2048 91% (legacy). Thus the C2048 losses on this subset are−5pp versus−6pp; do not compare this Qwen3 pilot to the Qwen3.5 whole500 loss as if only architecture differed. Sampling and generated-length differences remain substantial confounds.
+- Raw SHA `5cba2925451fe7d1a8072bcf0ab1ec24695b267e8368d37cc66d0dd714a029ff`; no raw rewrites. Report: `qwen3-control-pilot-report.md`, analysis/integrity/prefix sidecars and `qwen3-qwen35-matched-pilot-descriptive.json`.
+- All GPU jobs have finished. No full500 Qwen3 run or new grading sensitivity has started; either requires an explicitly documented follow-up design. Original Qwen3/Qwen3.5 frozen sources and prior conclusions remain unchanged.

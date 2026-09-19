@@ -1,0 +1,136 @@
+{
+  "scope": "Post-hoc descriptive matched-question subset; legacy scores only; no cross-model causal inference or hypothesis tests",
+  "problem_ids": [
+    "test/precalculus/323.json",
+    "test/algebra/892.json",
+    "test/counting_and_probability/339.json",
+    "test/prealgebra/1747.json",
+    "test/precalculus/1105.json",
+    "test/counting_and_probability/51.json",
+    "test/counting_and_probability/71.json",
+    "test/intermediate_algebra/1837.json",
+    "test/number_theory/911.json",
+    "test/algebra/1078.json",
+    "test/prealgebra/2037.json",
+    "test/algebra/291.json",
+    "test/prealgebra/1388.json",
+    "test/number_theory/1257.json",
+    "test/precalculus/697.json",
+    "test/precalculus/1201.json",
+    "test/algebra/2551.json",
+    "test/intermediate_algebra/1063.json",
+    "test/prealgebra/1742.json",
+    "test/prealgebra/1558.json",
+    "test/algebra/1035.json",
+    "test/algebra/1547.json",
+    "test/algebra/975.json",
+    "test/counting_and_probability/525.json",
+    "test/precalculus/801.json",
+    "test/precalculus/902.json",
+    "test/intermediate_algebra/337.json",
+    "test/algebra/435.json",
+    "test/prealgebra/1458.json",
+    "test/algebra/305.json",
+    "test/prealgebra/1622.json",
+    "test/counting_and_probability/508.json",
+    "test/number_theory/466.json",
+    "test/counting_and_probability/894.json",
+    "test/algebra/1143.json",
+    "test/intermediate_algebra/101.json",
+    "test/number_theory/156.json",
+    "test/number_theory/691.json",
+    "test/precalculus/927.json",
+    "test/algebra/2257.json",
+    "test/algebra/478.json",
+    "test/algebra/2264.json",
+    "test/prealgebra/1655.json",
+    "test/algebra/2253.json",
+    "test/precalculus/703.json",
+    "test/geometry/477.json",
+    "test/intermediate_algebra/431.json",
+    "test/algebra/776.json",
+    "test/algebra/1960.json",
+    "test/intermediate_algebra/752.json"
+  ],
+  "models": {
+    "Qwen3-4B": {
+      "root": "results/qwen3_control/pilot32k_b2_v1",
+      "manifest_sha256": "b6f4de7349587205b14ad04980572567f3b9fec314fc69aa6d26c996a2aaa0aa",
+      "subset_data_sha256": "5cba2925451fe7d1a8072bcf0ab1ec24695b267e8368d37cc66d0dd714a029ff",
+      "sampling": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "presence_penalty": 0.0,
+        "repetition_penalty": 1.0,
+        "min_p": 0.0
+      },
+      "cells": {
+        "native": {
+          "n": 100,
+          "legacy_final_accuracy": 0.98,
+          "eos_required_accuracy": 0.98,
+          "cap_rate": 0.0,
+          "mean_tokens": 4779.39,
+          "eviction_exposure": 0.0
+        },
+        "random_pp_C1024": {
+          "n": 100,
+          "legacy_final_accuracy": 0.91,
+          "eos_required_accuracy": 0.91,
+          "cap_rate": 0.08,
+          "mean_tokens": 6066.07,
+          "eviction_exposure": 1.0
+        },
+        "random_pp_C2048": {
+          "n": 100,
+          "legacy_final_accuracy": 0.93,
+          "eos_required_accuracy": 0.93,
+          "cap_rate": 0.06,
+          "mean_tokens": 5556.5,
+          "eviction_exposure": 0.77
+        }
+      }
+    },
+    "Qwen3.5-4B": {
+      "root": "results/qwen35/main32k_b2_v3",
+      "manifest_sha256": "ae7f93f814f573d734ff1036987534fa8ad747db9eae6d467b9ee546926b841c",
+      "subset_data_sha256": "3c0b7a1841fe1eb53f7c9a89b3264911b463e55cd1a2bfed39ed04e6a3a0a3f6",
+      "sampling": {
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 20,
+        "presence_penalty": 1.5,
+        "repetition_penalty": 1.0,
+        "min_p": 0.0
+      },
+      "cells": {
+        "native": {
+          "n": 100,
+          "legacy_final_accuracy": 0.97,
+          "eos_required_accuracy": 0.97,
+          "cap_rate": 0.03,
+          "mean_tokens": 7750.87,
+          "eviction_exposure": 0.0
+        },
+        "random_pp_C1024": {
+          "n": 100,
+          "legacy_final_accuracy": 0.77,
+          "eos_required_accuracy": 0.77,
+          "cap_rate": 0.23,
+          "mean_tokens": 11959.16,
+          "eviction_exposure": 0.98
+        },
+        "random_pp_C2048": {
+          "n": 100,
+          "legacy_final_accuracy": 0.91,
+          "eos_required_accuracy": 0.9,
+          "cap_rate": 0.1,
+          "mean_tokens": 9082.7,
+          "eviction_exposure": 0.87
+        }
+      }
+    }
+  },
+  "source_sha256": "94e63231611d79a76eba2f40e0ddf19087d6c2b5caabb47f66234491682be03a"
+}
